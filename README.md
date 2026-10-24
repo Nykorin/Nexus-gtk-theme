@@ -125,6 +125,13 @@ Just install the compact version
 ./install.sh -s compact
 ```
 
+## Use of an LLM
+
+The changes in this fork (the palette extraction, the SCSS and asset edits, the
+install script changes and this README) were made with the help of Claude, an LLM by
+Anthropic, through Claude Code. The maintainer directed the work and tested the theme
+on a real desktop; commits made this way carry a `Co-Authored-By: Claude` trailer.
+
 ## Credits and license
 
 - [Fluent gtk theme](https://github.com/vinceliuice/Fluent-gtk-theme) by
