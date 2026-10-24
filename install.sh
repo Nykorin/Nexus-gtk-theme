@@ -31,7 +31,7 @@ fi
 SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Fluent
-THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-grey')
+THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-grey' '-connections')
 COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-compact')
 
@@ -67,7 +67,7 @@ OPTIONS:
 
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
 
-  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
+  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|connections|all] (Default: blue)
 
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
 
@@ -379,6 +379,10 @@ while [[ "$#" -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
+          connections)
+            themes+=("${THEME_VARIANTS[9]}")
+            shift
+            ;;
           all)
             themes+=("${THEME_VARIANTS[@]}")
             shift
@@ -648,6 +652,9 @@ install_theme_color() {
         ;;
       -grey)
         theme_color='grey'
+        ;;
+      -connections)
+        theme_color='connections'
         ;;
     esac
     sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
