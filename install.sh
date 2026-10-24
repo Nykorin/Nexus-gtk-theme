@@ -30,8 +30,8 @@ fi
 
 SASSC_OPT="-M -t expanded"
 
-THEME_NAME=Fluent
-THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-teal' '-grey' '-connections')
+THEME_NAME=Nexus
+THEME_VARIANTS=('')
 COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-compact')
 
@@ -67,9 +67,7 @@ OPTIONS:
 
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
 
-  -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|connections|all] (Default: blue)
-
-  -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
+  -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
 
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
@@ -116,7 +114,7 @@ install() {
 
   [[ -d "$THEME_DIR" ]] && rm -rf "${THEME_DIR:?}"
 
-  theme_tweaks && install_theme_color
+  theme_tweaks
 
   echo "Installing '$THEME_DIR'..."
 
@@ -126,14 +124,14 @@ install() {
   echo "[Desktop Entry]" >>                                                     "$THEME_DIR/index.theme"
   echo "Type=X-GNOME-Metatheme" >>                                              "$THEME_DIR/index.theme"
   echo "Name=$name$round$theme$color$size" >>                                   "$THEME_DIR/index.theme"
-  echo "Comment=An Materia Gtk+ theme based on Elegant Design" >>               "$THEME_DIR/index.theme"
+  echo "Comment=Nexus GTK theme, a fork of Fluent GTK theme" >>                 "$THEME_DIR/index.theme"
   echo "Encoding=UTF-8" >>                                                      "$THEME_DIR/index.theme"
   echo "" >>                                                                    "$THEME_DIR/index.theme"
   echo "[X-GNOME-Metatheme]" >>                                                 "$THEME_DIR/index.theme"
   echo "GtkTheme=$name$round$theme$color$size" >>                               "$THEME_DIR/index.theme"
   echo "MetacityTheme=$name$round$theme$color$size" >>                          "$THEME_DIR/index.theme"
-  echo "IconTheme=$name${ELSE_DARK:-}" >>                                       "$THEME_DIR/index.theme"
-  echo "CursorTheme=$name${ELSE_DARK:-}" >>                                     "$THEME_DIR/index.theme"
+  echo "IconTheme=Fluent${ELSE_DARK:-}" >>                                      "$THEME_DIR/index.theme"
+  echo "CursorTheme=Fluent${ELSE_DARK:-}" >>                                    "$THEME_DIR/index.theme"
   echo "ButtonLayout=close,minimize,maximize:menu" >>                           "$THEME_DIR/index.theme"
 
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
@@ -229,7 +227,7 @@ install() {
   cp -r "$SRC_DIR/cinnamon/common-assets"                                       "$THEME_DIR/cinnamon/assets"
   cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                          "$THEME_DIR/cinnamon/assets"
 
-  if [[ "$accent" == 'true' || "$opacity" == 'solid' ]]; then
+  if [[ "$opacity" == 'solid' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon$color$size.scss"               "$THEME_DIR/cinnamon/cinnamon.css"
   else
     cp -r "$SRC_DIR/cinnamon/cinnamon$color$size.css"                           "$THEME_DIR/cinnamon/cinnamon.css"
@@ -332,66 +330,6 @@ while [[ "$#" -gt 0 ]]; do
             ;;
           *)
             echo "ERROR: Unrecognized tweaks variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-      done
-      ;;
-    -t|--theme)
-      accent='true'
-      shift
-      for variant in "$@"; do
-        case "$variant" in
-          default)
-            themes+=("${THEME_VARIANTS[0]}")
-            shift
-            ;;
-          purple)
-            themes+=("${THEME_VARIANTS[1]}")
-            shift
-            ;;
-          pink)
-            themes+=("${THEME_VARIANTS[2]}")
-            shift
-            ;;
-          red)
-            themes+=("${THEME_VARIANTS[3]}")
-            shift
-            ;;
-          orange)
-            themes+=("${THEME_VARIANTS[4]}")
-            shift
-            ;;
-          yellow)
-            themes+=("${THEME_VARIANTS[5]}")
-            shift
-            ;;
-          green)
-            themes+=("${THEME_VARIANTS[6]}")
-            shift
-            ;;
-          teal)
-            themes+=("${THEME_VARIANTS[7]}")
-            shift
-            ;;
-          grey)
-            themes+=("${THEME_VARIANTS[8]}")
-            shift
-            ;;
-          connections)
-            themes+=("${THEME_VARIANTS[9]}")
-            shift
-            ;;
-          all)
-            themes+=("${THEME_VARIANTS[@]}")
-            shift
-            ;;
-          -*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized theme variant '$1'."
             echo "Try '$0 --help' for more information."
             exit 1
             ;;
@@ -626,44 +564,8 @@ activities_style() {
   sed -i "/\$activities:/s/default/icon/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
 }
 
-install_theme_color() {
-  if [[ "$theme" != '' ]]; then
-    case "$theme" in
-      -purple)
-        theme_color='purple'
-        ;;
-      -pink)
-        theme_color='pink'
-        ;;
-      -red)
-        theme_color='red'
-        ;;
-      -orange)
-        theme_color='orange'
-        ;;
-      -yellow)
-        theme_color='yellow'
-        ;;
-      -green)
-        theme_color='green'
-        ;;
-      -teal)
-        theme_color='teal'
-        ;;
-      -grey)
-        theme_color='grey'
-        ;;
-      -connections)
-        theme_color='connections'
-        ;;
-    esac
-    sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
-    sed -i "/\$theme:/s/default/${theme_color}/" ${SRC_DIR}/_sass/_tweaks-temp.scss
-  fi
-}
-
 theme_tweaks() {
-  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$accent" == 'true' || "$blur" == 'true' || "$outline" == 'false' || "$titlebutton" == 'square' || "$activities" = "icon" ]]; then
+  if [[ "$panel" = "float" || "$opacity" == 'solid' || "$window" == 'round' || "$blur" == 'true' || "$outline" == 'false' || "$titlebutton" == 'square' || "$activities" = "icon" ]]; then
     tweaks='true'
     install_package; tweaks_temp
   fi

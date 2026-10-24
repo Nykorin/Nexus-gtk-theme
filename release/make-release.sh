@@ -2,12 +2,12 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=Fluent
+THEME_NAME=Nexus
 
 _COLOR_VARIANTS=('' '-Light' '-Dark')
 _COMPA_VARIANTS=('' '-compact')
 _ROUND_VARIANTS=('' '-round')
-_THEME_VARIANTS=('' '-purple' '-pink' '-red' '-orange' '-yellow' '-green' '-grey' '-teal')
+_THEME_VARIANTS=('')
 
 if [ ! -z "${COMPA_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COMPA_VARIANTS <<< "${COMPA_VARIANTS:-}"

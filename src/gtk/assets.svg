@@ -122,14 +122,14 @@
     <linearGradient
        id="color-primary-dark">
       <stop
-         stop-color="#1A73E8"
+         stop-color="#1B7299"
          offset="1"
          id="stop19" />
     </linearGradient>
     <linearGradient
        id="color-primary-light">
       <stop
-         stop-color="#3281EA"
+         stop-color="#3796BE"
          offset="1"
          id="stop22" />
     </linearGradient>

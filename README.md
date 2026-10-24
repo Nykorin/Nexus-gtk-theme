@@ -1,16 +1,32 @@
-# Fluent gtk theme
+# Nexus gtk theme
 
-Fluent gtk theme is a Fluent design theme for GNOME/GTK based desktop environments. See also [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme).
+Nexus is a GTK theme for GNOME/GTK based desktop environments with a deep-navy and
+cyan palette, built for translucent, blurred desktops.
 
-### Normal version
-![screenshot01](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot01.png?raw=true)
+It is a fork of [Fluent gtk theme](https://github.com/vinceliuice/Fluent-gtk-theme)
+by vinceliuice. All of the theme's structure, widgets and assets come from Fluent;
+Nexus changes its colors.
 
-### Blur version (Only for Gnome-Shell desktop)
-![screenshot-blur](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot-blur.jpg?raw=true)
+## Changes from Fluent
 
-#### Blur version requirement
+Modified on 2026-10-23:
 
-- [Blur My Shell](https://github.com/aunetx/blur-my-shell)
+- **New palette.** The accent and neutral colors are sampled from a dark
+  network/plexus wallpaper:
+
+  | | Light | Dark |
+  |---|---|---|
+  | Accent | `#1B7299` | `#3796BE` |
+  | Neutrals | Fluent's greys tinted to hue 197° (18% saturation), same lightness | Fluent's greys tinted to hue 197° (20% saturation), same lightness |
+
+- **More translucent blur version.** `--tweaks blur` uses half of Fluent's
+  background opacity: 0.25 for dark, 0.425 for light.
+- **One color scheme.** Fluent's color variants (blue, purple, pink, red, orange,
+  yellow, green, teal and grey) and the `-t/--theme` option are removed.
+- **Renamed** from Fluent to Nexus.
+
+The wallpaper the palette was taken from is not included, because its license is
+unknown. The theme only uses colors sampled from it.
 
 ## Requirements
 
@@ -23,6 +39,14 @@ Fluent gtk theme is a Fluent design theme for GNOME/GTK based desktop environmen
   - `gtk2-engines-murrine` on Debian, Ubuntu, etc.
 - `sassc` — build dependency
 
+### Blur
+
+The blur version only makes the theme translucent. The blur itself comes from
+your compositor, for example:
+
+- GNOME Shell: [Blur My Shell](https://github.com/aunetx/blur-my-shell)
+- Wayfire (including Budgie on Wayland): the `blur` plugin
+
 ## Installation
 
 ### Manual Installation
@@ -33,14 +57,18 @@ Run the following commands in the terminal:
 ./install.sh
 ```
 
+For example, the dark, compact, blur version with a link for libadwaita apps:
+
+```sh
+./install.sh -c dark -s compact --tweaks blur -l
+```
+
 > Tip: `./install.sh` allows the following options:
 
 ```
--d, --dest DIR          Specify destination directory (Default: /usr/share/themes)
+-d, --dest DIR          Specify destination directory (Default: $HOME/.local/share/themes)
 
--n, --name NAME         Specify theme name (Default: Fluent)
-
--t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|teal|connections|all] (Default: blue)
+-n, --name NAME         Specify theme name (Default: Nexus)
 
 -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
 
@@ -48,11 +76,12 @@ Run the following commands in the terminal:
 
 -i, --icon VARIANT      Specify icon variant(s) for shell panel
                         [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros|tux|nixos]
-                        (Default: Windows icon)
+                        (Default: Windows)
 
 -l, --libadwaita        Install link to gtk4 config for theming libadwaita
 
--u, --uninstall         Uninstall themes or link for libadwaita
+-r, --remove
+-u, --uninstall         Uninstall/remove themes or link for libadwaita
 
 --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                         solid:    no transparency version
@@ -65,8 +94,6 @@ Run the following commands in the terminal:
 -h, --help              Show help
 ```
 
-![theme-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/theme-view.png?raw=true)
-
 > For more information, run: `./install.sh --help`
 
 ### Flatpak Installation
@@ -75,25 +102,23 @@ Automatically install your host GTK+ theme as a Flatpak.
 
 - [pakitheme](https://github.com/refi64/pakitheme)
 
-### Wallpaper
-[Install Wallpapers](https://github.com/vinceliuice/Fluent-gtk-theme/tree/Wallpaper)
-
-#### Preview
-![wallpaper](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/wallpaper-view.png?raw=true)
-
 ### Firefox theme
 [Install Firefox theme](src/firefox)
-
-#### Preview
-![firefox-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-view.png?raw=true)
 
 ### Fix for Dash to panel
 
 Just install the compact version
 
 ```sh
-./install.sh --tweaks compact
+./install.sh -s compact
 ```
 
-## Gtk theme widgets
-![screenshot02](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot02.png?raw=true)
+## Credits and license
+
+- [Fluent gtk theme](https://github.com/vinceliuice/Fluent-gtk-theme) by
+  vinceliuice, which Nexus is based on. Its
+  [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme) pairs well
+  with Nexus and is what `index.theme` points to.
+
+Nexus is licensed under the GNU General Public License v3.0, the same as Fluent.
+See [COPYING](COPYING).
