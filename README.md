@@ -7,6 +7,17 @@ It is a fork of [Fluent gtk theme](https://github.com/vinceliuice/Fluent-gtk-the
 by vinceliuice. All of the theme's structure, widgets and assets come from Fluent;
 Nexus changes its colors.
 
+### Normal version
+![Nexus, normal version](screenshots/theme.png)
+
+### Blur version
+![Nexus, blur version](screenshots/theme-blur.png)
+
+<sub>Screenshots: Budgie on Wayfire with the Wayfire blur plugin. Icons are
+[Yet Another Monochrome Icon Set](https://bitbucket.org/dirn-typo/yet-another-monochrome-icon-set/src/main/);
+the wallpaper is a recolored photo by Conny Schneider (see
+[Credits](#credits-and-license)).</sub>
+
 ## Changes from Fluent
 
 Modified on 2026-10-23:
@@ -26,7 +37,8 @@ Modified on 2026-10-23:
 - **Renamed** from Fluent to Nexus.
 
 The wallpaper the palette was taken from is not included, because its license is
-unknown. The theme only uses colors sampled from it.
+unknown. The theme only uses colors sampled from it; the screenshots use a
+different, freely licensed wallpaper (see [Credits](#credits-and-license)).
 
 ## Requirements
 
@@ -119,6 +131,13 @@ Just install the compact version
   vinceliuice, which Nexus is based on. Its
   [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme) pairs well
   with Nexus and is what `index.theme` points to.
+- Icons in the screenshots:
+  [Yet Another Monochrome Icon Set](https://bitbucket.org/dirn-typo/yet-another-monochrome-icon-set/src/main/)
+  by Dirn (GPL-3.0).
+- Wallpaper in the screenshots:
+  [photo by Conny Schneider (@choys_)](https://unsplash.com/photos/a-blue-abstract-background-with-lines-and-dots-pREq0ns_p_E)
+  on Unsplash, used under the [Unsplash License](https://unsplash.com/license) and
+  recolored to the Nexus palette. The wallpaper itself is not part of Nexus.
 
 Nexus is licensed under the GNU General Public License v3.0, the same as Fluent.
 See [COPYING](COPYING).
