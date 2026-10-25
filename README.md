@@ -92,6 +92,9 @@ For example, the dark, compact, blur version with a link for libadwaita apps:
 
 -l, --libadwaita        Install link to gtk4 config for theming libadwaita
 
+-f, --flatpak           Also install each variant as a Flatpak GTK3 theme extension
+                        (org.gtk.Gtk3theme.NAME), so GTK3 Flatpak apps can use it
+
 -r, --remove
 -u, --uninstall         Uninstall/remove themes or link for libadwaita
 
@@ -110,9 +113,11 @@ For example, the dark, compact, blur version with a link for libadwaita apps:
 
 ### Flatpak Installation
 
-Automatically install your host GTK+ theme as a Flatpak.
-
-- [pakitheme](https://github.com/refi64/pakitheme)
+`./install.sh -f` also installs each variant as a Flatpak GTK3 theme extension
+(per-user, or system-wide when run as root), which GTK3 Flatpak apps use when that
+theme is selected. It needs `flatpak` and any installed `org.freedesktop.Platform`
+runtime. GTK4/libadwaita apps can't use theme extensions; they need the `-l` links
+and access to them (`flatpak override --user --filesystem=xdg-config/gtk-4.0:ro`).
 
 ### Firefox theme
 [Install Firefox theme](src/firefox)

@@ -77,6 +77,9 @@ OPTIONS:
 
   -l, --libadwaita        Install link to gtk4 config for theming libadwaita
 
+  -f, --flatpak           Also install each variant as a Flatpak GTK3 theme extension
+                          (org.gtk.Gtk3theme.NAME), so GTK3 Flatpak apps can use it
+
   -r, --remove
   -u, --uninstall         Uninstall/remove themes or link for libadwaita
 
@@ -280,11 +283,15 @@ while [[ "$#" -gt 0 ]]; do
       shift 2
       ;;
     -n|--name)
-      _name="$2"
+      name="$2"
       shift 2
       ;;
     -l|--libadwaita)
       libadwaita="true"
+      shift
+      ;;
+    -f|--flatpak)
+      flatpak="true"
       shift
       ;;
     -u|--uninstall|-r|--remove)
@@ -717,18 +724,145 @@ link_theme() {
   done
 }
 
+# Flatpak GTK3 theme extensions: the Platform runtime mounts org.gtk.Gtk3theme.NAME
+# (branch 3.22) as the gtk-3.0 folder of theme NAME inside GTK3 apps. GTK4/libadwaita
+# apps have no such mechanism; they use the gtk-4.0 links (-l) instead.
+FLATPAK_THEME_BRANCH="3.22"
+
+flatpak_scope() {
+  if [[ "$UID" -eq "$ROOT_UID" ]]; then echo "--system"; else echo "--user"; fi
+}
+
+# Any installed org.freedesktop.Platform, newest first: the extension only records it,
+# and it stands in for the SDK, which isn't needed for prebuilt files
+flatpak_platform() {
+  flatpak list --runtime --columns=application,branch 2>/dev/null \
+    | awk '$1 == "org.freedesktop.Platform" { print $2 }' | sort -V | tail -1
+}
+
+install_flatpak() {
+  local dest="$1"
+  local name="$2"
+  local theme="$3"
+  local color="$4"
+  local size="$5"
+
+  if [[ "$window" == 'round' ]]; then
+    round='-round'
+  else
+    round=$window
+  fi
+
+  local THEME_NAME_FULL="$name$round$theme$color$size"
+  local THEME_DIR="$dest/$THEME_NAME_FULL"
+  local id="org.gtk.Gtk3theme.$THEME_NAME_FULL"
+  local platform build
+
+  if [[ ! -d "$THEME_DIR/gtk-3.0" ]]; then
+    echo "No $THEME_DIR/gtk-3.0 to package for Flatpak, skipping"
+    return
+  fi
+
+  platform="$(flatpak_platform)"
+  if [[ -z "$platform" ]]; then
+    echo "No org.freedesktop.Platform runtime installed, skipping Flatpak extension $id"
+    return
+  fi
+
+  echo -e "\nInstalling Flatpak theme extension '$id'..."
+
+  build="$(mktemp -d)"
+  if flatpak build-init --type=extension "$build/build" "$id" \
+       "org.freedesktop.Platform//$platform" "org.freedesktop.Platform//$platform" "$FLATPAK_THEME_BRANCH" > /dev/null &&
+     cp -r "$THEME_DIR/gtk-3.0/." "$build/build/files/" &&
+     flatpak build-finish "$build/build" > /dev/null &&
+     flatpak build-export --runtime "$build/repo" "$build/build" "$FLATPAK_THEME_BRANCH" > /dev/null &&
+     flatpak build-bundle --runtime "$build/repo" "$build/theme.flatpak" "$id" "$FLATPAK_THEME_BRANCH" &&
+     flatpak install "$(flatpak_scope)" --noninteractive --reinstall --bundle "$build/theme.flatpak" > /dev/null; then
+    echo "Installed $id//$FLATPAK_THEME_BRANCH"
+  else
+    echo "Couldn't build or install Flatpak extension $id"
+  fi
+  rm -rf "$build"
+}
+
+uninstall_flatpak() {
+  local dest="$1"
+  local name="$2"
+  local theme="$3"
+  local color="$4"
+  local size="$5"
+
+  if [[ "$window" == 'round' ]]; then
+    round='-round'
+  else
+    round=$window
+  fi
+
+  local id="org.gtk.Gtk3theme.$name$round$theme$color$size"
+  local ref="$id//$FLATPAK_THEME_BRANCH"
+  local scope origin repo
+
+  scope="$(flatpak_scope)"
+  flatpak info "$scope" "$ref" &> /dev/null || return 0
+
+  origin="$(flatpak info "$scope" --show-origin "$ref" 2>/dev/null)"
+  echo -e "Uninstall Flatpak extension $id..."
+  flatpak uninstall "$scope" --noninteractive "$ref" > /dev/null
+
+  # Installing from a bundle makes a hidden origin remote. Uninstalling removes the
+  # remote but can leave its ref (which keeps the extension's files in the repo) and
+  # the ref's empty folders
+  [[ -n "$origin" ]] || return 0
+  if [[ "$scope" == "--user" ]]; then
+    repo="${XDG_DATA_HOME:-$HOME/.local/share}/flatpak/repo"
+  else
+    repo="/var/lib/flatpak/repo"
+  fi
+  if command -v ostree > /dev/null &&
+     ostree --repo="$repo" refs 2>/dev/null | grep -qF "$origin:runtime/$id/"; then
+    ostree --repo="$repo" refs --delete "$origin:runtime/$id/$(flatpak --default-arch)/$FLATPAK_THEME_BRANCH" &&
+      ostree --repo="$repo" prune --refs-only > /dev/null
+  fi
+  if [[ -d "$repo/refs/remotes/$origin" && -z "$(find "$repo/refs/remotes/$origin" -type f)" ]]; then
+    find "$repo/refs/remotes/$origin" -depth -type d -empty -delete
+  fi
+}
+
+flatpak_theme() {
+  local action="$1"
+
+  if ! command -v flatpak > /dev/null; then
+    if [[ "$action" == 'install' ]]; then echo -e "\nflatpak isn't installed, skipping the Flatpak extensions"; fi
+    return 0
+  fi
+
+  for theme in "${themes[@]}"; do
+    for color in "${colors[@]}"; do
+      for size in "${sizes[@]}"; do
+        "${action}_flatpak" "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$theme" "$color" "$size"
+      done
+    done
+  done
+}
+
 if [[ "$uninstall" == 'true' ]]; then
   if [[ "$libadwaita" == 'true' ]]; then
     echo -e "\nUninstall ${HOME}/.config/gtk-4.0 links ..."
     uninstall_link
   else
     echo && uninstall_theme && uninstall_link
+    flatpak_theme uninstall
   fi
 else
    clean_theme && install_theme
 
    if [[ "$libadwaita" == 'true' ]]; then
      uninstall_link && link_theme
+   fi
+
+   if [[ "$flatpak" == 'true' ]]; then
+     flatpak_theme install
    fi
 fi
 
