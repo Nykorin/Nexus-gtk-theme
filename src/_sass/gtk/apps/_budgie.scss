@@ -266,7 +266,6 @@
   popover.background.budgie-menu { background-color: $titlebar; }
 }
 
-// FIXME: workspace has unnecessary/unknown margin
 .workspace-switcher {
   .workspace-layout {
     border: 0 solid on($panel, divider);
@@ -302,6 +301,11 @@
 
     &.current-workspace { background-color: $overlay-checked; }
   }
+
+  // Without this the add button keeps the panel buttons' 24px minimum width on top
+  // of its padding, leaving extra space around the "+" (Budgie's own theme resets
+  // it); specific enough to win over `.budgie-panel button.flat`
+  .budgie-panel & button.workspace-add-button { min-width: 0; }
 
   .workspace-add-button {
     &:hover { box-shadow: none; }

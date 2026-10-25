@@ -7541,6 +7541,10 @@ MsdOsdWindow.background.osd .progressbar {
   background-color: alpha(currentColor, 0.1);
 }
 
+.budgie-panel .workspace-switcher button.workspace-add-button {
+  min-width: 0;
+}
+
 .workspace-switcher .workspace-add-button:hover {
   box-shadow: none;
 }
