@@ -23,7 +23,7 @@
   border-color: transparent;
   border-radius: $corner-radius + 1px;
   box-shadow: $shadow-z4;
-  background-color: if($blur == 'true', $titlebar, $surface);
+  background-color: $titlebar;
 
   .container {
     padding: $space-size;
@@ -259,12 +259,10 @@
   }
 }
 
-// The icon task list menu and Budgie menu are plain GTK popovers, which get the
-// nearly opaque $menu; match the other Budgie popovers in the blur version
-@if $blur == 'true' {
-  popover.background.icon-popover,
-  popover.background.budgie-menu { background-color: $titlebar; }
-}
+// The icon task list menu and Budgie menu are plain GTK popovers, which get $menu;
+// match the panel and the other Budgie popovers
+popover.background.icon-popover,
+popover.background.budgie-menu { background-color: $titlebar; }
 
 .workspace-switcher {
   .workspace-layout {
@@ -589,7 +587,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
 // Raven
 .raven {
-  background-color: if($blur == 'true', $titlebar, $surface);
+  background-color: $titlebar;
   box-shadow: $shadow-z16;
 
   @if $panel_style == 'float' {
