@@ -1,8 +1,8 @@
 # CachyOS-Nord GTK theme
 
 CachyOS-Nord is the GTK theme of the CachyOS Nord desktop: navy backgrounds with a cyan
-accent, for GNOME/GTK based desktop environments. It comes in one color variant,
-CachyOS-Nord-Dark (and CachyOS-Nord-Dark-compact): navy backgrounds (`#0F121C`, `#131621`,
+accent, for GNOME/GTK based desktop environments. It comes in one color variant
+(installed as CachyOS-Nord and CachyOS-Nord-compact): navy backgrounds (`#0F121C`, `#131621`,
 `#181B28`) with cyan (`#47ADD6`) text and accent, cyan-tinted borders and shadows, and a
 cyan glow around windows.
 

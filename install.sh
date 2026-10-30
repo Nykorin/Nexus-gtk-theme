@@ -31,7 +31,6 @@ fi
 SASSC_OPT="-M -t expanded"
 
 THEME_NAME=CachyOS-Nord
-COLOR_VARIANTS=('-Dark')
 SIZE_VARIANTS=('' '-compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
@@ -92,9 +91,10 @@ EOF
 install() {
   local dest="$1"
   local name="$2"
-  local color="$3"
-  local size="$4"
-  local icon="$5"
+  local size="$3"
+  local icon="$4"
+  # The source files of the theme's one color variant
+  local color='-Dark'
 
   if [[ "$window" == 'round' ]]; then
     round='-round'
@@ -102,7 +102,7 @@ install() {
     round=$window
   fi
 
-  local THEME_DIR="$dest/$name$round$color$size"
+  local THEME_DIR="$dest/$name$round$size"
 
   [[ -d "$THEME_DIR" ]] && rm -rf "${THEME_DIR:?}"
 
@@ -115,13 +115,13 @@ install() {
 
   echo "[Desktop Entry]" >>                                                     "$THEME_DIR/index.theme"
   echo "Type=X-GNOME-Metatheme" >>                                              "$THEME_DIR/index.theme"
-  echo "Name=$name$round$color$size" >>                                         "$THEME_DIR/index.theme"
+  echo "Name=$name$round$size" >>                                               "$THEME_DIR/index.theme"
   echo "Comment=CachyOS Nord GTK theme: navy and cyan" >>                       "$THEME_DIR/index.theme"
   echo "Encoding=UTF-8" >>                                                      "$THEME_DIR/index.theme"
   echo "" >>                                                                    "$THEME_DIR/index.theme"
   echo "[X-GNOME-Metatheme]" >>                                                 "$THEME_DIR/index.theme"
-  echo "GtkTheme=$name$round$color$size" >>                                     "$THEME_DIR/index.theme"
-  echo "MetacityTheme=$name$round$color$size" >>                                "$THEME_DIR/index.theme"
+  echo "GtkTheme=$name$round$size" >>                                           "$THEME_DIR/index.theme"
+  echo "MetacityTheme=$name$round$size" >>                                      "$THEME_DIR/index.theme"
   echo "ButtonLayout=close,minimize,maximize:menu" >>                           "$THEME_DIR/index.theme"
 
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
@@ -262,7 +262,7 @@ while [[ "$#" -gt 0 ]]; do
       shift 2
       ;;
     -n|--name)
-      _name="$2"
+      name="$2"
       shift 2
       ;;
     -l|--libadwaita)
@@ -542,8 +542,7 @@ theme_tweaks() {
 uninstall() {
   local dest="${1}"
   local name="${2}"
-  local color="${3}"
-  local size="${4}"
+  local size="${3}"
 
   if [[ "$window" == 'round' ]]; then
     round='-round'
@@ -551,7 +550,7 @@ uninstall() {
     round=$window
   fi
 
-  local THEME_DIR="$dest/$name$round$color$size"
+  local THEME_DIR="$dest/$name$round$size"
 
   if [[ -d "${THEME_DIR}" ]]; then
     echo -e "Uninstall ${THEME_DIR}... "
@@ -566,8 +565,7 @@ uninstall_link() {
 link_libadwaita() {
   local dest="$1"
   local name="$2"
-  local color="$3"
-  local size="$4"
+  local size="$3"
 
   if [[ "$window" == 'round' ]]; then
     round='-round'
@@ -575,7 +573,7 @@ link_libadwaita() {
     round=$window
   fi
 
-  local THEME_DIR="$dest/$name$round$color$size"
+  local THEME_DIR="$dest/$name$round$size"
 
   echo -e "\nLink '$THEME_DIR/gtk-4.0' to '${HOME}/.config/gtk-4.0' for libadwaita..."
 
@@ -584,63 +582,30 @@ link_libadwaita() {
   ln -sf "${THEME_DIR}/gtk-4.0/gtk.css"                                         "${HOME}/.config/gtk-4.0/gtk.css"
 }
 
-clean() {
-  local dest="$1"
-  local name="$2"
-  local round="$3"
-  local color="$4"
-  local size="$5"
-
-  local THEME_DIR="$dest/$name$round$color$size"
-
-  if [[ -d ${THEME_DIR} ]]; then
-    rm -rf ${THEME_DIR}
-    echo -e "Find: ${THEME_DIR} ! removing it ..."
-  fi
-}
-
 clean_theme() {
-  for round in '' '-round'; do
-    for color in '-light' '-dark'; do
-      for size in "${SIZE_VARIANTS[@]}"; do
-        clean "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$round" "$color" "$size"
-      done
-    done
-  done
-
   if [[ "$DEST_DIR" == "$HOME/.themes" ]]; then
     local dest="$HOME/.local/share/themes"
   fi
 
-  for color in "${COLOR_VARIANTS[@]}"; do
-    for size in "${SIZE_VARIANTS[@]}"; do
-      uninstall "${dest}" "${name:-$THEME_NAME}" "$color" "$size"
-    done
+  for size in "${SIZE_VARIANTS[@]}"; do
+    uninstall "${dest}" "${name:-$THEME_NAME}" "$size"
   done
 }
 
 uninstall_theme() {
-  for color in "${COLOR_VARIANTS[@]}"; do
-    for size in "${sizes[@]}"; do
-      uninstall "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$color" "$size"
-    done
+  for size in "${sizes[@]}"; do
+    uninstall "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$size"
   done
 }
 
 install_theme() {
-  for color in "${COLOR_VARIANTS[@]}"; do
-    for size in "${sizes[@]}"; do
-      install "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$color" "$size" "$icon"
-    done
+  for size in "${sizes[@]}"; do
+    install "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$size" "$icon"
   done
 }
 
 link_theme() {
-  for color in "${COLOR_VARIANTS[@]}"; do
-    for size in "${sizes[0]}"; do
-      link_libadwaita "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$color" "$size"
-    done
-  done
+  link_libadwaita "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "${sizes[0]}"
 }
 
 if [[ "$uninstall" == 'true' ]]; then
