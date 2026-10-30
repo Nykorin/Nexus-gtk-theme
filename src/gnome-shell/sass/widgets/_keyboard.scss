@@ -6,7 +6,7 @@ $key_shadow: if($variant == 'light', inset 0 -1px rgba($black, 0.25), inset 0 1p
 
 // draw keys using button function
 #keyboard {
-  background-color: if($variant == 'light', rgba(#eeeeee, 0.95), rgba(#1a1a1a, 0.95));
+  background-color: if($variant == 'light', rgba($cachyos-light-bg, 0.95), rgba($cachyos-bg, 0.95));
   border: none;
   border-top-width: 0;
   box-shadow: none;
@@ -78,7 +78,7 @@ $key_shadow: if($variant == 'light', inset 0 -1px rgba($black, 0.25), inset 0 1p
 .keyboard-subkeys {
   color: inherit;
   -arrow-border-radius: $buttons_radius;
-  -arrow-background-color: rgba(black, 0.45);
+  -arrow-background-color: rgba($cachyos-ink, 0.45);
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 20px;

@@ -87,21 +87,21 @@ stage {
   }
 
   &:last-child {
-    color: white;
+    color: $light_fg_color;
     border-image: url("assets/modal-button-right.svg") 16 16 16 16;
 
     &:hover {
-      color: white;
+      color: $light_fg_color;
       border-image: url("assets/modal-button-right-hover.svg") 16 16 16 16;
     }
 
     &:active {
-      color: white;
+      color: $light_fg_color;
       border-image: url("assets/modal-button-right-active.svg") 16 16 16 16;
     }
 
     &:insensitive {
-      color: rgba(white, 0.45);
+      color: rgba($cachyos-cyan, 0.45);
     }
   }
 

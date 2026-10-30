@@ -187,24 +187,24 @@
 
 .calendar-today {
   font-weight: bold !important;
-  color: white !important;
+  color: $light_fg_color !important;
   background-color: $primary_color !important;
   border: none;
 
   &:hover, &:focus {
     background-color: lighten($primary_color, 3%) !important;
-    color: white !important;
+    color: $on_accent_color !important;
     box-shadow: none !important;
   }
 
   &:active, &:selected {
     background-color: $primary_color !important;
-    color: white !important;
+    color: $on_accent_color !important;
     box-shadow: none !important;
 
     &:hover, &:focus {
       background-color: lighten($primary_color, 3%) !important;
-      color: white !important;
+      color: $on_accent_color !important;
     }
   }
 }
@@ -239,7 +239,7 @@
   padding: $container_padding / 2 - 2px 0 !important;
   margin: $container_padding 0 !important;
   border-radius: $circular_radius;
-  background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));
+  background-color: if($variant == 'light', rgba($cachyos-ink, 0.04), rgba($cachyos-cyan, 0.03));
   color: $hint_fg_color;
   font-size: inherit;
   font-weight: bold;
@@ -267,7 +267,7 @@
   &:hover, &:focus {
     color: $fg_color;
     background-color: $popover_button_hover !important;
-    border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.06));
+    border-color: if($variant == 'light', rgba($cachyos-ink, 0.15), rgba($cachyos-cyan, 0.06));
     box-shadow: none;
   }
 

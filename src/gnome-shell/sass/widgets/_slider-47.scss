@@ -1,7 +1,7 @@
 /* Slider */
 
 $slider_size: 12px;
-$slider_color: if($variant == 'light', $accent_color, white);
+$slider_color: if($variant == 'light', $accent_color, $cachyos-cyan);
 
 .slider {
   height: $slider_size;

@@ -207,11 +207,11 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
     // make check/radio visible regardless of whether the background is bright or dark
     > checkbutton > check:not(:checked):not(:indeterminate),
     > radiobutton > radio:not(:checked):not(:indeterminate) {
-      color: $grey-600;
+      color: mix($cachyos-ink, $cachyos-light-bg, 55%);
 
-      &:hover, &:active { color: $grey-500; }
+      &:hover, &:active { color: mix($cachyos-ink, $cachyos-light-bg, 40%); }
 
-      &:disabled { color: rgba($grey-600, 0.5); }
+      &:disabled { color: rgba(mix($cachyos-ink, $cachyos-light-bg, 55%), 0.5); }
     }
   }
 

@@ -1412,15 +1412,15 @@ panelthemeselector { // Gnome builder
     }
 
     &.follow {
-      background-image: linear-gradient(to bottom right, #ffffff 50%, #202020 50%);
+      background-image: linear-gradient(to bottom right, $cachyos-light-bg 50%, $cachyos-bg 50%);
     }
 
     &.light {
-      background-color: #ffffff;
+      background-color: $cachyos-light-bg;
     }
 
     &.dark {
-      background-color: #202020;
+      background-color: $cachyos-bg;
     }
 
     &.theme-selector radio {
@@ -1494,17 +1494,17 @@ themeswitcher { // Gnome console
     }
 
     &.system {
-      background: linear-gradient(-45deg, #1e1e1e 50%, white 50%);
+      background: linear-gradient(-45deg, $cachyos-bg 50%, $cachyos-light-bg 50%);
     }
 
     &.light {
-      color: gtkalpha(black, .8);
-      background-color: white;
+      color: gtkalpha($cachyos-ink, .8);
+      background-color: $cachyos-light-bg;
     }
 
     &.dark {
-      color: white;
-      background-color: #1e1e1e;
+      color: $cachyos-cyan;
+      background-color: $cachyos-bg;
     }
   }
 }

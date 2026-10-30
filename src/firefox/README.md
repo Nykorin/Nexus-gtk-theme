@@ -1,10 +1,7 @@
 
-## Firefox Fluent theme
+## Firefox CachyOS-Nord theme
 
-<p align="center">A Fluent design theme for Firefox 80+</p>
-
-#### Preview
-![firefox-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-view.png?raw=true)
+<p align="center">The CachyOS-Nord theme for Firefox 80+</p>
 
 ## Description
 
@@ -31,8 +28,8 @@ Open `userChrome.css` with a text editor and follow instructions to enable extra
 
 ### Enable square window button style
 1. Open `userChrome.css` with a text editor
-2. change `/*@import "Fluent/square-window-buttons.css"; /**/`
-   to `@import "Fluent/square-window-buttons.css"; /**/`
+2. change `/*@import "CachyOS-Nord/square-window-buttons.css"; /**/`
+   to `@import "CachyOS-Nord/square-window-buttons.css"; /**/`
 3. save it
 
 ## Known bugs

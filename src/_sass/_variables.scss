@@ -13,6 +13,10 @@ $medium-size: if($compact == 'false', 32px, 28px);
 $large-size: if($compact == 'false', 44px, 36px);
 
 $space-size: if($compact == 'false', 6px, 4px);
+
+// Bigger (circular) title buttons, with bigger icons
+$big-titlebuttons: $titlebutton == 'circular';
+$titlebutton-icon-size: if($compact == 'false', 20px, 18px);
 $bar-size: if($window == 'round', 6px, 3px);
 $menuitem-size: 28px;
 
@@ -63,46 +67,58 @@ $transition-shadow: box-shadow $duration $ease-out;
 
 // NOTE 2: Compared to rendering on the Web, GTK seems to have a bigger blur.
 
+// Shadows tinted dark cyan
+$shadow-color: #0A242F;
+
 $shadow-z1:
-  0 1px 2px rgba(black, 0.15),
-  0 0 1px rgba(black, 0.12),
-  0 1px 2px rgba(black, 0.1);
+  0 1px 2px rgba($shadow-color, 0.15),
+  0 0 1px rgba($shadow-color, 0.12),
+  0 1px 2px rgba($shadow-color, 0.1);
 $shadow-z2:
-  0 3px 4px rgba(black, 0.15),
-  0 2px 2px rgba(black, 0.16),
-  0 1px 3px rgba(black, 0.12);
+  0 3px 4px rgba($shadow-color, 0.15),
+  0 2px 2px rgba($shadow-color, 0.16),
+  0 1px 3px rgba($shadow-color, 0.12);
 $shadow-z3:
-  0 1px 1px rgba(black, 0.08),
-  0 2px 3px rgba(black, 0.14),
-  0 1px 3px rgba(black, 0.12);
+  0 1px 1px rgba($shadow-color, 0.08),
+  0 2px 3px rgba($shadow-color, 0.14),
+  0 1px 3px rgba($shadow-color, 0.12);
 $shadow-z4:
-  0 1px 2px rgba(black, 0.1),
-  0 3px 4px rgba(black, 0.14),
-  0 1px 6px rgba(black, 0.12);
+  0 1px 2px rgba($shadow-color, 0.1),
+  0 3px 4px rgba($shadow-color, 0.14),
+  0 1px 6px rgba($shadow-color, 0.12);
 $shadow-z5:
-  0 1px 2px rgba(black, 0.06),
-  0 3px 4px rgba(black, 0.08),
-  0 1px 6px rgba(black, 0.06);
+  0 1px 2px rgba($shadow-color, 0.06),
+  0 3px 4px rgba($shadow-color, 0.08),
+  0 1px 6px rgba($shadow-color, 0.06);
 $shadow-z6:
-  0 1px 2px rgba(black, 0.12),
-  0 4px 5px rgba(black, 0.16),
-  0 1px 6px rgba(black, 0.1);
+  0 1px 2px rgba($shadow-color, 0.12),
+  0 4px 5px rgba($shadow-color, 0.16),
+  0 1px 6px rgba($shadow-color, 0.1);
 $shadow-z8:
-  0 2px 0 rgba(black, 0.08),
-  0 7px 9px rgba(black, 0.15),
-  0 5px 11px rgba(black, 0.16);
+  0 2px 0 rgba($shadow-color, 0.08),
+  0 7px 9px rgba($shadow-color, 0.15),
+  0 5px 11px rgba($shadow-color, 0.16);
 $shadow-z12:
-  0 1px 3px rgba(black, 0.1),
-  0 14px 15px rgba(black, 0.15),
-  0 9px 17px rgba(black, 0.15);
+  0 1px 3px rgba($shadow-color, 0.1),
+  0 14px 15px rgba($shadow-color, 0.15),
+  0 9px 17px rgba($shadow-color, 0.15);
 $shadow-z16:
-  0 1px 3px rgba(black, 0.1),
-  0 16px 18px rgba(black, 0.15),
-  0 11px 23px rgba(black, 0.13);
+  0 1px 3px rgba($shadow-color, 0.1),
+  0 16px 18px rgba($shadow-color, 0.15),
+  0 11px 23px rgba($shadow-color, 0.13);
 $shadow-z24:
-  0 2px 4px rgba(black, 0.1),
-  0 25px 28px rgba(black, 0.16),
-  0 17px 36px rgba(black, 0.15);
+  0 2px 4px rgba($shadow-color, 0.1),
+  0 25px 28px rgba($shadow-color, 0.16),
+  0 17px 36px rgba($shadow-color, 0.15);
+
+// Window shadows (CSD); the dark variant has a cyan glow
+$window-shadow: $shadow-z16;
+$window-shadow-backdrop: $shadow-z4;
+
+@if $variant == 'dark' {
+  $window-shadow: 0 3px 9px 1px rgba(#15485D, 0.7);
+  $window-shadow-backdrop: 0 2px 6px 2px rgba(#15485D, 0.4);
+}
 
 $text-shadow:
   0 1px 1px rgba(black, 0.2),
@@ -111,10 +127,10 @@ $text-shadow:
 
 // workaround for selection-mode checkboxes
 $icon-shadow-z2:
-  0 1px 1px rgba(black, 0.2),
-  0 2px 2px rgba(black, 0.14),
-  0 1px 3px rgba(black, 0.12);
+  0 1px 1px rgba($shadow-color, 0.2),
+  0 2px 2px rgba($shadow-color, 0.14),
+  0 1px 3px rgba($shadow-color, 0.12);
 $icon-shadow-z4:
-  0 2px 2px rgba(black, 0.2),
-  0 3px 4px rgba(black, 0.14),
-  0 1px 6px rgba(black, 0.12);
+  0 2px 2px rgba($shadow-color, 0.2),
+  0 3px 4px rgba($shadow-color, 0.14),
+  0 1px 6px rgba($shadow-color, 0.12);

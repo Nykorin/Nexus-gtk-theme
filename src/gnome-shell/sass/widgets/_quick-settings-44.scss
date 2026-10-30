@@ -44,16 +44,16 @@
 
   &:checked {
     background-color: $primary_color !important;
-    color: white;
+    color: $on_accent_color;
 
     &:hover {
       background-color: mix($fg_color, $primary_color, 6%) !important;
-      color: white;
+      color: $on_accent_color;
     }
 
     &:active {
       background-color: mix($fg_color, $primary_color, 15%) !important;
-      color: white;
+      color: $on_accent_color;
     }
   }
 
@@ -108,16 +108,16 @@
   
     &:checked {
       background-color: $primary_color !important;
-      color: white;
+      color: $on_accent_color;
   
       &:hover {
         background-color: mix($fg_color, $primary_color, 6%) !important;
-        color: white;
+        color: $on_accent_color;
       }
   
       &:active {
         background-color: mix($fg_color, $primary_color, 15%) !important;
-        color: white;
+        color: $on_accent_color;
       }
     }
 
@@ -200,7 +200,7 @@
 
       &.active {
         background-color: $primary_color !important;
-        color: white;
+        color: $on_accent_color;
       }
     }
 

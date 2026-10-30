@@ -10,7 +10,7 @@
    width="24"
    height="24"
    viewBox="0 0 24 24"
-   fill="#808080"
+   fill="#678899"
    version="1.1"
    id="svg4"
    sodipodi:docname="shade.svg"
@@ -30,7 +30,7 @@
      id="defs8" />
   <sodipodi:namedview
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
@@ -54,6 +54,6 @@
   </sodipodi:namedview>
   <path
      id="rect837"
-     style="opacity:1;fill:#808080;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;fill-opacity:1"
+     style="opacity:1;fill:#678899;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;fill-opacity:1"
      d="M 12 8 L 11.292969 8.7070312 L 5.6367188 14.363281 L 6.34375 15.070312 L 12 9.4140625 L 17.65625 15.070312 L 18.363281 14.363281 L 12.707031 8.7070312 L 12 8 z " />
 </svg>

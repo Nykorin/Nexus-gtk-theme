@@ -294,7 +294,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   color: $warning_color;
 }
 
-.lightbox { background-color: black; }
+.lightbox { background-color: $cachyos-bg; }
 .flashspot { background-color: white; }
 
 /* Modal Dialogs */
@@ -731,7 +731,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
   &:rtl { padding-right: 0; padding-left:1.5em; }
 
   &:checked {
-    background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
+    background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06));
     font-weight: normal;
     border-radius: $buttons_radius $buttons_radius 0 0;
     border: none;
@@ -739,12 +739,12 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
     color: $fg_color;
 
     &.selected {
-      background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.08));
+      background-color: if($variant == 'light', rgba($cachyos-ink, 0.1), rgba($cachyos-cyan, 0.08));
       color: $fg_color;
     }
 
     &:active, &.selected:active {
-      background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
+      background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06));
       color: $fg_color;
     }
 
@@ -781,7 +781,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
 // popover submenus
 .popup-sub-menu {
   margin: 0 $container_padding;
-  background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
+  background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06));
   border-radius: 0 0 $buttons_radius $buttons_radius;
   border: none;
   box-shadow: none;
@@ -899,7 +899,7 @@ $slider_color: if($variant == 'light', $accent_color, $accent_color);
     padding: ($large_size - 20px) / 2;
   }
 
-  &:active { background-color: $primary_color; color: white; }
+  &:active { background-color: $primary_color; color: $on_accent_color; }
 
   & > StIcon { icon-size: 16px; }
 }
@@ -1475,22 +1475,22 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
 .calendar-today {
   font-weight: bold !important;
-  color: white;
+  color: $light_fg_color;
   background-color: $primary_color;
   border: none;
 
   &:hover, &:focus {
     background-color: lighten($primary_color, 3%);
-    color: white;
+    color: $on_accent_color;
   }
 
   &:active, &:selected {
     background-color: $primary_color;
-    color: white;
+    color: $on_accent_color;
 
     &:hover, &:focus {
       background-color: lighten($primary_color, 3%);
-      color: white;
+      color: $on_accent_color;
     }
   }
 }
@@ -1515,7 +1515,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   width: 2em;
   margin: $container_padding 0;
   border-radius: $circular_radius;
-  background-color: if($variant == 'light', rgba(black, 0.04), rgba(white, 0.03));
+  background-color: if($variant == 'light', rgba($cachyos-ink, 0.04), rgba($cachyos-cyan, 0.03));
   color: $hint_fg_color;
   font-size: inherit;
   font-weight: bold;
@@ -1538,7 +1538,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   &:hover, &:focus {
     color: $fg_color;
     background-color: $popover_button_hover !important;
-    border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.06));
+    border-color: if($variant == 'light', rgba($cachyos-ink, 0.15), rgba($cachyos-cyan, 0.06));
   }
 
   &:active {
@@ -1695,7 +1695,7 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
 
   &:hover, &:focus {
     background-color: $popover_button_hover;
-    border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.06));
+    border-color: if($variant == 'light', rgba($cachyos-ink, 0.15), rgba($cachyos-cyan, 0.06));
   }
 
   &:active { background-color: $popover_button_active; }
@@ -1984,12 +1984,12 @@ $search_entry_width: 320px;
   }
 
   &:hover, &:focus {
-    .search-entry-icon { color: rgba(black, 0.75); }
+    .search-entry-icon { color: rgba($cachyos-ink, 0.75); }
   }
 
   StLabel.hint-text {
     margin-left: 2px;
-    color: rgba(black, 0.35);
+    color: rgba($cachyos-ink, 0.35);
   }
 }
 
@@ -2081,7 +2081,7 @@ $search_entry_width: 320px;
   border-radius: $buttons_radius;
   padding: 8px 10px;
   color: $inverse_fg_color;
-  background-color: rgba(black, 0.75);
+  background-color: rgba($cachyos-ink, 0.75);
   border: none;
   box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.35);
   text-align: center;
@@ -2105,8 +2105,8 @@ $search_entry_width: 320px;
 
 .system-action-icon {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); // FIXME: this should really have a highlight
-  background-color: $grey_900;
-  color: $white;
+  background-color: $cachyos-surface;
+  color: $light_fg_color;
   border-radius: 99px;
   icon-size: 48px;
 }
@@ -2135,7 +2135,7 @@ $search_entry_width: 320px;
     background-color: $inverse_track_color;
   }
   &:checked {
-    color: white;
+    color: $light_fg_color;
     background-color: $primary_color;
     box-shadow: none;
   }
@@ -2294,7 +2294,7 @@ StWidget.focused .app-well-app-running-dot {
 .app-folder-dialog {
   border-radius: $buttons_radius * 4;
   padding: 12px;
-  background-color: rgba(#222, 0.95);
+  background-color: rgba($cachyos-surface, 0.95);
 
   @if $window == 'round' {
     border: 1px solid $icon_border_color;
@@ -2313,24 +2313,24 @@ StWidget.focused .app-well-app-running-dot {
 
     & .folder-name-entry {
       border: none;
-      background-color: rgba(white, 0.15);
+      background-color: rgba($cachyos-cyan, 0.15);
       selection-background-color: $primary_color;
       selected-color: $light_fg_color;
       width: 300px;
 
       &:focus {
         color: $light_fg_color;
-        background-color: rgba(white, 0.25);
+        background-color: rgba($cachyos-cyan, 0.25);
       }
 
-      .search-entry-icon { color: rgba(white, 0.85); }
+      .search-entry-icon { color: rgba($cachyos-cyan, 0.85); }
 
       &:hover, &:focus {
-        .search-entry-icon { color: rgba(white, 0.95); }
+        .search-entry-icon { color: rgba($cachyos-cyan, 0.95); }
       }
 
       &:insensitive, StLabel.hint-text {
-        color: rgba(white, 0.45);
+        color: rgba($cachyos-cyan, 0.45);
       }
     }
 
@@ -2576,21 +2576,21 @@ StWidget.focused .app-well-app-running-dot {
   }
 
   &:last-child {
-    color: white;
+    color: $light_fg_color;
     border-image: url("assets/modal-button-right.svg") 16 16 16 16;
 
     &:hover {
-      color: white;
+      color: $light_fg_color;
       border-image: url("assets/modal-button-right-hover.svg") 16 16 16 16;
     }
 
     &:active {
-      color: white;
+      color: $light_fg_color;
       border-image: url("assets/modal-button-right-active.svg") 16 16 16 16;
     }
 
     &:insensitive {
-      color: rgba(white, 0.45);
+      color: rgba($cachyos-cyan, 0.45);
     }
   }
 }
@@ -2674,7 +2674,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 #keyboard {
-  background-color: rgba(black, 0.65);
+  background-color: rgba($cachyos-ink, 0.65);
 
   border: none;
   border-top-width: 0;
@@ -2741,7 +2741,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 .keyboard-subkeys { //long press on a key popup
   color: inherit;
   -arrow-border-radius: $buttons_radius;
-  -arrow-background-color: rgba(black, 0.45);
+  -arrow-background-color: rgba($cachyos-ink, 0.45);
   -arrow-border-width: 0;
   -arrow-border-color: transparent;
   -arrow-base: 20px;
@@ -2967,7 +2967,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 }
 
 .screen-shield-arrows Gjs_Arrow {
-    color: white;
+    color: $light_fg_color;
     width: 80px;
     height: 48px;
     -arrow-thickness: 12px;
@@ -2975,7 +2975,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 }
 
 .screen-shield-clock {
-  color: white;
+  color: $light_fg_color;
   text-shadow: $shadow_1;
   font-weight: normal;
   text-align: center;
@@ -3026,14 +3026,14 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 #panel.lock-screen { background-color: $alt_dark_bg_color; }
 
 .screen-shield-background { //just the shadow, really
-  background: black;
+  background: $cachyos-bg;
   box-shadow: $shadow_5;
 }
 
 /* Screen Shield */
 
 .unlock-dialog-clock {
-  color: white;
+  color: $light_fg_color;
   font-weight: 300;
   text-align: center;
   spacing: 24px;
@@ -3092,7 +3092,7 @@ $keyboard_active_bg_color: if($variant == 'light', darken($keyboard_bg_color, 20
 }
 
 #lockDialogGroup {
-  background: #333333 url("assets/noise-texture.svg");
+  background: $cachyos-bg url("assets/noise-texture.svg");
   background-size: cover;
 }
 

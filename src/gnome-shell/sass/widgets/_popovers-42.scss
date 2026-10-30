@@ -56,7 +56,7 @@
   &:rtl { padding-right: $container_padding * 2; padding-left: $container_padding * 2; }
 
   &:checked {
-    background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+    background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06)) !important;
     font-weight: normal;
     border-radius: $buttons_radius $buttons_radius 0 0 !important;
     border: none;
@@ -65,12 +65,12 @@
     background-gradient-direction: none !important;
 
     &.selected, &:hover, &:focus {
-      background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.08)) !important;
+      background-color: if($variant == 'light', rgba($cachyos-ink, 0.1), rgba($cachyos-cyan, 0.08)) !important;
       color: $fg_color !important;
     }
 
     &:active, &.selected:active {
-      background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+      background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06)) !important;
       color: $fg_color !important;
     }
 
@@ -110,7 +110,7 @@
 // popover submenus
 .popup-sub-menu {
   margin: 0;
-  background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06)) !important;
+  background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06)) !important;
   border-radius: 0 0 $buttons_radius $buttons_radius !important;
   border: none;
   box-shadow: none;

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Fluent</name>
+  <name>CachyOS-Nord</name>
   <author>vinceliucie</author>
   <copyright>GPL</copyright>
   <date>2020</date>
-  <description>Fluent Metacity theme</description>
+  <description>CachyOS-Nord Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
@@ -16,8 +16,8 @@
 <constant name="C_highlight_unfocused" value="gtk:custom(wm_highlight,gtk:base[NORMAL])"/>
 <constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])"/>
 <constant name="C_title_unfocused" value="gtk:custom(wm_unfocused_title,gtk:fg[INSENSITIVE])"/>
-<constant name="C_button_close_bg_prelight" value="gtk:custom(wm_button_close_hover_bg,#E57373)" />
-<constant name="C_button_close_bg_pressed" value="gtk:custom(wm_button_close_active_bg,#E53935)" />
+<constant name="C_button_close_bg_prelight" value="gtk:custom(wm_button_close_hover_bg,#C593BA)" />
+<constant name="C_button_close_bg_pressed" value="gtk:custom(wm_button_close_active_bg,#AF6BA0)" />
 
 <!-- geometries -->
 

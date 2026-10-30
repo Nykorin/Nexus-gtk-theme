@@ -44,7 +44,7 @@
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
@@ -80,7 +80,7 @@
      cy="20"
      r="16"
      id="circle2"
-     style="fill:#dc4040;stroke-width:1;fill-opacity:1" />
+     style="fill:#b06ca1;stroke-width:1;fill-opacity:1" />
   <circle
      cx="21"
      cy="21"

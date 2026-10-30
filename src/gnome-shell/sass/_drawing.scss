@@ -159,26 +159,26 @@
 //
 
   @if $t == normal {
-    caret-color: rgba(black, 0.75);
-    color: rgba(black, 0.75);
-    background-color: rgba(white, 0.75) !important;
+    caret-color: rgba($cachyos-ink, 0.75);
+    color: rgba($cachyos-ink, 0.75);
+    background-color: rgba($cachyos-cyan, 0.75) !important;
     border: none !important;
     box-shadow: none !important;
   }
 
   @if $t == focus {
-    color: rgba(black, 0.85);
-    background-color: rgba(white, 0.95) !important;
+    color: rgba($cachyos-ink, 0.85);
+    background-color: rgba($cachyos-cyan, 0.95) !important;
     border: none !important;
   }
 
   @if $t == hover {
-    color: rgba(black, 0.75);
-    background-color: rgba(white, 0.85) !important;
+    color: rgba($cachyos-ink, 0.75);
+    background-color: rgba($cachyos-cyan, 0.85) !important;
   }
 
   @if $t == insensitive {
-    color: rgba(black, 0.35);
+    color: rgba($cachyos-ink, 0.35);
   }
 }
 
@@ -194,7 +194,7 @@
   @if $t == normal {
     color: if($tc == $fg_color, $button_fg_color, $tc);
     background-color: $c;
-    border-color: if($variant == 'light', darken($c, 15%), rgba(white, 0.08));
+    border-color: if($variant == 'light', darken($c, 15%), rgba($cachyos-cyan, 0.08));
     box-shadow: none;
   }
 
@@ -211,14 +211,14 @@
   @if $t == hover {
     color: $tc;
     background-color: $c;
-    border-color: if($variant == 'light', darken($c, 20%), rgba(white, 0.15));
+    border-color: if($variant == 'light', darken($c, 20%), rgba($cachyos-cyan, 0.15));
     box-shadow: none;
   }
 
   @if $t == active {
     color: $tc;
     background-color: if($variant == 'light', darken($c, 5%), lighten($c, 5%));
-    border-color: if($variant == 'light', darken($c, 20%), rgba(white, 0.15));
+    border-color: if($variant == 'light', darken($c, 20%), rgba($cachyos-cyan, 0.15));
     box-shadow: none;
 
     &:hover, &:focus {

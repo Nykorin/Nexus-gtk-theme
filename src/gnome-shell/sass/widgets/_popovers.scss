@@ -57,7 +57,7 @@
   &:rtl { padding-right: 0; padding-left:1.5em; }
 
   &:checked {
-    background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
+    background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06));
     font-weight: normal;
     border-radius: $buttons_radius $buttons_radius 0 0;
     border: none;
@@ -66,12 +66,12 @@
     background-gradient-direction: none !important;
 
     &.selected {
-      background-color: if($variant == 'light', rgba(black, 0.1), rgba(white, 0.08));
+      background-color: if($variant == 'light', rgba($cachyos-ink, 0.1), rgba($cachyos-cyan, 0.08));
       color: $fg_color;
     }
 
     &:active, &.selected:active {
-      background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
+      background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06));
       color: $fg_color;
     }
 
@@ -109,7 +109,7 @@
 // popover submenus
 .popup-sub-menu {
   margin: 0;
-  background-color: if($variant == 'light', rgba(black, 0.08), rgba(white, 0.06));
+  background-color: if($variant == 'light', rgba($cachyos-ink, 0.08), rgba($cachyos-cyan, 0.06));
   border-radius: 0 0 $buttons_radius $buttons_radius;
   border: none;
   box-shadow: none;

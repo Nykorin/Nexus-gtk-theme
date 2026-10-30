@@ -109,8 +109,8 @@ StWidget.focused {
   width: $app_folder_size;
   height: $app_folder_size;
   border-radius: $buttons_radius * 4;
-  background-color: rgba(#222, 0.95);
-  color: white;
+  background-color: rgba($cachyos-surface, 0.95);
+  color: $light_fg_color;
 
   @if $window == 'round' {
     border: 1px solid $icon_border_color;
@@ -133,7 +133,7 @@ StWidget.focused {
     & .folder-name-entry {
       border: none;
       color: $light_fg_color;
-      background-color: rgba(white, 0.15);
+      background-color: rgba($cachyos-cyan, 0.15);
       caret-color: $light_fg_color;
       selection-background-color: $primary_color;
       selected-color: $light_fg_color;
@@ -141,17 +141,17 @@ StWidget.focused {
 
       &:focus {
         color: $light_fg_color;
-        background-color: rgba(white, 0.25);
+        background-color: rgba($cachyos-cyan, 0.25);
       }
 
-      .search-entry-icon { color: rgba(white, 0.85); }
+      .search-entry-icon { color: rgba($cachyos-cyan, 0.85); }
 
       &:hover, &:focus {
-        .search-entry-icon { color: rgba(white, 0.95); }
+        .search-entry-icon { color: rgba($cachyos-cyan, 0.95); }
       }
 
       &:insensitive, StLabel.hint-text {
-        color: rgba(white, 0.45);
+        color: rgba($cachyos-cyan, 0.45);
       }
     }
 
@@ -228,19 +228,19 @@ StWidget.focused {
 // shutdown and other actions in the grid
 .system-action-icon {
   background-color: rgba(0,0,0,0.8);
-  color: white;
+  color: $light_fg_color;
   border-radius: $circular_radius;
   icon-size: 8px;
 }
 
 .page-navigation-hint {
   &.dnd {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba($cachyos-cyan, 0.1);
   }
 
   &.next:ltr,
   &.previous:rtl {
-    background-gradient-start: rgba(255, 255, 255, 0.05);
+    background-gradient-start: rgba($cachyos-cyan, 0.05);
     background-gradient-end: transparent;
     background-gradient-direction: horizontal;
     border-radius: 15px 0px 0px 15px;
@@ -249,7 +249,7 @@ StWidget.focused {
   &.previous:ltr,
   &.next:rtl {
     background-gradient-start: transparent;
-    background-gradient-end: rgba(255, 255, 255, 0.05);
+    background-gradient-end: rgba($cachyos-cyan, 0.05);
     background-gradient-direction: horizontal;
     border-radius: 0px 15px 15px 0px;
   }
@@ -267,17 +267,17 @@ StWidget.focused {
   > StIcon { color: $inverse_fg_color; }
 
   &:insensitive {
-    background-color: rgba(white, 0.05);
-    color: rgba(white, 0.45);
+    background-color: rgba($cachyos-cyan, 0.05);
+    color: rgba($cachyos-cyan, 0.45);
   }
 
   &:hover {
-    background-color: rgba(white, 0.1);
-    color: white;
+    background-color: rgba($cachyos-cyan, 0.1);
+    color: $light_fg_color;
   }
 
   &:active {
-    background-color: rgba(white, 0.2);
-    color: white;
+    background-color: rgba($cachyos-cyan, 0.2);
+    color: $light_fg_color;
   }
 }

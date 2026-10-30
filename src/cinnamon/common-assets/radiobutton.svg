@@ -16,12 +16,12 @@
   <sodipodi:namedview
      id="namedview2119"
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1.0"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
+     inkscape:deskcolor="#c5d5dc"
      showgrid="false"
      inkscape:zoom="19.666667"
      inkscape:cx="15.635593"
@@ -34,12 +34,12 @@
      inkscape:current-layer="svg2117" />
   <path
      d="M 12,2 C 6.48,2 2,6.48 2,12 2,17.52 6.48,22 12,22 17.52,22 22,17.52 22,12 22,6.48 17.52,2 12,2 Z"
-     fill="#3476cf"
+     fill="#31a4d2"
      id="path2115"
      sodipodi:nodetypes="sssss" />
   <path
      d="m 12,7 c 2.761424,0 5,2.2385763 5,5 0,2.761424 -2.238576,5 -5,5 C 9.2385763,17 7,14.761424 7,12 7,9.2385763 9.2385763,7 12,7 Z"
-     fill="#3476cf"
+     fill="#31a4d2"
      id="path2123"
      sodipodi:nodetypes="sssss"
      style="fill:#ffffff" />

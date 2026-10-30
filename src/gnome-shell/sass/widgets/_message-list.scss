@@ -83,7 +83,7 @@
 
   &:hover, &:focus {
     background-color: $popover_button_hover;
-    border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.08));
+    border-color: if($variant == 'light', rgba($cachyos-ink, 0.15), rgba($cachyos-cyan, 0.08));
   }
 
   &:active { background-color: $popover_button_active; }

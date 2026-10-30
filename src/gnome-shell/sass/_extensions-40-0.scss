@@ -20,7 +20,7 @@
 
   .number-overlay {
     color: $light_fg_color;
-    background-color: rgba(black, 0.75);
+    background-color: rgba($cachyos-ink, 0.75);
     text-align: center;
   }
 
@@ -205,7 +205,7 @@
 
   &:overview #dash {
     .dash-background { // overview-mode #1
-      background-color: rgba(white, 0.2);
+      background-color: rgba($cachyos-cyan, 0.2);
     }
 
     .show-apps,
@@ -353,10 +353,10 @@
       // Match Dash to Panel's .dtp-container interaction states in both
       // light and dark shell variants.
       &:hover,
-      &:focus { background-color: rgba(238, 238, 236, 0.1) !important; }
+      &:focus { background-color: rgba($cachyos-cyan, 0.1) !important; }
 
       &:active,
-      &:checked { background-color: rgba(238, 238, 236, 0.18) !important; }
+      &:checked { background-color: rgba($cachyos-cyan, 0.18) !important; }
     }
   }
 }
@@ -476,13 +476,13 @@
 .overview-components-transparent .search-entry,
 .overview-components-light .search-entry,
 .overview-components-dark .search-entry {
-  caret-color: rgba(white, 0.75) !important;
+  caret-color: rgba($cachyos-cyan, 0.75) !important;
 
   .search-entry-icon {
-    color: rgba(white, 0.65);
+    color: rgba($cachyos-cyan, 0.65);
   }
 
   StLabel.hint-text {
-    color: rgba(white, 0.35) !important;
+    color: rgba($cachyos-cyan, 0.35) !important;
   }
 }

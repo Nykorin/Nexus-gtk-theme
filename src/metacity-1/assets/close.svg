@@ -10,7 +10,7 @@
    width="24"
    height="24"
    viewBox="0 0 24 24"
-   fill="#808080"
+   fill="#678899"
    version="1.1"
    id="svg4"
    sodipodi:docname="close.svg"
@@ -30,7 +30,7 @@
      id="defs8" />
   <sodipodi:namedview
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
@@ -55,6 +55,6 @@
   </sodipodi:namedview>
   <path
      id="rect831"
-     style="opacity:1;fill:#808080;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"
+     style="opacity:1;fill:#678899;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2"
      d="M 16.242641,7.0502528 12,11.292893 7.7573596,7.0502528 7.0502528,7.7573596 11.292893,12 7.0502528,16.242641 7.7573596,16.949747 12,12.707107 16.242641,16.949747 16.949747,16.242641 12.707107,12 16.949747,7.7573596 Z" />
 </svg>

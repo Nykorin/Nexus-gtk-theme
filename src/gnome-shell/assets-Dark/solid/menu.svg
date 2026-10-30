@@ -15,8 +15,8 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#333333"
-     bordercolor="#666666"
+     pagecolor="#0f121c"
+     bordercolor="#526d7a"
      borderopacity="1.0"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -91,7 +91,7 @@
        style="opacity:0.1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.549521;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
        d="m 2.38125,0.79374999 c -0.5863165,0 -1.0583334,0.47201681 -1.0583334,1.05833331 V 14.022916 c 0,0.586317 0.4720169,1.058334 1.0583334,1.058334 h 12.170833 c 0.586317,0 1.058333,-0.472017 1.058333,-1.058334 V 1.8520833 c 0,-0.5863165 -0.472016,-1.05833331 -1.058333,-1.05833331 z m 0,0.26458331 h 12.170833 c 0.439737,0 0.79375,0.3540128 0.79375,0.79375 V 14.022916 c 0,0.439738 -0.354013,0.79375 -0.79375,0.79375 H 2.38125 c -0.4397373,0 -0.79375,-0.354012 -0.79375,-0.79375 V 1.8520833 c 0,-0.4397372 0.3540127,-0.79375 0.79375,-0.79375 z" />
     <rect
-       style="opacity:1;fill:#202020;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
+       style="opacity:1;fill:#181b28;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
        id="rect832"
        width="13.758333"
        height="13.758333"

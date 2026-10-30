@@ -21,7 +21,7 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
+     inkscape:deskcolor="#c5d5dc"
      inkscape:zoom="13.700194"
      inkscape:cx="9.9268667"
      inkscape:cy="18.758858"
@@ -34,10 +34,10 @@
      showgrid="false" />
   <path
      d="m 11.5,8.5000001 c -1.662,0 -3,1.338 -3,2.9999999 v 9 c 0,1.662 1.338,3 3,3 h 9 c 1.662,0 3,-1.338 3,-3 v -9 c 0,-1.6619999 -1.338,-2.9999999 -3,-2.9999999 z M 11.5,10 h 9 c 0.831,0 1.5,0.669 1.5,1.5 v 9 c 0,0.831 -0.669,1.5 -1.5,1.5 h -9 C 10.669,22 10,21.331 10,20.5 v -9 C 10,10.669 10.669,10 11.5,10 Z"
-     fill="#dedede"
+     fill="#d6e1e6"
      stroke-linecap="round"
      stroke-linejoin="round"
      stroke-opacity="0.08"
-     style="stroke-width:1.5;paint-order:stroke markers fill;fill:#363636;fill-opacity:1"
+     style="stroke-width:1.5;paint-order:stroke markers fill;fill:#181b28;fill-opacity:1"
      id="path789" />
 </svg>

@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Fluent</name>
+  <name>CachyOS-Nord</name>
   <author>vinceliucie</author>
   <copyright>GPL</copyright>
   <date>2020</date>
-  <description>Fluent Metacity theme</description>
+  <description>CachyOS-Nord Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
 
-<constant name="C_titlebar_focused" value="#e0e0e0"/>
-<constant name="C_titlebar_unfocused" value="#d6d6d6"/>
-<constant name="C_highlight_focused" value="blend/#e0e0e0/#ffffff/0.4"/>
-<constant name="C_highlight_unfocused" value="blend/#d6d6d6/#ffffff/0.4"/>
-<constant name="C_title_focused" value="blend/#e0e0e0/#000000/0.87"/>
-<constant name="C_title_unfocused" value="blend/#d6d6d6/#000000/0.6"/>
+<constant name="C_titlebar_focused" value="#d8e3e8"/>
+<constant name="C_titlebar_unfocused" value="#ccd9e0"/>
+<constant name="C_highlight_focused" value="blend/#d8e3e8/#ffffff/0.4"/>
+<constant name="C_highlight_unfocused" value="blend/#ccd9e0/#ffffff/0.4"/>
+<constant name="C_title_focused" value="blend/#d8e3e8/#000000/0.87"/>
+<constant name="C_title_unfocused" value="blend/#ccd9e0/#000000/0.6"/>
 
 <!-- geometries -->
 

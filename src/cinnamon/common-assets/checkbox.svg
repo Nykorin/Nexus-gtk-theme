@@ -17,12 +17,12 @@
   <sodipodi:namedview
      id="namedview1997"
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1.0"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
+     inkscape:deskcolor="#c5d5dc"
      showgrid="true"
      inkscape:zoom="13.906433"
      inkscape:cx="13.554877"
@@ -46,7 +46,7 @@
      y="5" />
   <path
      d="m5 3c-1.108 0-2 0.892-2 2v14c0 1.108 0.892 2 2 2h14c1.108 0 2-0.892 2-2v-14c0-1.108-0.892-2-2-2zm11.648 5.6485 0.703 0.703-7.351 7.3595-3.3515-3.3595 0.703-0.703 2.6485 2.6405 6.6485-6.6405z"
-     fill="#3476cf"
+     fill="#31a4d2"
      stroke-width=".5"
      style="paint-order:stroke fill markers"
      id="path1993" />

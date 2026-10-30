@@ -1,0 +1,52 @@
+CachyOS-Nord GTK theme
+======================
+
+This theme is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License, version 3, as published by the Free
+Software Foundation (see COPYING).
+
+
+Fluent GTK theme
+----------------
+
+CachyOS-Nord is a modified version of the Fluent GTK theme by vinceliuice
+(https://github.com/vinceliuice/Fluent-gtk-theme), licensed under GPL-3.0.
+Modified in October 2026:
+
+- recolored throughout to the CachyOS Nord color scheme (below), with Fluent's
+  other color variants and its branding removed
+- widget styling from the cachyOS-nord theme: outlined checks and radios, the
+  rectangular switch, joined stack switchers, filled list selections and the cyan
+  window glow
+- larger title buttons that glow on hover, and matching header bar heights in
+  GTK 3 and GTK 4
+- the Budgie panel, popovers and Raven sharing the title bar color
+- a librsvg renderer (src/render-svg-ids.py) used by the asset scripts when
+  Inkscape is not installed
+
+The Firefox theme in src/firefox keeps its own credits (see src/firefox/README.md).
+
+
+CachyOS color scheme and widget styling
+---------------------------------------
+
+The color scheme comes from the cachyOS-nord GTK theme in CachyOS-Nord-KDE by
+CachyOS (https://github.com/CachyOS/CachyOS-Nord-KDE):
+
+- navy backgrounds #0F121C, #131621 and #181B28
+- the cyan accent and text color #47ADD6, and #147AA3 for links
+- the status colors #7AE070 (success), #ADAD70 (warning) and #AD7AA3 (error)
+- the dark cyan shadows #0A242F and #15485D
+
+So does the styling listed above as coming from the cachyOS-nord theme. The
+check, dash and dot glyphs in src/gtk/scalable/classic-*-symbolic.svg are taken
+from that theme's assets; that theme was itself generated with Oomox, a fork of
+the Numix GTK theme.
+
+The CachyOS-Nord-KDE repository does not include a license file. CachyOS
+distributes it as the package cachyos-nord-gtk-theme-git, licensed GPL3
+(https://dashboard.cachyos.org/package/cachyos/any/cachyos-nord-gtk-theme-git,
+checked on 2026-10-30). The material above is used under that license.
+
+The light variant's cyan-tinted greys (#EBF1F4, #F1F6F9, #F3F7FA, #F7FAFC) are
+new to this theme.

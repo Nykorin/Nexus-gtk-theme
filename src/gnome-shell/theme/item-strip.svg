@@ -17,7 +17,7 @@
   <sodipodi:namedview
      id="namedview1041"
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1.0"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -48,7 +48,7 @@
     <linearGradient
        id="color-primary-dark">
       <stop
-         stop-color="#1A73E8"
+         stop-color="#47ADD6"
          offset="1"
          id="stop14" />
     </linearGradient>
@@ -65,7 +65,7 @@
          height="16"
          rx="1.5"
          ry="1.5"
-         fill="#1a73e8"
+         fill="#47ADD6"
          stroke-linecap="round"
          stroke-linejoin="round"
          id="rect2"

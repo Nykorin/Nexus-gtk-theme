@@ -66,7 +66,7 @@
        gradientTransform="translate(-48)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#fbfbfb"
+         stop-color="#47ADD6"
          stop-opacity=".122"
          offset=".50021"
          id="stop2" />
@@ -85,7 +85,7 @@
        gradientTransform="scale(1.1453,0.87314)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#0F121C"
          offset="1"
          id="stop7" />
     </linearGradient>
@@ -98,7 +98,7 @@
        gradientTransform="scale(1.1453,0.87314)"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#000000"
+         stop-color="#0F121C"
          stop-opacity=".87"
          offset="1"
          id="stop10" />
@@ -106,7 +106,7 @@
     <linearGradient
        id="color-text-secondary-disabled">
       <stop
-         stop-color="#000000"
+         stop-color="#0F121C"
          stop-opacity=".26"
          offset="1"
          id="stop13" />
@@ -114,7 +114,7 @@
     <linearGradient
        id="color-text-secondary-disabled-dark">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#47ADD6"
          stop-opacity=".3"
          offset="1"
          id="stop16" />
@@ -122,28 +122,28 @@
     <linearGradient
        id="color-primary-dark">
       <stop
-         stop-color="#1A73E8"
+         stop-color="#147AA3"
          offset="1"
          id="stop19" />
     </linearGradient>
     <linearGradient
        id="color-primary-light">
       <stop
-         stop-color="#3281EA"
+         stop-color="#47ADD6"
          offset="1"
          id="stop22" />
     </linearGradient>
     <linearGradient
        id="color-background">
       <stop
-         stop-color="#F2F2F2"
+         stop-color="#EBF1F4"
          offset="1"
          id="stop25" />
     </linearGradient>
     <linearGradient
        id="color-background-dark">
       <stop
-         stop-color="#212121"
+         stop-color="#0F121C"
          offset="1"
          id="stop28" />
     </linearGradient>
@@ -152,7 +152,7 @@
        x2="40"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#FFFFFF"
+         stop-color="#F7FAFC"
          offset="1"
          id="stop31" />
     </linearGradient>
@@ -161,7 +161,7 @@
        x2="40"
        gradientUnits="userSpaceOnUse">
       <stop
-         stop-color="#3C3C3C"
+         stop-color="#181B28"
          offset="1"
          id="stop34" />
     </linearGradient>

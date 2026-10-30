@@ -93,8 +93,8 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_bg #{"" + $titlebar};
 @define-color wm_unfocused_bg #{"" + $titlebar-backdrop};
 @define-color wm_unfocused_bg #{"" + $titlebar-backdrop};
-@define-color wm_button_close_hover_bg #{"" + $red-300};
-@define-color wm_button_close_active_bg #{"" + $red-600};
+@define-color wm_button_close_hover_bg #{"" + $error};
+@define-color wm_button_close_active_bg #{"" + darken($error, 10%)};
 
 /*
 FIXME this is really an API */

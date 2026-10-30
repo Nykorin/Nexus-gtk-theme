@@ -698,17 +698,17 @@ button {
       margin: $space-size / 2;
       box-shadow: none;
       border: none;
-      background-color: $red-a200;
-      color: white;
+      background-color: $destructive;
+      color: on($destructive);
 
       &:hover {
-        background-color: $red-a100;
-        color: white;
+        background-color: lighten($destructive, 8%);
+        color: on($destructive);
       }
 
       &:active {
-        background-color: $red-800;
-        color: white;
+        background-color: darken($destructive, 10%);
+        color: on($destructive);
       }
     }
 
@@ -1975,15 +1975,48 @@ headerbar {
       @extend %square_titlebutton;
     }
 
+    // Bigger title buttons
+    @if $big-titlebuttons {
+      min-height: $medium-size;
+      min-width: $medium-size;
+
+      > image {
+        -gtk-icon-transform: scale($titlebutton-icon-size / 16px);
+      }
+    }
+
     &.close {
       &:hover, &:backdrop:hover {
-        background-color: $red-300;
-        color: on($red-300);
+        background-color: $error;
+        color: on($error);
       }
 
       &:active {
-        background-color: $red-600;
-        color: on($red-600);
+        background-color: darken($error, 10%);
+        color: on(darken($error, 10%));
+      }
+    }
+
+    // The icon glows instead of the button getting a background
+    @if $titlebutton-glow {
+      &:hover, &:backdrop:hover, &:active,
+      &.close:hover, &.close:backdrop:hover, &.close:active {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      &:hover, &:backdrop:hover {
+        color: $titlebutton-glow-color;
+        -gtk-icon-shadow: 0 0 4px rgba($cachyos-cyan, 0.9), 0 0 8px rgba($cachyos-cyan, 0.6);
+      }
+
+      &.close:hover, &.close:backdrop:hover {
+        color: $titlebutton-close-glow-color;
+        -gtk-icon-shadow: 0 0 4px rgba($titlebutton-close-glow-color, 0.9), 0 0 8px rgba($titlebutton-close-glow-color, 0.6);
+      }
+
+      &:active, &.close:active {
+        opacity: 0.75;
       }
     }
 
@@ -2044,6 +2077,16 @@ headerbar {
         min-width: $medium-size;
         margin: 0 -$space-size / 2;
         padding: 0 $space-size;
+      }
+
+      // Bigger title buttons
+      @if $big-titlebuttons {
+        min-height: $medium-size;
+        min-width: $medium-size;
+
+        > image {
+          -gtk-icon-transform: scale($titlebutton-icon-size / 16px);
+        }
       }
     }
   }
@@ -4645,12 +4688,12 @@ decoration {
   border-radius: $window-radius;
 
   @if $outline =='false' {
-    box-shadow: $shadow-z16,
+    box-shadow: $window-shadow,
       0 15px 30px transparent;
   }
 
   @else {
-    box-shadow: $shadow-z16, 0 0 0 1px $divider,
+    box-shadow: $window-shadow, 0 0 0 1px $window-outline,
       0 15px 30px transparent;
   }
 
@@ -4664,12 +4707,12 @@ decoration {
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
     @if $outline =='false' {
-      box-shadow: $shadow-z4,
+      box-shadow: $window-shadow-backdrop,
         0 15px 30px transparent;
     }
 
     @else {
-      box-shadow: $shadow-z4, 0 0 0 1px $divider,
+      box-shadow: $window-shadow-backdrop, 0 0 0 1px $window-outline,
         0 15px 30px transparent;
     }
   }

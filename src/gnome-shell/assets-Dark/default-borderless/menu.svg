@@ -15,8 +15,8 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#333333"
-     bordercolor="#666666"
+     pagecolor="#0f121c"
+     bordercolor="#526d7a"
      borderopacity="1.0"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -87,7 +87,7 @@
        ry="0.79374951"
        clip-path="url(#clipPath1317)" />
     <rect
-       style="opacity:0.97;fill:#202020;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
+       style="opacity:0.97;fill:#181b28;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.15;paint-order:stroke fill markers"
        id="rect832"
        width="13.758333"
        height="13.758333"

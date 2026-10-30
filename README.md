@@ -1,16 +1,15 @@
-# Fluent gtk theme
+# CachyOS-Nord GTK theme
 
-Fluent gtk theme is a Fluent design theme for GNOME/GTK based desktop environments. See also [Fluent Icon theme](https://github.com/vinceliuice/Fluent-icon-theme).
+CachyOS-Nord is the GTK theme of the CachyOS Nord desktop: navy backgrounds with a cyan
+accent, for GNOME/GTK based desktop environments.
 
-### Normal version
-![screenshot01](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot01.png?raw=true)
+- **Dark**: navy backgrounds (`#0F121C`, `#131621`, `#181B28`) with cyan (`#47ADD6`) text
+  and accent, cyan-tinted borders and shadows, and a cyan glow around windows
+- **Standard**: light window contents with navy title bars
+- **Light**: light throughout, with a deeper cyan accent (`#147AA3`)
 
-### Blur version (Only for Gnome-Shell desktop)
-![screenshot-blur](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot-blur.jpg?raw=true)
-
-#### Blur version requirement
-
-- [Blur My Shell](https://github.com/aunetx/blur-my-shell)
+On the navy title bars, the minimize, maximize and close buttons glow when hovered
+(cyan, close in red).
 
 ## Requirements
 
@@ -25,8 +24,6 @@ Fluent gtk theme is a Fluent design theme for GNOME/GTK based desktop environmen
 
 ## Installation
 
-### Manual Installation
-
 Run the following commands in the terminal:
 
 ```sh
@@ -36,11 +33,9 @@ Run the following commands in the terminal:
 > Tip: `./install.sh` allows the following options:
 
 ```
--d, --dest DIR          Specify destination directory (Default: /usr/share/themes)
+-d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
 
--n, --name NAME         Specify theme name (Default: Fluent)
-
--t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|grey|teal|all] (Default: blue)
+-n, --name NAME         Specify theme name (Default: CachyOS-Nord)
 
 -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
 
@@ -48,11 +43,12 @@ Run the following commands in the terminal:
 
 -i, --icon VARIANT      Specify icon variant(s) for shell panel
                         [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros|tux|nixos]
-                        (Default: Windows icon)
+                        (Default: Windows)
 
 -l, --libadwaita        Install link to gtk4 config for theming libadwaita
 
--u, --uninstall         Uninstall themes or link for libadwaita
+-r, --remove
+-u, --uninstall         Uninstall/remove themes or link for libadwaita
 
 --tweaks                Specify versions for tweaks [solid|float|round|blur|noborder|square]
                         solid:    no transparency version
@@ -65,35 +61,37 @@ Run the following commands in the terminal:
 -h, --help              Show help
 ```
 
-![theme-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/theme-view.png?raw=true)
+The blur tweak needs [Blur My Shell](https://github.com/aunetx/blur-my-shell) on GNOME Shell.
 
-> For more information, run: `./install.sh --help`
+### Flatpak
 
-### Flatpak Installation
-
-Automatically install your host GTK+ theme as a Flatpak.
-
-- [pakitheme](https://github.com/refi64/pakitheme)
-
-### Wallpaper
-[Install Wallpapers](https://github.com/vinceliuice/Fluent-gtk-theme/tree/Wallpaper)
-
-#### Preview
-![wallpaper](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/wallpaper-view.png?raw=true)
+Automatically install your host GTK+ theme as a Flatpak:
+[pakitheme](https://github.com/refi64/pakitheme)
 
 ### Firefox theme
+
 [Install Firefox theme](src/firefox)
 
-#### Preview
-![firefox-view](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/firefox-view.png?raw=true)
+## Development
 
-### Fix for Dash to panel
+- `./parse-sass.sh` regenerates the precompiled CSS in `src/` (used when installing
+  without `--tweaks`) from the SCSS in `src/_sass`, `src/gnome-shell/sass` and
+  `src/cinnamon`. The colors are in `src/_sass/_colors.scss`.
+- `src/gtk/render-assets.sh` and `src/gtk-2.0/assets-folder/render-assets.sh` render the
+  PNG assets from `assets*.svg`, for those missing from the assets folders (delete one
+  to re-render it). They use `rendersvg` or Inkscape when installed, and otherwise
+  `src/render-svg-ids.py` (librsvg, with python-gobject and python-cairo).
 
-Just install the compact version
+## License
 
-```sh
-./install.sh --tweaks compact
-```
+GPL-3.0, see [COPYING](COPYING) and [NOTICE](NOTICE).
 
-## Gtk theme widgets
-![screenshot02](https://github.com/vinceliuice/Fluent-gtk-theme/blob/Images/screenshot02.png?raw=true)
+CachyOS-Nord is a modified version of the
+[Fluent GTK theme](https://github.com/vinceliuice/Fluent-gtk-theme) by vinceliuice: recolored
+to the CachyOS Nord palette, with the other color variants removed.
+
+The color scheme and the widget styling of the original theme come from the cachyOS-nord GTK
+theme in [CachyOS-Nord-KDE](https://github.com/CachyOS/CachyOS-Nord-KDE) by CachyOS, which
+CachyOS distributes under GPL-3.0 as the
+[cachyos-nord-gtk-theme-git](https://dashboard.cachyos.org/package/cachyos/any/cachyos-nord-gtk-theme-git)
+package. See [NOTICE](NOTICE) for details.

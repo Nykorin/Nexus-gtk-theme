@@ -21,7 +21,7 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
+     inkscape:deskcolor="#c5d5dc"
      inkscape:zoom="13.700194"
      inkscape:cx="9.9998584"
      inkscape:cy="18.758858"
@@ -35,21 +35,21 @@
   <g
      fill="#ffffff"
      id="g2"
-     style="fill:#e57373;fill-opacity:1">
+     style="fill:#c593ba;fill-opacity:1">
     <circle
        cx="16"
        cy="16"
        r="16"
        opacity="0.2"
        id="circle2"
-       style="stroke-width:1.33328;opacity:1;fill:#e57373;fill-opacity:1" />
+       style="stroke-width:1.33328;opacity:1;fill:#c593ba;fill-opacity:1" />
   </g>
   <path
      d="m 23.267712,8.7322885 c -0.309718,-0.309718 -0.808393,-0.309718 -1.118111,0 L 16,14.881889 9.850399,8.7322885 c -0.3097175,-0.309718 -0.8083933,-0.309718 -1.1181108,0 -0.3097175,0.309717 -0.3097175,0.808393 0,1.11811 L 14.881889,16 8.7322882,22.149601 c -0.3097175,0.309717 -0.3097175,0.808393 0,1.11811 0.3097175,0.309718 0.8083933,0.309718 1.1181108,0 L 16,17.11811 l 6.149601,6.149601 c 0.309718,0.309718 0.808393,0.309718 1.118111,0 0.309717,-0.309716 0.309717,-0.808392 0,-1.11811 L 17.118111,16 23.267712,9.8503985 c 0.309717,-0.309717 0.309717,-0.808393 0,-1.11811 z"
-     fill="#dedede"
+     fill="#86C9E4"
      stroke-linecap="round"
      stroke-linejoin="round"
      stroke-opacity="0.08"
-     style="stroke-width:1.58124;paint-order:stroke markers fill;fill:#fdf3f3;fill-opacity:1"
+     style="stroke-width:1.58124;paint-order:stroke markers fill;fill:#0F121C;fill-opacity:1"
      id="path685" />
 </svg>

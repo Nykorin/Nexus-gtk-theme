@@ -49,15 +49,15 @@ $search_entry_width: 320px;
     }
 
     .search-entry-icon {
-      color: rgba(black, 0.65);
+      color: rgba($cachyos-ink, 0.65);
     }
 
     &:hover, &:focus {
-      .search-entry-icon { color: rgba(black, 0.75); }
+      .search-entry-icon { color: rgba($cachyos-ink, 0.75); }
     }
 
     StLabel.hint-text {
-      color: rgba(black, 0.35);
+      color: rgba($cachyos-ink, 0.35);
     }
   }
 }

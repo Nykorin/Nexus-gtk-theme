@@ -121,7 +121,7 @@
 
     &:hover, &:focus {
       background-color: $card_hover_color;
-      border-color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.08));
+      border-color: if($variant == 'light', rgba($cachyos-ink, 0.15), rgba($cachyos-cyan, 0.08));
       box-shadow: none;
     }
   

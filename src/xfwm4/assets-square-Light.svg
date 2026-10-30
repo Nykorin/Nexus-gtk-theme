@@ -17,12 +17,12 @@
   <sodipodi:namedview
      id="namedview64"
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#526d7a"
      borderopacity="1.0"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
+     inkscape:deskcolor="#c5d5dc"
      inkscape:zoom="6.0104076"
      inkscape:cx="78.114502"
      inkscape:cy="183.01587"
@@ -59,14 +59,14 @@
       <g
          id="use1"
          transform="translate(99,66)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect71"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <g
          id="titlebutton-minimize-backdrop-c"
@@ -100,14 +100,14 @@
       <g
          id="use2"
          transform="translate(99,33)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect72"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <g
          id="titlebutton-maximize-backdrop-c"
@@ -137,14 +137,14 @@
       <g
          id="use3"
          transform="translate(99,-2.2617e-5)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect73"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <g
          id="titlebutton-close-backdrop-c"
@@ -240,7 +240,7 @@
            y="557.36"
            width="38"
            height="28"
-           fill="#f7f7f7"
+           fill="#f3f7fa"
            id="rect8" />
       </g>
       <g
@@ -305,14 +305,14 @@
         <g
            id="use11"
            transform="translate(99,33)"
-           style="fill:#f2f2f2;fill-opacity:1">
+           style="fill:#ebf1f4;fill-opacity:1">
           <rect
              x="1"
              y="557.35999"
              width="38"
              height="28"
              id="rect70"
-             style="fill:#f2f2f2;fill-opacity:1" />
+             style="fill:#ebf1f4;fill-opacity:1" />
         </g>
         <g
            transform="translate(140,1288)"
@@ -332,7 +332,7 @@
       </g>
       <path
          d="m116 666.36v2h-2v7l7 1e-5v-2h2v-7zm1 1h5v5h-1v-4h-4zm-2 2h5v5h-5z"
-         fill="#adb0b5"
+         fill="#a1b6c1"
          style="paint-order:stroke fill markers"
          id="path13" />
     </g>
@@ -354,7 +354,7 @@
            width="38"
            height="28"
            ry="0"
-           fill="#000000"
+           fill="#0F121C"
            fill-opacity=".098039"
            style="paint-order:stroke fill markers"
            id="rect13" />
@@ -393,7 +393,7 @@
                id="g15">
               <g
                  transform="translate(1294,247)"
-                 fill="#c0e3ff"
+                 fill="#cbe8f4"
                  id="g14" />
             </g>
             <rect
@@ -415,7 +415,7 @@
            width="38"
            height="28"
            ry="0"
-           fill="#000000"
+           fill="#0F121C"
            fill-opacity=".098039"
            style="paint-order:stroke fill markers"
            id="rect17" />
@@ -444,12 +444,12 @@
            width="38"
            height="28"
            ry="0"
-           fill="#f68086"
+           fill="#cfa7c7"
            style="paint-order:stroke fill markers"
            id="rect18" />
         <path
            d="m16.354-687.99-0.70703 0.70704 4.1465 4.1465-4.1465 4.1465 0.70703 0.70704 4.1465-4.1465 4.1465 4.1465 0.70703-0.70704-4.1465-4.1465 4.1465-4.1465-0.70703-0.70704-4.1465 4.1465z"
-           fill="#ffffff"
+           fill="#0F121C"
            style="paint-order:stroke fill markers"
            id="path18" />
       </g>
@@ -472,7 +472,7 @@
            width="38"
            height="28"
            ry="0"
-           fill="#000000"
+           fill="#0F121C"
            fill-opacity=".2"
            style="paint-order:stroke fill markers"
            id="rect19" />
@@ -505,7 +505,7 @@
            width="38"
            height="28"
            ry="0"
-           fill="#000000"
+           fill="#0F121C"
            fill-opacity=".2"
            style="paint-order:stroke fill markers"
            id="rect21" />
@@ -534,12 +534,12 @@
            width="38"
            height="28"
            ry="0"
-           fill="#d05258"
+           fill="#b270a4"
            style="paint-order:stroke fill markers"
            id="rect22" />
         <path
            d="m16.354-687.99-0.70703 0.70704 4.1465 4.1465-4.1465 4.1465 0.70703 0.70704 4.1465-4.1465 4.1465 4.1465 0.70703-0.70704-4.1465-4.1465 4.1465-4.1465-0.70703-0.70704-4.1465 4.1465z"
-           fill="#ffffff"
+           fill="#0F121C"
            style="paint-order:stroke fill markers"
            id="path22" />
       </g>
@@ -571,7 +571,7 @@
                  id="g23">
                 <g
                    transform="translate(1294,247)"
-                   fill="#c0e3ff"
+                   fill="#cbe8f4"
                    id="g22" />
               </g>
               <rect
@@ -593,7 +593,7 @@
              width="38"
              height="28"
              ry="4.6603e-7"
-             fill="#000000"
+             fill="#0F121C"
              fill-opacity=".098039"
              style="paint-order:stroke fill markers"
              id="rect26" />
@@ -626,7 +626,7 @@
              width="38"
              height="28"
              ry="4.6603e-7"
-             fill="#000000"
+             fill="#0F121C"
              fill-opacity=".2"
              style="paint-order:stroke fill markers"
              id="rect28" />
@@ -653,7 +653,7 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".098039"
          style="paint-order:stroke fill markers"
          id="rect30" />
@@ -691,7 +691,7 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".2"
          style="paint-order:stroke fill markers"
          id="rect32" />
@@ -706,18 +706,18 @@
       <g
          id="use33"
          transform="translate(243,-3.3e-5)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect65"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <path
          d="m257.5 570.36a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm5 0a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm5 0a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm-10 1a0.49997 0.49997 0 0 1 0.5 0.5 0.49997 0.49997 0 0 1-0.5 0.5 0.49997 0.49997 0 0 1-0.5-0.5 0.49997 0.49997 0 0 1 0.5-0.5zm5 0a0.49997 0.49997 0 0 1 0.5 0.5 0.49997 0.49997 0 0 1-0.5 0.5 0.49997 0.49997 0 0 1-0.5-0.5 0.49997 0.49997 0 0 1 0.5-0.5zm5 0a0.49997 0.49997 0 0 1 0.5 0.5 0.49997 0.49997 0 0 1-0.5 0.5 0.49997 0.49997 0 0 1-0.5-0.5 0.49997 0.49997 0 0 1 0.5-0.5z"
-         fill="#adb0b5"
+         fill="#a1b6c1"
          id="path34" />
     </g>
     <g
@@ -750,7 +750,7 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".1"
          style="paint-order:stroke fill markers"
          id="rect35" />
@@ -775,7 +775,7 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".2"
          style="paint-order:stroke fill markers"
          id="rect36" />
@@ -791,18 +791,18 @@
       <g
          id="use37"
          transform="translate(243,33)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect66"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <path
          d="m263 601.33-6.3633 6.3633 0.70703 0.70703 5.6562-5.6562 5.6562 5.6562 0.70703-0.70703-5.6562-5.6562z"
-         fill="#adb0b5"
+         fill="#a1b6c1"
          id="path38" />
     </g>
     <g
@@ -835,7 +835,7 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".098039"
          style="paint-order:stroke fill markers"
          id="rect39" />
@@ -860,7 +860,7 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".2"
          style="paint-order:stroke fill markers"
          id="rect40" />
@@ -876,18 +876,18 @@
       <g
          id="use41"
          transform="translate(243,66)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect67"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <path
          d="m263 641.4-6.3633-6.3633 0.70703-0.70703 5.6562 5.6562 5.6562-5.6562 0.70703 0.70703-5.6562 5.6562z"
-         fill="#adb0b5"
+         fill="#a1b6c1"
          id="path42" />
     </g>
     <g
@@ -905,14 +905,14 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".098039"
          style="paint-order:stroke fill markers"
          id="rect42" />
       <path
          d="m194.5 664.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -931,7 +931,7 @@
       <path
          d="m159.5 664.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -953,14 +953,14 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".2"
          style="paint-order:stroke fill markers"
          id="rect44" />
       <path
          d="m228.5 664.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -973,19 +973,19 @@
       <g
          id="use45"
          transform="translate(243,99)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect68"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <path
          d="m262.5 664.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
-         fill="#adb0b5"
-         stop-color="#000000"
+         fill="#a1b6c1"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1004,7 +1004,7 @@
       <path
          d="m159.5 697.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1015,7 +1015,7 @@
          cy="703.86"
          r="2.5"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1037,14 +1037,14 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".098039"
          style="paint-order:stroke fill markers"
          id="rect47" />
       <path
          d="m194.5 697.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1055,7 +1055,7 @@
          cy="703.86"
          r="2.5"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1077,14 +1077,14 @@
          width="23"
          height="23"
          ry="11.5"
-         fill="#000000"
+         fill="#0F121C"
          fill-opacity=".2"
          style="paint-order:stroke fill markers"
          id="rect48" />
       <path
          d="m228.5 697.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1095,7 +1095,7 @@
          cy="703.86"
          r="2.5"
          fill="#5c616c"
-         stop-color="#000000"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1108,19 +1108,19 @@
       <g
          id="use49"
          transform="translate(243,132)"
-         style="fill:#f2f2f2;fill-opacity:1">
+         style="fill:#ebf1f4;fill-opacity:1">
         <rect
            x="1"
            y="557.35999"
            width="38"
            height="28"
            id="rect69"
-           style="fill:#f2f2f2;fill-opacity:1" />
+           style="fill:#ebf1f4;fill-opacity:1" />
       </g>
       <path
          d="m262.5 697.36a6.5 6.5 0 0 0-6.5 6.5 6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5 6.5 6.5 0 0 0-6.5-6.5zm0 1a5.5 5.5 0 0 1 5.5 5.5 5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5 5.5 5.5 0 0 1 5.5-5.5z"
-         fill="#c9cbce"
-         stop-color="#000000"
+         fill="#bfd0d8"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1130,8 +1130,8 @@
          cx="262.5"
          cy="703.86"
          r="2.5"
-         fill="#c9cbce"
-         stop-color="#000000"
+         fill="#bfd0d8"
+         stop-color="#0F121C"
          stroke-linecap="round"
          stroke-linejoin="round"
          stroke-width="2"
@@ -1146,7 +1146,7 @@
          y="554.35999"
          width="33.600269"
          height="34"
-         fill="#f7f7f7"
+         fill="#f3f7fa"
          id="rect50"
          style="stroke-width:0.994104" />
     </g>
@@ -1182,7 +1182,7 @@
          y="554.35999"
          width="33.600269"
          height="28"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="rect51"
          style="stroke-width:0.902135" />
     </g>
@@ -1194,7 +1194,7 @@
          y="554.35999"
          width="33.600269"
          height="28"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="rect52"
          style="stroke-width:0.902135" />
     </g>
@@ -1206,7 +1206,7 @@
          y="554.35999"
          width="33.600269"
          height="28"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="rect53"
          style="stroke-width:0.902135" />
     </g>
@@ -1218,7 +1218,7 @@
          y="554.35999"
          width="33.600269"
          height="28"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="rect54"
          style="stroke-width:0.902135" />
     </g>
@@ -1230,7 +1230,7 @@
          y="554.35999"
          width="34"
          height="28"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="rect55"
          style="stroke-width:0.907485" />
     </g>
@@ -1239,7 +1239,7 @@
        transform="translate(-5.0028 -31.998)">
       <path
          d="m 5,731.358 -2e-7,23 H 13 l 10e-7,-28 -7.0000002,-4e-5 -2e-7,1 -1,-1e-5 z"
-         fill="#f7f7f7"
+         fill="#f3f7fa"
          id="path55"
          sodipodi:nodetypes="cccccccc" />
     </g>
@@ -1248,7 +1248,7 @@
        transform="translate(4.9999997,-31.99996)">
       <path
          d="m 5,731.36 -2e-7,22.99996 H 13 l 10e-7,-27.99996 -7.0000002,-4e-5 -2e-7,1 -1,-10e-6 z"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="path56"
          sodipodi:nodetypes="cccccccc" />
     </g>
@@ -1263,7 +1263,7 @@
        transform="matrix(-1,0,0,1,43,-31.99996)">
       <path
          d="m 5,731.36 -2e-7,22.99996 H 13 l 10e-7,-27.99996 -7.0000002,-4e-5 -2e-7,1 -1,-10e-6 z"
-         fill="#f2f2f2"
+         fill="#ebf1f4"
          id="path57"
          sodipodi:nodetypes="cccccccc" />
     </g>
@@ -1277,7 +1277,7 @@
          width="1"
          height="16"
          id="rect57"
-         style="fill:#f7f7f7;fill-opacity:1;stroke-width:0.707107" />
+         style="fill:#f3f7fa;fill-opacity:1;stroke-width:0.707107" />
     </g>
     <g
        id="left-inactive"
@@ -1289,7 +1289,7 @@
          width="1"
          height="16"
          id="rect58"
-         style="fill:#f2f2f2;fill-opacity:1;stroke-width:0.707107" />
+         style="fill:#ebf1f4;fill-opacity:1;stroke-width:0.707107" />
     </g>
     <g
        id="right-inactive"
@@ -1301,7 +1301,7 @@
          width="1"
          height="16"
          id="rect59"
-         style="fill:#f2f2f2;fill-opacity:1;stroke-width:0.707107" />
+         style="fill:#ebf1f4;fill-opacity:1;stroke-width:0.707107" />
     </g>
     <g
        id="right-active"
@@ -1313,7 +1313,7 @@
          width="1"
          height="16"
          id="rect60"
-         style="fill:#f7f7f7;fill-opacity:1;stroke-width:0.707107" />
+         style="fill:#f3f7fa;fill-opacity:1;stroke-width:0.707107" />
     </g>
     <g
        id="bottom-left-active"
@@ -1321,7 +1321,7 @@
       <path
          d="M 97.003,730.358 96,730.36 v 9.0001 h 1 v 1 l 9,-1.2e-4 0.003,-1.00198 h -9 z"
          id="path60"
-         style="fill:#f7f7f7;fill-opacity:1" />
+         style="fill:#f3f7fa;fill-opacity:1" />
     </g>
     <g
        id="bottom-left-inactive"
@@ -1329,7 +1329,7 @@
       <path
          d="M 97.003,730.3578 96,730.36 v 9.0001 h 1 v 1 l 9,-1.2e-4 0.003,-1.00218 h -9 z"
          id="path61"
-         style="fill:#f2f2f2;fill-opacity:1" />
+         style="fill:#ebf1f4;fill-opacity:1" />
     </g>
     <g
        id="bottom-right-inactive"
@@ -1337,7 +1337,7 @@
       <path
          d="m 97,730.3578 -1,0.002 v 9.0001 h 1 v 1 l 9,-1.2e-4 v -1.00218 h -9 z"
          id="path62"
-         style="fill:#f2f2f2;fill-opacity:1" />
+         style="fill:#ebf1f4;fill-opacity:1" />
     </g>
     <g
        id="bottom-right-active"
@@ -1345,7 +1345,7 @@
       <path
          d="m 97,730.358 -1,0.002 v 9.0001 h 1 v 1 l 9,-1.2e-4 V 739.358 h -9 z"
          id="path63"
-         style="fill:#f7f7f7;fill-opacity:1" />
+         style="fill:#f3f7fa;fill-opacity:1" />
     </g>
     <g
        id="bottom-active"
@@ -1357,7 +1357,7 @@
          width="1"
          height="16"
          id="rect63"
-         style="fill:#f7f7f7;fill-opacity:1" />
+         style="fill:#f3f7fa;fill-opacity:1" />
     </g>
     <g
        id="bottom-inactive"
@@ -1369,7 +1369,7 @@
          width="1"
          height="16"
          id="rect64"
-         style="fill:#f2f2f2;fill-opacity:1" />
+         style="fill:#ebf1f4;fill-opacity:1" />
     </g>
   </g>
 </svg>

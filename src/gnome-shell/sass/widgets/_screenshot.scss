@@ -120,7 +120,7 @@ $screenshot_ui_button_red: $error_color;
   }
 
   .screenshot-ui-area-indicator-selection {
-    border: 2px white;
+    border: 2px $cachyos-cyan;
   }
 }
 
@@ -174,7 +174,7 @@ $screenshot_ui_button_red: $error_color;
     }
 
     .screenshot-ui-window-selector-check {
-      color: white;
+      color: $light_fg_color;
       background-color: $primary_color;
     }
   }
@@ -188,7 +188,7 @@ $screenshot_ui_button_red: $error_color;
   &:active { background-color: rgba(0,0,0,.7); }
   &:checked {
     background-color: transparent;
-    border: 2px white;
+    border: 2px $cachyos-cyan;
   }
 }
 

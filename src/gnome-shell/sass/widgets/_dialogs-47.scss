@@ -41,7 +41,7 @@
   .modal-dialog-linked-button {
     &:last-child {
       background-color: $destructive_color !important;
-      color: white !important;
+      color: $on_accent_color !important;
       border-color: mix($fg_color, $destructive_color, 15%) !important;
 
       &:hover {
@@ -55,7 +55,7 @@
       }
 
       &:insensitive {
-        color: rgba(white, 0.5) !important;
+        color: rgba($cachyos-cyan, 0.5) !important;
         background-color: rgba($destructive_color, 0.35) !important;
         border-color: mix($fg_color, $destructive_color, 10%) !important;
       }
@@ -131,7 +131,7 @@
   .modal-dialog-linked-button {
     &:last-child {
       background-color: $suggested_color !important;
-      color: white !important;
+      color: $on_accent_color !important;
       border-color: mix($fg_color, $suggested_color, 15%) !important;
 
       &:hover {
@@ -145,7 +145,7 @@
       }
 
       &:insensitive {
-        color: rgba(white, 0.5) !important;
+        color: rgba($cachyos-cyan, 0.5) !important;
         background-color: rgba($suggested_color, 0.35) !important;
         border-color: mix($fg_color, $suggested_color, 10%) !important;
       }

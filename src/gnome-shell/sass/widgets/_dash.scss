@@ -1,6 +1,6 @@
 /* Dash */
 
-$dash_background_color: rgba(white, 0.2);
+$dash_background_color: rgba($cachyos-cyan, 0.2);
 $dash_placeholder_size: 32px;
 $dash_padding: 10px;
 $dash_spacing: 3px;
@@ -45,7 +45,7 @@ $dash_border_radius: $menu_radius + $dash_padding;
 .dash-separator {
   width: 1px;
   margin: 0 ($dash_spacing + ($dash_padding / 2)) $dash_bottom_margin;
-  background-color: rgba(white, 0.15);
+  background-color: rgba($cachyos-cyan, 0.15);
 }
 
 // OSD Tooltip
@@ -54,7 +54,7 @@ $dash_border_radius: $menu_radius + $dash_padding;
   padding: $container_padding $container_padding * 2;
   margin: $container_padding;
   color: $inverse_fg_color;
-  background-color: rgba(black, 0.75);
+  background-color: rgba($cachyos-ink, 0.75);
   border: none;
   box-shadow: none;
   text-align: center;
