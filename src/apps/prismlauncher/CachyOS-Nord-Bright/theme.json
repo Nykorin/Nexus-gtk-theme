@@ -1,0 +1,36 @@
+{
+    "name": "CachyOS-Nord (bright)",
+    "widgets": "Fusion",
+    "qssFilePath": "themeStyle.css",
+    "colors": {
+        "Window": "#0F121C",
+        "WindowText": "#E6F7FD",
+        "Base": "#131621",
+        "AlternateBase": "#151826",
+        "ToolTipBase": "#181B28",
+        "ToolTipText": "#E6F7FD",
+        "Text": "#E6F7FD",
+        "Button": "#181B28",
+        "ButtonText": "#E6F7FD",
+        "BrightText": "#F9FAFB",
+        "Link": "#C2EAF8",
+        "Highlight": "#9FDCF2",
+        "HighlightedText": "#0F121C",
+        "fadeColor": "#0F121C",
+        "fadeAmount": 0.5
+    },
+    "logColors": {
+        "Message": "#E6F7FD",
+        "Launcher": "#81A1C1",
+        "Debug": "#526D7A",
+        "Warning": "#ADAD70",
+        "Error": "#BF616A",
+        "Fatal": "#AD7AA3",
+        "MessageHighlight": "#00000000",
+        "LauncherHighlight": "#1A81A1C1",
+        "DebugHighlight": "#00000000",
+        "WarningHighlight": "#1AADAD70",
+        "ErrorHighlight": "#26BF616A",
+        "FatalHighlight": "#33AD7AA3"
+    }
+}

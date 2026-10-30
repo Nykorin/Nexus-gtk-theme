@@ -104,24 +104,32 @@ details (cyan-bordered checkboxes and radio buttons with the check, dash and dot
 with a cyan top line, list selections filled cyan at 0.6 with navy text, and thin scrollbars),
 and log colors (warnings olive, errors red, fatal errors mauve).
 
-Copy the folder into Prism's `themes` folder. Keep the name `CachyOS-Nord`: the stylesheet
-finds its images under `themes/CachyOS-Nord/`.
+There are two variants:
+
+- `CachyOS-Nord`: the GTK theme's colors
+- `CachyOS-Nord-Bright`: near-white text (`#E6F7FD`) and light cyan accents (`#9FDCF2`) on the
+  same navy, for use with a translucent window (see [Transparency](#transparency) below), where
+  the regular cyan text gets hard to read
+
+Copy the folders into Prism's `themes` folder. Keep their names: each stylesheet finds its
+images under `themes/<folder name>/`.
 
 ```sh
 # AppImage or native package
 mkdir -p ~/.local/share/PrismLauncher/themes
-cp -r prismlauncher/CachyOS-Nord ~/.local/share/PrismLauncher/themes/
+cp -r prismlauncher/CachyOS-Nord* ~/.local/share/PrismLauncher/themes/
 
 # Flatpak
 mkdir -p ~/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/themes
-cp -r prismlauncher/CachyOS-Nord ~/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/themes/
+cp -r prismlauncher/CachyOS-Nord* ~/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/themes/
 ```
 
-Then restart Prism and pick *CachyOS-Nord* under Settings → Appearance → Theme.
+Then restart Prism and pick *CachyOS-Nord* or *CachyOS-Nord (bright)* under Settings →
+Appearance → Theme.
 
 #### Transparency
 
-There is no transparent variant: Prism doesn't ask Qt for translucent windows, so a theme with
+The themes themselves are opaque: Prism doesn't ask Qt for translucent windows, so a theme with
 translucent colors leaves the compositor treating the window as opaque, and it doesn't repaint
 what's behind it (old frames show through as trails). Have the compositor make the window
 translucent instead; text and icons fade with it. On Wayfire (and Budgie on Wayfire), with the
@@ -130,5 +138,9 @@ translucent instead; text and icons fade with it. On Wayfire (and Budgie on Wayf
 
 ```ini
 [window-rules]
-prism_alpha = on created if app_id is "org.prismlauncher.PrismLauncher" then set alpha 0.85
+prism_alpha = on created if app_id is "org.prismlauncher.PrismLauncher" then set alpha 0.5
 ```
+
+Use the bright variant with it. At 0.5 its text stays readable over a dark wallpaper; raise the
+value (0.6–0.7) over a busy or light one. Lower values such as the terminals' 0.25 leave even
+near-white text faint, since the text fades along with the window.
