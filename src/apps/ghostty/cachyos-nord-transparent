@@ -3,8 +3,8 @@
 # green, olive and mauve; red and blue from CachyOS's Nordic Konsole scheme.
 # Use with: theme = cachyos-nord-transparent in config.ghostty (colors set there override it).
 
-# CachyOS's Konsole scheme uses 0.88; a background-opacity in config.ghostty overrides it
-background-opacity = 0.88
+# 0.25, as in the Nexus theme; a background-opacity in config.ghostty overrides it
+background-opacity = 0.25
 
 background = #0F121C
 foreground = #47ADD6

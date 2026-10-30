@@ -8,8 +8,8 @@ scheme.
 Each app has two variants:
 
 - `cachyos-nord`: opaque
-- `cachyos-nord-transparent`: the terminal window at 0.88 opacity (as in CachyOS's Konsole
-  scheme), and btop without a background of its own, so the translucent terminal shows through
+- `cachyos-nord-transparent`: the terminal window at 0.25 opacity (as in the Nexus theme),
+  and btop without a background of its own, so the translucent terminal shows through
 
 ### Alacritty
 

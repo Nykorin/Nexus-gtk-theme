@@ -116,7 +116,7 @@ $titlebar-backdrop:                     titlebar(backdrop);
 $panel:                                 if($topbar == 'light', rgba($cachyos-light-titlebar, 0.8), rgba($cachyos-bg, 0.8));
 $panel-solid:                           if($topbar == 'light', $cachyos-light-titlebar, $cachyos-bg); // for Unity panel which doesn't allow translucent colors
 
-$blur_opacity:                          if($variant == 'light', 0.85, 0.5);
+$blur_opacity:                          if($variant == 'light', 0.425, 0.25); // half of upstream, lets more wallpaper through (as in Nexus)
 
 @if $blur == 'true' {
   $background:                          if($variant == 'light', rgba($cachyos-light-base, $blur_opacity), rgba($cachyos-bg, $blur_opacity));

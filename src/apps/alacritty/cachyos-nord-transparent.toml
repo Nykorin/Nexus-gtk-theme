@@ -3,11 +3,11 @@
 # green, olive and mauve; red and blue from CachyOS's Nordic Konsole scheme.
 # Use with: [general] import = ["~/.config/alacritty/themes/cachyos-nord-transparent.toml"] in alacritty.toml,
 # with no [colors] sections there (alacritty.toml loads after its imports and would override them).
-# Sets the window opacity (CachyOS's Konsole scheme uses 0.88); an opacity set in
+# Sets the window opacity (0.25, as in the Nexus theme); an opacity set in
 # alacritty.toml overrides it.
 
 [window]
-opacity = 0.88
+opacity = 0.25
 
 [colors]
 draw_bold_text_with_bright_colors = true
