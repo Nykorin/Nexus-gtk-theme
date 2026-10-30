@@ -1,0 +1,29 @@
+# CachyOS-Nord Ghostty theme
+# Colors from the CachyOS-Nord GTK theme: navy background, cyan text and accent, and its
+# green, olive and mauve; red and blue from CachyOS's Nordic Konsole scheme.
+# Use with: theme = cachyos-nord in config.ghostty (colors set there override it).
+
+background = #0F121C
+foreground = #47ADD6
+cursor-color = #47ADD6
+cursor-text = #0F121C
+selection-background = #47ADD6
+selection-foreground = #0F121C
+bold-color = bright
+
+palette = 0=#181B28
+palette = 1=#BF616A
+palette = 2=#7AE070
+palette = 3=#ADAD70
+palette = 4=#81A1C1
+palette = 5=#AD7AA3
+palette = 6=#47ADD6
+palette = 7=#D8DEE9
+palette = 8=#526D7A
+palette = 9=#CE858C
+palette = 10=#A1E99A
+palette = 11=#C0C090
+palette = 12=#A3BAD2
+palette = 13=#C09AB9
+palette = 14=#71C0DF
+palette = 15=#F9FAFB

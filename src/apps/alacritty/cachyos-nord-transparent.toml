@@ -1,0 +1,61 @@
+# CachyOS-Nord Alacritty theme (transparent)
+# Colors from the CachyOS-Nord GTK theme: navy background, cyan text and accent, and its
+# green, olive and mauve; red and blue from CachyOS's Nordic Konsole scheme.
+# Use with: [general] import = ["~/.config/alacritty/themes/cachyos-nord-transparent.toml"] in alacritty.toml,
+# with no [colors] sections there (alacritty.toml loads after its imports and would override them).
+# Sets the window opacity (CachyOS's Konsole scheme uses 0.88); an opacity set in
+# alacritty.toml overrides it.
+
+[window]
+opacity = 0.88
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "0x0F121C"
+foreground = "0x47ADD6"
+
+[colors.cursor]
+text = "0x0F121C"
+cursor = "0x47ADD6"
+
+[colors.vi_mode_cursor]
+text = "0x0F121C"
+cursor = "0x71C0DF"
+
+[colors.search.matches]
+foreground = "0x0F121C"
+background = "0xADAD70"
+
+[colors.search.focused_match]
+foreground = "0x0F121C"
+background = "0x7AE070"
+
+[colors.footer_bar]
+foreground = "0x47ADD6"
+background = "0x181B28"
+
+[colors.selection]
+text = "0x0F121C"
+background = "0x47ADD6"
+
+[colors.normal]
+black = "0x181B28"
+red = "0xBF616A"
+green = "0x7AE070"
+yellow = "0xADAD70"
+blue = "0x81A1C1"
+magenta = "0xAD7AA3"
+cyan = "0x47ADD6"
+white = "0xD8DEE9"
+
+[colors.bright]
+black = "0x526D7A"
+red = "0xCE858C"
+green = "0xA1E99A"
+yellow = "0xC0C090"
+blue = "0xA3BAD2"
+magenta = "0xC09AB9"
+cyan = "0x71C0DF"
+white = "0xF9FAFB"

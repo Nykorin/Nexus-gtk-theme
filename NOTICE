@@ -23,6 +23,7 @@ Modified in October 2026:
 - the Budgie panel, popovers and Raven sharing the title bar color
 - a librsvg renderer (src/render-svg-ids.py) used by the asset scripts when
   Inkscape is not installed
+- themes for Alacritty, Ghostty and btop in the same colors (src/apps)
 
 The Firefox theme in src/firefox keeps its own credits (see src/firefox/README.md).
 
@@ -37,6 +38,9 @@ CachyOS (https://github.com/CachyOS/CachyOS-Nord-KDE):
 - the cyan accent and text color #47ADD6, and #147AA3 for links
 - the status colors #7AE070 (success), #ADAD70 (warning) and #AD7AA3 (error)
 - the dark cyan shadows #0A242F and #15485D
+- for the terminal themes in src/apps: red #BF616A, blue #81A1C1, white #D8DEE9
+  and the 0.88 window opacity, from CachyOS's Nordic Konsole scheme
+  (konsole/cachyOSNord.colorscheme in the same repository)
 
 So does the styling listed above as coming from the cachyOS-nord theme. The
 check, dash and dot glyphs in src/gtk/scalable/classic-*-symbolic.svg are taken

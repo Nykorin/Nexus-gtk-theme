@@ -1,0 +1,110 @@
+# CachyOS-Nord btop theme
+# Colors from the CachyOS-Nord GTK theme: navy background, cyan text and accent, and its
+# green, olive and mauve; red and blue from CachyOS's Nordic Konsole scheme.
+# Select with color_theme = "cachyos-nord" in btop.conf.
+# Needs theme_background = true in btop.conf to draw its background.
+
+# Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal: "#RRGGBB", "#BW" or "0-255 0-255 0-255"
+# For single color graphs leave "mid" and "end" variable empty.
+# Use "start" and "end" variables for two color gradient
+# Use "start", "mid" and "end" for three color gradient
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#0F121C"
+
+# Main text color
+theme[main_fg]="#47ADD6"
+
+# Title color for boxes
+theme[title]="#71C0DF"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#7AE070"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#47ADD6"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#0F121C"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#526D7A"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#D8DEE9"
+
+# Background color of the percentage meters
+theme[meter_bg]="#181B28"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#71C0DF"
+
+# Cpu box outline color
+theme[cpu_box]="#47ADD6"
+
+# Memory/disks box outline color
+theme[mem_box]="#47ADD6"
+
+# Net up/down box outline color
+theme[net_box]="#47ADD6"
+
+# Processes box outline color
+theme[proc_box]="#47ADD6"
+
+# Box divider line and small boxes line color
+theme[div_line]="#526D7A"
+
+# Temperature graph colors
+theme[temp_start]="#7AE070"
+theme[temp_mid]="#ADAD70"
+theme[temp_end]="#BF616A"
+
+# CPU graph colors
+theme[cpu_start]="#47ADD6"
+theme[cpu_mid]="#ADAD70"
+theme[cpu_end]="#BF616A"
+
+# Mem/Disk free meter
+theme[free_start]="#47ADD6"
+theme[free_mid]=""
+theme[free_end]="#7AE070"
+
+# Mem/Disk cached meter
+theme[cached_start]="#81A1C1"
+theme[cached_mid]=""
+theme[cached_end]="#71C0DF"
+
+# Mem/Disk available meter
+theme[available_start]="#7AE070"
+theme[available_mid]=""
+theme[available_end]="#71C0DF"
+
+# Mem/Disk used meter
+theme[used_start]="#ADAD70"
+theme[used_mid]=""
+theme[used_end]="#BF616A"
+
+# Download graph colors
+theme[download_start]="#47ADD6"
+theme[download_mid]="#81A1C1"
+theme[download_end]="#71C0DF"
+
+# Upload graph colors
+theme[upload_start]="#AD7AA3"
+theme[upload_mid]=""
+theme[upload_end]="#BF616A"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#7AE070"
+theme[process_mid]="#ADAD70"
+theme[process_end]="#BF616A"
+
+# Process box banner colors
+theme[proc_pause_bg]="#BF616A"
+theme[proc_follow_bg]="#47ADD6"
+theme[proc_banner_bg]="#AD7AA3"
+theme[proc_banner_fg]="#0F121C"
+
+# Process following attributes
+theme[followed_bg]="#47ADD6"
+theme[followed_fg]="#0F121C"
