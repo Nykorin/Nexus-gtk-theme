@@ -1,0 +1,107 @@
+{
+	"extends": "Adaptive.sublime-theme",
+	"variables": {
+		"link_fg": "#71C0DF",
+		"tool_tip_bg": "#181B28",
+		"tool_tip_fg": "#47ADD6",
+		"file_tab_unselected_label_color": "color(#47ADD6 a(0.7))",
+		"file_tab_selected_label_color": "#47ADD6",
+		"file_tab_angled_unselected_label_color": "color(#47ADD6 a(0.6))",
+		"icon_tint": "#47ADD6",
+		"radio_selected": "#47ADD6",
+		"checkbox_selected": "#47ADD6"
+	},
+	"rules": [
+		{
+			"class": "sidebar_label",
+			"fg": [
+				71,
+				173,
+				214
+			]
+		},
+		{
+			"class": "sidebar_heading",
+			"fg": [
+				71,
+				173,
+				214,
+				180
+			]
+		},
+		{
+			"class": "label_control",
+			"parents": [
+				{
+					"class": "status_bar"
+				}
+			],
+			"fg": [
+				71,
+				173,
+				214,
+				200
+			]
+		},
+		{
+			"class": "tree_row",
+			"attributes": [
+				"selected"
+			],
+			"layer0.tint": [
+				71,
+				173,
+				214
+			],
+			"layer0.opacity": 0.6
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{
+					"class": "tree_row",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"fg": [
+				15,
+				18,
+				28
+			]
+		},
+		{
+			"class": "icon_folder",
+			"parents": [
+				{
+					"class": "tree_row",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": [
+				15,
+				18,
+				28
+			]
+		},
+		{
+			"class": "icon_file_type",
+			"parents": [
+				{
+					"class": "tree_row",
+					"attributes": [
+						"selected"
+					]
+				}
+			],
+			"layer0.tint": [
+				15,
+				18,
+				28
+			]
+		}
+	]
+}

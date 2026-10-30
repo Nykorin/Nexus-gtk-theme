@@ -1,0 +1,212 @@
+{
+	"name": "CachyOS-Nord",
+	"author": "CachyOS-Nord GTK theme",
+	"variables": {
+		"navy": "#0F121C",
+		"surface": "#181B28",
+		"base": "#131621",
+		"cyan": "#47ADD6",
+		"cyan_light": "#71C0DF",
+		"slate": "#526D7A",
+		"red": "#BF616A",
+		"green": "#7AE070",
+		"olive": "#ADAD70",
+		"blue": "#81A1C1",
+		"mauve": "#AD7AA3",
+		"white": "#D8DEE9"
+	},
+	"globals": {
+		"background": "var(navy)",
+		"foreground": "var(cyan)",
+		"caret": "var(cyan)",
+		"line_highlight": "var(surface)",
+		"selection": "color(var(cyan) alpha(0.3))",
+		"selection_border": "color(var(cyan) alpha(0.5))",
+		"inactive_selection": "color(var(cyan) alpha(0.15))",
+		"misspelling": "var(red)",
+		"gutter": "var(navy)",
+		"gutter_foreground": "var(slate)",
+		"gutter_foreground_highlight": "var(cyan)",
+		"line_diff_added": "var(green)",
+		"line_diff_modified": "var(olive)",
+		"line_diff_deleted": "var(red)",
+		"accent": "var(cyan)",
+		"guide": "color(var(slate) alpha(0.35))",
+		"active_guide": "var(slate)",
+		"stack_guide": "color(var(slate) alpha(0.6))",
+		"find_highlight": "var(olive)",
+		"find_highlight_foreground": "var(navy)",
+		"highlight": "var(olive)",
+		"brackets_foreground": "var(cyan_light)",
+		"brackets_options": "underline",
+		"bracket_contents_foreground": "var(cyan_light)",
+		"tags_foreground": "var(cyan_light)",
+		"tags_options": "stippled_underline",
+		"minimap_border": "color(var(cyan) alpha(0.2))",
+		"shadow": "color(#000000 alpha(0.4))",
+		"popup_css": "html { background-color: #181B28; color: #47ADD6; } a { color: #71C0DF; }"
+	},
+	"rules": [
+		{
+			"name": "Comment",
+			"scope": "comment, punctuation.definition.comment",
+			"foreground": "var(slate)",
+			"font_style": "italic"
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "Escape",
+			"scope": "constant.character.escape, constant.other.placeholder",
+			"foreground": "var(cyan_light)"
+		},
+		{
+			"name": "Number and constant",
+			"scope": "constant.numeric, constant.language, constant.character, constant.other",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Keyword and storage",
+			"scope": "keyword, storage, keyword.operator.word",
+			"foreground": "var(mauve)"
+		},
+		{
+			"name": "Operator and punctuation",
+			"scope": "keyword.operator, punctuation.separator, punctuation.accessor",
+			"foreground": "var(white)"
+		},
+		{
+			"name": "Function",
+			"scope": "entity.name.function, support.function, meta.function-call variable.function, variable.function",
+			"foreground": "var(cyan_light)"
+		},
+		{
+			"name": "Type and class",
+			"scope": "entity.name.type, entity.name.class, entity.other.inherited-class, support.type, support.class, storage.type.class",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Parameter",
+			"scope": "variable.parameter",
+			"foreground": "var(white)",
+			"font_style": "italic"
+		},
+		{
+			"name": "Language variable",
+			"scope": "variable.language",
+			"foreground": "var(mauve)",
+			"font_style": "italic"
+		},
+		{
+			"name": "Tag",
+			"scope": "entity.name.tag",
+			"foreground": "var(mauve)"
+		},
+		{
+			"name": "Attribute",
+			"scope": "entity.other.attribute-name",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Decorator",
+			"scope": "meta.annotation, punctuation.definition.annotation, entity.name.function.decorator",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Heading",
+			"scope": "markup.heading, entity.name.section",
+			"foreground": "var(cyan_light)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Bold",
+			"scope": "markup.bold",
+			"font_style": "bold"
+		},
+		{
+			"name": "Italic",
+			"scope": "markup.italic",
+			"font_style": "italic"
+		},
+		{
+			"name": "Link",
+			"scope": "markup.underline.link",
+			"foreground": "var(cyan_light)"
+		},
+		{
+			"name": "Code",
+			"scope": "markup.raw",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "Inserted",
+			"scope": "markup.inserted",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "Changed",
+			"scope": "markup.changed",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Deleted",
+			"scope": "markup.deleted",
+			"foreground": "var(red)"
+		},
+		{
+			"name": "Invalid",
+			"scope": "invalid, invalid.illegal",
+			"foreground": "var(navy)",
+			"background": "var(red)"
+		},
+		{
+			"name": "Deprecated",
+			"scope": "invalid.deprecated",
+			"foreground": "var(navy)",
+			"background": "var(olive)"
+		},
+		{
+			"name": "Region red",
+			"scope": "region.redish",
+			"foreground": "var(red)"
+		},
+		{
+			"name": "Region orange",
+			"scope": "region.orangish",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Region yellow",
+			"scope": "region.yellowish",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Region green",
+			"scope": "region.greenish",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "Region cyan",
+			"scope": "region.cyanish",
+			"foreground": "var(cyan_light)"
+		},
+		{
+			"name": "Region blue",
+			"scope": "region.bluish",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Region purple",
+			"scope": "region.purplish",
+			"foreground": "var(mauve)"
+		},
+		{
+			"name": "Region pink",
+			"scope": "region.pinkish",
+			"foreground": "var(mauve)"
+		}
+	]
+}

@@ -68,9 +68,10 @@ Automatically install your host GTK+ theme as a Flatpak:
 
 [Install Firefox theme](src/firefox)
 
-### Terminal app themes
+### App themes
 
-Themes for Alacritty, Ghostty and btop in the same colors, each opaque or transparent:
+Themes in the same colors for Alacritty, Ghostty, Konsole and btop (each opaque or transparent)
+and for Sublime Text 4 (color scheme and UI theme):
 [Install app themes](src/apps)
 
 ## Development

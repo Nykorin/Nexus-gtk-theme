@@ -1,11 +1,11 @@
 ## CachyOS-Nord app themes
 
-Themes for terminal apps in the colors of the CachyOS-Nord GTK theme: a navy background
+Themes for terminals and Sublime Text in the colors of the CachyOS-Nord GTK theme: a navy background
 (`#0F121C`) with cyan text (`#47ADD6`), cyan cursor and selection, and the theme's green,
 olive and mauve in the 16-color palette. Red and blue come from CachyOS's Nordic Konsole
 scheme.
 
-Each app has two variants:
+Each terminal has two variants:
 
 - `cachyos-nord`: opaque
 - `cachyos-nord-transparent`: the terminal window at 0.25 opacity (as in the Nexus theme),
@@ -60,3 +60,32 @@ theme_background = true
 
 Use the transparent btop theme in a transparent terminal; the opaque one draws its own navy
 background.
+
+### Konsole
+
+```sh
+mkdir -p ~/.local/share/konsole
+cp konsole/CachyOS-Nord*.colorscheme ~/.local/share/konsole/
+```
+
+Then pick *CachyOS-Nord* or *CachyOS-Nord (transparent)* in Settings → Edit Current Profile →
+Appearance. The transparent one sets the background opacity to 0.25 (blur is left off, as in
+CachyOS's own scheme).
+
+### Sublime Text 4
+
+A color scheme for the editor and a UI theme for the sidebar, tabs and panels. The UI theme
+extends Sublime's Adaptive theme, which takes its colors from the color scheme, and adds the
+GTK theme's touches: cyan sidebar and status bar text, and the selected sidebar row filled cyan
+at 0.6 with navy text.
+
+```sh
+cp sublime-text/CachyOS-Nord.sublime-* ~/.config/sublime-text/Packages/User/
+```
+
+In Preferences → Settings:
+
+```json
+"theme": "CachyOS-Nord.sublime-theme",
+"color_scheme": "CachyOS-Nord.sublime-color-scheme",
+```
