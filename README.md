@@ -1,12 +1,10 @@
 # CachyOS-Nord GTK theme
 
 CachyOS-Nord is the GTK theme of the CachyOS Nord desktop: navy backgrounds with a cyan
-accent, for GNOME/GTK based desktop environments.
-
-- **Dark**: navy backgrounds (`#0F121C`, `#131621`, `#181B28`) with cyan (`#47ADD6`) text
-  and accent, cyan-tinted borders and shadows, and a cyan glow around windows
-- **Standard**: light window contents with navy title bars
-- **Light**: light throughout, with a deeper cyan accent (`#147AA3`)
+accent, for GNOME/GTK based desktop environments. It comes in one color variant,
+CachyOS-Nord-Dark (and CachyOS-Nord-Dark-compact): navy backgrounds (`#0F121C`, `#131621`,
+`#181B28`) with cyan (`#47ADD6`) text and accent, cyan-tinted borders and shadows, and a
+cyan glow around windows.
 
 On the navy title bars, the minimize, maximize and close buttons glow when hovered
 (cyan, close in red).
@@ -36,8 +34,6 @@ Run the following commands in the terminal:
 -d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
 
 -n, --name NAME         Specify theme name (Default: CachyOS-Nord)
-
--c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
 
 -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
@@ -93,7 +89,7 @@ GPL-3.0, see [COPYING](COPYING) and [NOTICE](NOTICE).
 
 CachyOS-Nord is a modified version of the
 [Fluent GTK theme](https://github.com/vinceliuice/Fluent-gtk-theme) by vinceliuice: recolored
-to the CachyOS Nord palette, with the other color variants removed.
+to the CachyOS Nord palette, with only a dark color variant.
 
 The color scheme and the widget styling of the original theme come from the cachyOS-nord GTK
 theme in [CachyOS-Nord-KDE](https://github.com/CachyOS/CachyOS-Nord-KDE) by CachyOS, which

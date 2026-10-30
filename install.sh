@@ -31,7 +31,7 @@ fi
 SASSC_OPT="-M -t expanded"
 
 THEME_NAME=CachyOS-Nord
-COLOR_VARIANTS=('' '-Light' '-Dark')
+COLOR_VARIANTS=('-Dark')
 SIZE_VARIANTS=('' '-compact')
 
 if [[ "$(command -v gnome-shell)" ]]; then
@@ -66,8 +66,6 @@ OPTIONS:
 
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
 
-  -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
-
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
   -i, --icon VARIANT      Specify icon variant(s) for shell panel
@@ -97,10 +95,6 @@ install() {
   local color="$3"
   local size="$4"
   local icon="$5"
-
-  [[ "$color" == '-Dark' ]] && local ELSE_DARK="$color"
-  [[ "$color" == '-Light' ]] && local ELSE_LIGHT="$color"
-  [[ "$color" == '-Dark' ]] || [[ "$color" == '' ]] && local ACTIVITIES_ASSETS_SUFFIX="-Dark"
 
   if [[ "$window" == 'round' ]]; then
     round='-round'
@@ -140,46 +134,42 @@ install() {
   fi
 
   cp -r "${SRC_DIR}/gnome-shell/common-assets"                                  "$THEME_DIR/gnome-shell/assets"
-  cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/"*.svg                     "$THEME_DIR/gnome-shell/assets"
+  cp -r "${SRC_DIR}/gnome-shell/assets-Dark/"*.svg                              "$THEME_DIR/gnome-shell/assets"
   cp -r "${SRC_DIR}/gnome-shell/theme/"*.svg                                    "$THEME_DIR/gnome-shell/assets"
-  cp -r "${SRC_DIR}/gnome-shell/assets${ACTIVITIES_ASSETS_SUFFIX:-}/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities.svg"
+  cp -r "${SRC_DIR}/gnome-shell/assets-Dark/activities/activities${icon}.svg"   "$THEME_DIR/gnome-shell/assets/activities.svg"
 
   if [[ "$window" = "round" ]] ; then
-    cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/buttons-round/"*.svg     "$THEME_DIR/gnome-shell/assets"
+    cp -r "${SRC_DIR}/gnome-shell/assets-Dark/buttons-round/"*.svg              "$THEME_DIR/gnome-shell/assets"
   else
-    cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/buttons/"*.svg           "$THEME_DIR/gnome-shell/assets"
-  fi
-
-  if [[ "$color" = "-Light" ]] ; then
-    cp -r "${SRC_DIR}/gnome-shell/assets-Dark/activities/activities${icon}.svg" "$THEME_DIR/gnome-shell/assets/activities-white.svg"
+    cp -r "${SRC_DIR}/gnome-shell/assets-Dark/buttons/"*.svg                    "$THEME_DIR/gnome-shell/assets"
   fi
 
   if [[ "$opacity" = "solid" ]] ; then
     if [[ "$window" = "round" ]] ; then
       if [[ "$outline" = "" ]] ; then
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-round/"*.svg    "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/solid-round/"*.svg            "$THEME_DIR/gnome-shell/assets"
       else
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-round-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/solid-round-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
       fi
     else
       if [[ "$outline" = "" ]] ; then
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid/"*.svg           "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/solid/"*.svg                  "$THEME_DIR/gnome-shell/assets"
       else
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/solid-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/solid-borderless/"*.svg       "$THEME_DIR/gnome-shell/assets"
       fi
     fi
   else
     if [[ "$window" = "round" ]] ; then
       if [[ "$outline" = "" ]] ; then
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-round/"*.svg   "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/default-round/"*.svg          "$THEME_DIR/gnome-shell/assets"
       else
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-round-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/default-round-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
       fi
     else
       if [[ "$outline" = "" ]] ; then
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default/"*.svg         "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/default/"*.svg                "$THEME_DIR/gnome-shell/assets"
       else
-        cp -r "${SRC_DIR}/gnome-shell/assets${ELSE_DARK:-}/default-borderless/"*.svg "$THEME_DIR/gnome-shell/assets"
+        cp -r "${SRC_DIR}/gnome-shell/assets-Dark/default-borderless/"*.svg     "$THEME_DIR/gnome-shell/assets"
       fi
     fi
   fi
@@ -191,20 +181,18 @@ install() {
 
   mkdir -p                                                                      "$THEME_DIR/gtk-2.0"
   cp -r "$SRC_DIR/gtk-2.0/common/"{apps.rc,hacks.rc,main.rc}                    "$THEME_DIR/gtk-2.0"
-  cp -r "$SRC_DIR/gtk-2.0/assets-folder/assets${ELSE_DARK:-}"                   "$THEME_DIR/gtk-2.0/assets"
-  cp -r "$SRC_DIR/gtk-2.0/gtkrc${ELSE_DARK:-}"                                  "$THEME_DIR/gtk-2.0/gtkrc"
+  cp -r "$SRC_DIR/gtk-2.0/assets-folder/assets-Dark"                            "$THEME_DIR/gtk-2.0/assets"
+  cp -r "$SRC_DIR/gtk-2.0/gtkrc-Dark"                                           "$THEME_DIR/gtk-2.0/gtkrc"
 
   mkdir -p                                                                      "$THEME_DIR/gtk-3.0"
   cp -r "$SRC_DIR/gtk/assets"                                                   "$THEME_DIR/gtk-3.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-3.0/assets"
-  cp -r "$SRC_DIR/gtk/thumbnail${ELSE_DARK:-}.png"                              "$THEME_DIR/gtk-3.0/thumbnail.png"
+  cp -r "$SRC_DIR/gtk/thumbnail-Dark.png"                                       "$THEME_DIR/gtk-3.0/thumbnail.png"
 
   if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-3.0/gtk.css"
-    sassc $SASSC_OPT "$SRC_DIR/gtk/3.0/gtk-Dark$size.scss"                      "$THEME_DIR/gtk-3.0/gtk-dark.css"
   else
     cp -r "$SRC_DIR/gtk/3.0/gtk$color$size.css"                                 "$THEME_DIR/gtk-3.0/gtk.css"
-    cp -r "$SRC_DIR/gtk/3.0/gtk-Dark$size.css"                                  "$THEME_DIR/gtk-3.0/gtk-dark.css"
   fi
 
   mkdir -p                                                                      "$THEME_DIR/gtk-4.0"
@@ -213,15 +201,16 @@ install() {
 
   if [[ "$tweaks" == 'true' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk$color$size.scss"                     "$THEME_DIR/gtk-4.0/gtk.css"
-    sassc $SASSC_OPT "$SRC_DIR/gtk/4.0/gtk-Dark$size.scss"                      "$THEME_DIR/gtk-4.0/gtk-dark.css"
   else
     cp -r "$SRC_DIR/gtk/4.0/gtk$color$size.css"                                 "$THEME_DIR/gtk-4.0/gtk.css"
-    cp -r "$SRC_DIR/gtk/4.0/gtk-Dark$size.css"                                  "$THEME_DIR/gtk-4.0/gtk-dark.css"
   fi
+
+  # GTK 4 falls back to Adwaita, not gtk.css, when a dark theme has no gtk-dark.css
+  ln -s gtk.css                                                                 "$THEME_DIR/gtk-4.0/gtk-dark.css"
 
   mkdir -p                                                                      "$THEME_DIR/cinnamon"
   cp -r "$SRC_DIR/cinnamon/common-assets"                                       "$THEME_DIR/cinnamon/assets"
-  cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                          "$THEME_DIR/cinnamon/assets"
+  cp -r "$SRC_DIR/cinnamon/assets-Dark/"*.svg                                   "$THEME_DIR/cinnamon/assets"
 
   if [[ "$opacity" == 'solid' ]]; then
     sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon$color$size.scss"               "$THEME_DIR/cinnamon/cinnamon.css"
@@ -235,15 +224,15 @@ install() {
 
   if [[ "$titlebutton" = "square" ]] ; then
     cp -r "$SRC_DIR/xfwm4/assets-square$color/"*.png                            "$THEME_DIR/xfwm4"
-    cp -r "$SRC_DIR/xfwm4/themerc-square${ELSE_LIGHT:-}"                        "$THEME_DIR/xfwm4/themerc"
+    cp -r "$SRC_DIR/xfwm4/themerc-square"                                       "$THEME_DIR/xfwm4/themerc"
   else
     cp -r "$SRC_DIR/xfwm4/assets$color/"*.png                                   "$THEME_DIR/xfwm4"
-    cp -r "$SRC_DIR/xfwm4/themerc${ELSE_LIGHT:-}"                               "$THEME_DIR/xfwm4/themerc"
+    cp -r "$SRC_DIR/xfwm4/themerc"                                              "$THEME_DIR/xfwm4/themerc"
   fi
 
   mkdir -p                                                                      "$THEME_DIR/labwc"
-  cp -r "$SRC_DIR/labwc/assets${ELSE_LIGHT:-}/"*.svg                            "$THEME_DIR/labwc"
-  cp -r "$SRC_DIR/labwc/themerc${ELSE_DARK:-}${ELSE_LIGHT:-}"                   "$THEME_DIR/labwc/themerc"
+  cp -r "$SRC_DIR/labwc/assets/"*.svg                                           "$THEME_DIR/labwc"
+  cp -r "$SRC_DIR/labwc/themerc-Dark"                                           "$THEME_DIR/labwc/themerc"
 
   mkdir -p                                                                      "$THEME_DIR/metacity-1"
   cp -r "$SRC_DIR/metacity-1/metacity-theme-2$color.xml"                        "$THEME_DIR/metacity-1/metacity-theme-2.xml"
@@ -256,16 +245,14 @@ install() {
     cp -r "$SRC_DIR/metacity-1/assets"                                          "$THEME_DIR/metacity-1"
   fi
 
-  cp -r "$SRC_DIR/metacity-1/thumbnail${ELSE_DARK:-}.png"                       "$THEME_DIR/metacity-1/thumbnail.png"
+  cp -r "$SRC_DIR/metacity-1/thumbnail-Dark.png"                                "$THEME_DIR/metacity-1/thumbnail.png"
   cd "$THEME_DIR/metacity-1" && ln -s metacity-theme-2.xml metacity-theme-1.xml
 
   mkdir -p                                                                      "$THEME_DIR/plank"
-  cp -r "$SRC_DIR/plank/theme${ELSE_LIGHT:-}/dock.theme"                        "$THEME_DIR/plank"
+  cp -r "$SRC_DIR/plank/theme/dock.theme"                                       "$THEME_DIR/plank"
 }
 
-colors=()
 sizes=()
-lcolors=()
 
 while [[ "$#" -gt 0 ]]; do
   case "${1:-}" in
@@ -416,36 +403,6 @@ while [[ "$#" -gt 0 ]]; do
         echo "Install $icons icon for gnome-shell panel..."
       done
       ;;
-    -c|--color)
-      shift
-      for variant in "$@"; do
-        case "$variant" in
-          standard)
-            colors+=("${COLOR_VARIANTS[0]}")
-            lcolors+=("${COLOR_VARIANTS[0]}")
-            shift
-            ;;
-          light)
-            colors+=("${COLOR_VARIANTS[1]}")
-            lcolors+=("${COLOR_VARIANTS[1]}")
-            shift
-            ;;
-          dark)
-            colors+=("${COLOR_VARIANTS[2]}")
-            lcolors+=("${COLOR_VARIANTS[2]}")
-            shift
-            ;;
-          -*|--*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized color variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-      done
-      ;;
     -s|--size)
       shift
       for variant in "$@"; do
@@ -480,14 +437,6 @@ while [[ "$#" -gt 0 ]]; do
       ;;
   esac
 done
-
-if [[ "${#colors[@]}" -eq 0 ]] ; then
-  colors=("${COLOR_VARIANTS[@]}")
-fi
-
-if [[ "${#lcolors[@]}" -eq 0 ]] ; then
-  lcolors=("${COLOR_VARIANTS[1]}")
-fi
 
 if [[ "${#sizes[@]}" -eq 0 ]] ; then
   sizes=("${SIZE_VARIANTS[@]}")
@@ -633,7 +582,6 @@ link_libadwaita() {
   mkdir -p                                                                      "${HOME}/.config/gtk-4.0"
   ln -sf "${THEME_DIR}/gtk-4.0/assets"                                          "${HOME}/.config/gtk-4.0/assets"
   ln -sf "${THEME_DIR}/gtk-4.0/gtk.css"                                         "${HOME}/.config/gtk-4.0/gtk.css"
-  ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css"                                    "${HOME}/.config/gtk-4.0/gtk-dark.css"
 }
 
 clean() {
@@ -672,7 +620,7 @@ clean_theme() {
 }
 
 uninstall_theme() {
-  for color in "${colors[@]}"; do
+  for color in "${COLOR_VARIANTS[@]}"; do
     for size in "${sizes[@]}"; do
       uninstall "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$color" "$size"
     done
@@ -680,7 +628,7 @@ uninstall_theme() {
 }
 
 install_theme() {
-  for color in "${colors[@]}"; do
+  for color in "${COLOR_VARIANTS[@]}"; do
     for size in "${sizes[@]}"; do
       install "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$color" "$size" "$icon"
     done
@@ -688,7 +636,7 @@ install_theme() {
 }
 
 link_theme() {
-  for color in "${lcolors[@]}"; do
+  for color in "${COLOR_VARIANTS[@]}"; do
     for size in "${sizes[0]}"; do
       link_libadwaita "${dest:-$DEST_DIR}" "${name:-$THEME_NAME}" "$color" "$size"
     done

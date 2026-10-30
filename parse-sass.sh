@@ -2,7 +2,7 @@
 
 SASSC_OPT=('-M' '-t' 'expanded')
 
-_COLOR_VARIANTS=('' '-Light' '-Dark')
+_COLOR_VARIANTS=('-Dark')
 _SIZE_VARIANTS=('' '-compact')
 
 if [[ -n "${COLOR_VARIANTS:-}" ]]; then

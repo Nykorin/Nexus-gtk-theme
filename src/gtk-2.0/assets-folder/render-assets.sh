@@ -8,7 +8,7 @@ RENDER_IDS="$(dirname "$(readlink -f "$0")")/../../render-svg-ids.py"
 
 INDEX="assets.txt"
 
-for color in '' '-Dark'; do
+for color in '-Dark'; do
 
   ASSETS_DIR="assets${color}"
   SRC_FILE="assets${color}.svg"

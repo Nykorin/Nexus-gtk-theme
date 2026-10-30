@@ -4,7 +4,7 @@ THEME_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=CachyOS-Nord
 
-_COLOR_VARIANTS=('' '-Light' '-Dark')
+_COLOR_VARIANTS=('-Dark')
 _COMPA_VARIANTS=('' '-compact')
 _ROUND_VARIANTS=('' '-round')
 
@@ -26,7 +26,7 @@ for round in "${_ROUND_VARIANTS[@]}"; do
 done
 
 for round in "${_ROUND_VARIANTS[@]}"; do
-  tar -Jcvf ${THEME_NAME}${round}.tar.xz ${THEME_NAME}${round}{'','-Light','-Dark'}{'','-compact'}
+  tar -Jcvf ${THEME_NAME}${round}.tar.xz ${THEME_NAME}${round}-Dark{'','-compact'}
 done
 }
 
