@@ -17,7 +17,7 @@ accent, for GNOME/GTK based desktop environments. It comes in one color variant
 cyan glow around windows.
 
 On the navy title bars, the minimize, maximize and close buttons glow when hovered
-(cyan, close in red).
+(cyan, close in mauve).
 
 ## Requirements
 
