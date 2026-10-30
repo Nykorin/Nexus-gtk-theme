@@ -1,9 +1,9 @@
 ## CachyOS-Nord app themes
 
-Themes for terminals and Sublime Text in the colors of the CachyOS-Nord GTK theme: a navy background
-(`#0F121C`) with cyan text (`#47ADD6`), cyan cursor and selection, and the theme's green,
-olive and mauve in the 16-color palette. Red and blue come from CachyOS's Nordic Konsole
-scheme.
+Themes for terminals, Sublime Text and Prism Launcher in the colors of the CachyOS-Nord GTK
+theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`), cyan cursor and selection,
+and the theme's green, olive and mauve in the 16-color palette. Red and blue come from
+CachyOS's Nordic Konsole scheme.
 
 Each terminal has two variants:
 
@@ -95,3 +95,26 @@ Give the color scheme's full path as above if you use the
 schemes given by name only in Sublime's *Color Scheme - Default* package, and otherwise can't add
 its rules, so color values aren't highlighted in their own colors. With the full path it adds
 them to `CachyOS-Nord.sublime-color-scheme` itself (keeping a `.chback` backup next to it).
+
+### Prism Launcher
+
+A theme for [Prism Launcher](https://prismlauncher.org/) (MultiMC itself doesn't load custom
+themes): the navy and cyan palette on Qt's Fusion style, plus a stylesheet for the GTK theme's
+details (cyan-bordered checkboxes and radio buttons with the check, dash and dot glyphs, tabs
+with a cyan top line, list selections filled cyan at 0.6 with navy text, and thin scrollbars),
+and log colors (warnings olive, errors red, fatal errors mauve).
+
+Copy the folder into Prism's `themes` folder. Keep the name `CachyOS-Nord`: the stylesheet
+finds its images under `themes/CachyOS-Nord/`.
+
+```sh
+# AppImage or native package
+mkdir -p ~/.local/share/PrismLauncher/themes
+cp -r prismlauncher/CachyOS-Nord ~/.local/share/PrismLauncher/themes/
+
+# Flatpak
+mkdir -p ~/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/themes
+cp -r prismlauncher/CachyOS-Nord ~/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/themes/
+```
+
+Then restart Prism and pick *CachyOS-Nord* under Settings → Appearance → Theme.

@@ -6,9 +6,9 @@
 > colors, the widget styling taken from the old cachyOS-nord theme, the app themes in `src/apps`
 > and the asset renderer) was written with an LLM (Anthropic's Claude, through Claude Code).
 > It was tested in a nested Budgie session on Wayfire: GTK 3 and GTK 4 (including libadwaita)
-> apps, the Budgie panel and settings, and the Alacritty, Ghostty, btop and Sublime Text 4 themes.
-> The GNOME Shell, Cinnamon, GTK 2, xfwm4, Metacity, labwc, Plank, Firefox and Konsole parts were
-> recolored and built, but not tested in a running session.
+> apps, the Budgie panel and settings, and the Alacritty, Ghostty, btop, Sublime Text 4 and Prism
+> Launcher themes. The GNOME Shell, Cinnamon, GTK 2, xfwm4, Metacity, labwc, Plank, Firefox and
+> Konsole parts were recolored and built, but not tested in a running session.
 
 CachyOS-Nord is the GTK theme of the CachyOS Nord desktop: navy backgrounds with a cyan
 accent, for GNOME/GTK based desktop environments. It comes in one color variant
@@ -80,8 +80,8 @@ Automatically install your host GTK+ theme as a Flatpak:
 
 ### App themes
 
-Themes in the same colors for Alacritty, Ghostty, Konsole and btop (each opaque or transparent)
-and for Sublime Text 4 (color scheme and UI theme):
+Themes in the same colors for Alacritty, Ghostty, Konsole and btop (each opaque or transparent),
+for Sublime Text 4 (color scheme and UI theme) and for Prism Launcher:
 [Install app themes](src/apps)
 
 ## Development

@@ -1,0 +1,114 @@
+/* CachyOS-Nord for Prism Launcher: details of the GTK theme that the palette can't express */
+
+/* Cyan-tinted borders */
+QGroupBox {
+    border: 1px solid rgba(71, 173, 214, 0.2);
+    border-radius: 3px;
+    margin-top: 1.2em;
+    padding-top: 0.4em;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 8px;
+    padding: 0 4px;
+    color: #71C0DF;
+}
+
+QToolTip {
+    color: #47ADD6;
+    background-color: #181B28;
+    border: 1px solid rgba(71, 173, 214, 0.3);
+    padding: 3px;
+}
+
+/* Selected rows: translucent cyan with navy text, as in the GTK theme */
+QListView::item:selected,
+QTreeView::item:selected,
+QTableView::item:selected {
+    color: #0F121C;
+    background-color: rgba(71, 173, 214, 0.6);
+}
+
+/* Tabs: the active one gets a cyan top edge */
+QTabWidget::pane {
+    border: 1px solid rgba(71, 173, 214, 0.18);
+    top: -1px;
+}
+
+QTabBar::tab {
+    color: rgba(71, 173, 214, 0.8);
+    background-color: rgba(71, 173, 214, 0.06);
+    border: 1px solid rgba(71, 173, 214, 0.18);
+    border-bottom: none;
+    padding: 4px 12px;
+    margin-right: 1px;
+}
+
+QTabBar::tab:selected {
+    color: #47ADD6;
+    background-color: #0F121C;
+    border-top: 3px solid #47ADD6;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: rgba(71, 173, 214, 0.12);
+}
+
+/* Scrollbars: slider at 0.3, 0.5 when hovered, 0.8 when dragged */
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+
+QScrollBar:vertical { width: 10px; }
+QScrollBar:horizontal { height: 10px; }
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background: rgba(71, 173, 214, 0.3);
+    border-radius: 4px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical { min-height: 24px; }
+QScrollBar::handle:horizontal { min-width: 24px; }
+
+QScrollBar::handle:hover { background: rgba(71, 173, 214, 0.5); }
+QScrollBar::handle:pressed { background: rgba(71, 173, 214, 0.8); }
+
+QScrollBar::add-line, QScrollBar::sub-line { width: 0; height: 0; border: none; background: none; }
+QScrollBar::add-page, QScrollBar::sub-page { background: none; }
+
+/* Checkboxes and radio buttons: navy with a cyan-tinted border, and the original theme's
+   cyan check, dash and dot (Fusion's own outline is invisible on navy). The images are found
+   relative to Prism's data folder, so the theme folder needs to be named CachyOS-Nord. */
+QCheckBox::indicator,
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(71, 173, 214, 0.3);
+    border-radius: 2px;
+    background-color: #131621;
+}
+
+QRadioButton::indicator { border-radius: 8px; }
+
+QCheckBox::indicator:hover,
+QRadioButton::indicator:hover { border-color: rgba(71, 173, 214, 0.6); }
+
+QCheckBox::indicator:checked { image: url(themes/CachyOS-Nord/resources/check.svg); }
+QCheckBox::indicator:indeterminate { image: url(themes/CachyOS-Nord/resources/dash.svg); }
+QRadioButton::indicator:checked { image: url(themes/CachyOS-Nord/resources/dot.svg); }
+
+QCheckBox::indicator:disabled,
+QRadioButton::indicator:disabled {
+    border-color: rgba(71, 173, 214, 0.15);
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked:disabled { image: url(themes/CachyOS-Nord/resources/check-disabled.svg); }
+QCheckBox::indicator:indeterminate:disabled { image: url(themes/CachyOS-Nord/resources/dash-disabled.svg); }
+QRadioButton::indicator:checked:disabled { image: url(themes/CachyOS-Nord/resources/dot-disabled.svg); }
