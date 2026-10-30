@@ -195,6 +195,10 @@ install() {
     cp -r "$SRC_DIR/gtk/3.0/gtk$color$size.css"                                 "$THEME_DIR/gtk-3.0/gtk.css"
   fi
 
+  # libhandy apps that follow the dark color scheme (e.g. Budgie Control Center) switch to
+  # Adwaita when the theme has no gtk-dark.css
+  ln -s gtk.css                                                                 "$THEME_DIR/gtk-3.0/gtk-dark.css"
+
   mkdir -p                                                                      "$THEME_DIR/gtk-4.0"
   cp -r "$SRC_DIR/gtk/assets"                                                   "$THEME_DIR/gtk-4.0/assets"
   cp -r "$SRC_DIR/gtk/scalable"                                                 "$THEME_DIR/gtk-4.0/assets"
