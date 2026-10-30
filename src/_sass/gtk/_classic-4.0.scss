@@ -5,6 +5,7 @@
 $classic-border:                        rgba($primary, 0.3);
 $classic-border-hover:                  rgba($primary, 0.6);
 $classic-border-disabled:               rgba($primary, 0.15);
+$classic-fill:                          rgba($primary, 0.6); // selected rows and checked switches
 
 //
 // Check and radio buttons
@@ -102,7 +103,7 @@ switch {
   }
 
   &:checked, &:checked:hover {
-    background-color: $primary;
+    background-color: $classic-fill;
     box-shadow: none;
     color: on($primary);
   }
@@ -253,7 +254,7 @@ row:selected,
 .navigation-sidebar > row:selected,
 placessidebar .navigation-sidebar > row:selected {
   background-image: none;
-  background-color: $primary;
+  background-color: $classic-fill;
   color: on($primary);
 
   image, label { color: on($primary); }
@@ -262,7 +263,7 @@ placessidebar .navigation-sidebar > row:selected {
 treeview.view:selected {
   &, &:focus, &:hover {
     background-image: none;
-    background-color: $primary;
+    background-color: $classic-fill;
     color: on($primary);
   }
 }

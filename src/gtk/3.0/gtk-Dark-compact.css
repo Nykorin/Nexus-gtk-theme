@@ -8707,7 +8707,7 @@ switch:hover {
 }
 
 switch:checked, switch:checked:hover {
-  background-color: #47ADD6;
+  background-color: rgba(71, 173, 214, 0.6);
   box-shadow: none;
   color: rgba(15, 18, 28, 0.87);
 }
@@ -8877,7 +8877,7 @@ window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.
 window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:selected,
 window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack list row.activatable:selected {
   background-image: none;
-  background-color: #47ADD6;
+  background-color: rgba(71, 173, 214, 0.6);
   color: rgba(15, 18, 28, 0.87);
 }
 
@@ -8895,7 +8895,7 @@ window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > vi
 
 treeview.view:selected, treeview.view:selected:focus, treeview.view:selected:hover {
   background-image: none;
-  background-color: #47ADD6;
+  background-color: rgba(71, 173, 214, 0.6);
   color: rgba(15, 18, 28, 0.87);
 }
 

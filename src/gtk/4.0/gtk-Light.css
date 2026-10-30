@@ -8442,7 +8442,7 @@ switch:hover {
 }
 
 switch:checked, switch:checked:hover {
-  background-color: #147AA3;
+  background-color: rgba(20, 122, 163, 0.6);
   box-shadow: none;
   color: white;
 }
@@ -8609,7 +8609,7 @@ row:selected,
 .navigation-sidebar > row:selected,
 placessidebar .navigation-sidebar > row:selected {
   background-image: none;
-  background-color: #147AA3;
+  background-color: rgba(20, 122, 163, 0.6);
   color: white;
 }
 
@@ -8623,7 +8623,7 @@ placessidebar .navigation-sidebar > row:selected label {
 
 treeview.view:selected, treeview.view:selected:focus, treeview.view:selected:hover {
   background-image: none;
-  background-color: #147AA3;
+  background-color: rgba(20, 122, 163, 0.6);
   color: white;
 }
 
