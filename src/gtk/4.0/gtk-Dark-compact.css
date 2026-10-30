@@ -8651,6 +8651,14 @@ treeview.view:selected, treeview.view:selected:focus, treeview.view:selected:hov
   color: rgba(15, 18, 28, 0.87);
 }
 
+scrollbar > range > trough > slider:hover {
+  background-color: rgba(71, 173, 214, 0.5);
+}
+
+scrollbar > range > trough > slider:active {
+  background-color: rgba(71, 173, 214, 0.8);
+}
+
 button {
   min-height: 20px;
   min-width: 20px;
