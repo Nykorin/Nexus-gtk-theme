@@ -279,6 +279,30 @@ treeview.view:selected {
 }
 
 //
+// Blur version: GTK 4 draws the header bar over the translucent window background, while
+// GTK 3 draws the title bar on its own, so it came out more transparent; layer the window
+// background under it to match
+//
+
+@if $blur == 'true' {
+  .titlebar,
+  headerbar.default-decoration {
+    background-color: $background;
+    background-image: image($titlebar);
+
+    &:backdrop {
+      background-color: $background;
+      background-image: image($titlebar-backdrop);
+    }
+  }
+
+  .titlebar .titlebar {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+//
 // Compact: the sizes of the original theme
 //
 
