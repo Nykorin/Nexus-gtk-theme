@@ -118,3 +118,17 @@ cp -r prismlauncher/CachyOS-Nord ~/.var/app/org.prismlauncher.PrismLauncher/data
 ```
 
 Then restart Prism and pick *CachyOS-Nord* under Settings → Appearance → Theme.
+
+#### Transparency
+
+There is no transparent variant: Prism doesn't ask Qt for translucent windows, so a theme with
+translucent colors leaves the compositor treating the window as opaque, and it doesn't repaint
+what's behind it (old frames show through as trails). Have the compositor make the window
+translucent instead; text and icons fade with it. On Wayfire (and Budgie on Wayfire), with the
+`alpha` and `window-rules` plugins enabled, add a rule to the `[window-rules]` section of
+`wayfire.ini` (`~/.config/budgie-desktop/wayfire/wayfire.ini` on Budgie):
+
+```ini
+[window-rules]
+prism_alpha = on created if app_id is "org.prismlauncher.PrismLauncher" then set alpha 0.85
+```
