@@ -111,6 +111,22 @@
 			"foreground": "var(olive)"
 		},
 		{
+			"name": "Mapping key (JSON, YAML)",
+			"scope": "meta.mapping.key string, meta.mapping.key.yaml",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Diff header",
+			"scope": "meta.diff.header, meta.header.diff, meta.diff.index",
+			"foreground": "var(blue)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Diff range",
+			"scope": "meta.diff.range",
+			"foreground": "var(mauve)"
+		},
+		{
 			"name": "Decorator",
 			"scope": "meta.annotation, punctuation.definition.annotation, entity.name.function.decorator",
 			"foreground": "var(blue)"
@@ -132,14 +148,142 @@
 			"font_style": "italic"
 		},
 		{
-			"name": "Link",
+			"name": "Link URL",
 			"scope": "markup.underline.link",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Link text",
+			"scope": "meta.link.inline.description, meta.link.reference.description, meta.link.reference.literal.description, meta.link.reference.wiki.description",
 			"foreground": "var(cyan_light)"
 		},
 		{
-			"name": "Code",
-			"scope": "markup.raw",
+			"name": "Link punctuation",
+			"scope": "punctuation.definition.link",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Inline code",
+			"scope": "markup.raw.inline",
+			"foreground": "var(green)",
+			"background": "color(var(cyan) alpha(0.08))"
+		},
+		{
+			"name": "Inline code backticks",
+			"scope": "markup.raw.inline punctuation.definition.raw",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Code block",
+			"scope": "markup.raw.block, markup.raw.code-fence",
+			"foreground": "var(white)",
+			"background": "var(surface)"
+		},
+		{
+			"name": "Code block with a language",
+			"scope": "meta.code-fence.body",
+			"background": "var(surface)"
+		},
+		{
+			"name": "Code fence",
+			"scope": "meta.code-fence.definition, punctuation.definition.raw.code-fence",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Code fence language",
+			"scope": "constant.other.language-name",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Heading markers",
+			"scope": "punctuation.definition.heading",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Bold and italic markers",
+			"scope": "punctuation.definition.bold, punctuation.definition.italic",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Quote",
+			"scope": "markup.quote",
+			"foreground": "color(var(cyan) alpha(0.75))",
+			"font_style": "italic"
+		},
+		{
+			"name": "Quote marker",
+			"scope": "punctuation.definition.blockquote",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Alert: note",
+			"scope": "markup.heading.alert.note, markup.heading.admonition.note",
+			"foreground": "var(cyan)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Alert body: note",
+			"scope": "markup.quote.alert.note",
+			"foreground": "var(cyan)"
+		},
+		{
+			"name": "Alert: tip",
+			"scope": "markup.heading.alert.tip, markup.heading.admonition.tip",
+			"foreground": "var(green)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Alert body: tip",
+			"scope": "markup.quote.alert.tip",
 			"foreground": "var(green)"
+		},
+		{
+			"name": "Alert: important",
+			"scope": "markup.heading.alert.important, markup.heading.admonition.important",
+			"foreground": "var(mauve)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Alert body: important",
+			"scope": "markup.quote.alert.important",
+			"foreground": "var(mauve)"
+		},
+		{
+			"name": "Alert: warning",
+			"scope": "markup.heading.alert.warning, markup.heading.admonition.warning",
+			"foreground": "var(olive)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Alert body: warning",
+			"scope": "markup.quote.alert.warning",
+			"foreground": "var(olive)"
+		},
+		{
+			"name": "Alert: caution",
+			"scope": "markup.heading.alert.caution, markup.heading.admonition.caution, markup.heading.admonition.error, markup.heading.alert.error",
+			"foreground": "var(red)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Alert body: caution",
+			"scope": "markup.quote.alert.caution",
+			"foreground": "var(red)"
+		},
+		{
+			"name": "List marker",
+			"scope": "punctuation.definition.list_item, markup.list.numbered.bullet, markup.list.unnumbered.bullet",
+			"foreground": "var(mauve)"
+		},
+		{
+			"name": "Separator",
+			"scope": "meta.separator",
+			"foreground": "var(slate)"
+		},
+		{
+			"name": "Strikethrough",
+			"scope": "markup.strikethrough",
+			"foreground": "var(slate)"
 		},
 		{
 			"name": "Inserted",
