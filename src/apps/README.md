@@ -87,5 +87,11 @@ In Preferences → Settings:
 
 ```json
 "theme": "CachyOS-Nord.sublime-theme",
-"color_scheme": "CachyOS-Nord.sublime-color-scheme",
+"color_scheme": "Packages/User/CachyOS-Nord.sublime-color-scheme",
 ```
+
+Give the color scheme's full path as above if you use the
+[Color Highlight](https://github.com/SublimeText/ColorHighlight) plugin: it looks for color
+schemes given by name only in Sublime's *Color Scheme - Default* package, and otherwise can't add
+its rules, so color values aren't highlighted in their own colors. With the full path it adds
+them to `CachyOS-Nord.sublime-color-scheme` itself (keeping a `.chback` backup next to it).
