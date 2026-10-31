@@ -182,3 +182,17 @@ fit = "Cover"
 ```
 
 The image has to be readable by the `greeter` user, e.g. under `/usr/share`.
+
+For a frosted-glass look, `regreet/blur-background.sh` blurs a copy of the wallpaper with
+ImageMagick and writes a `regreet.css` that puts it behind the login box and clock. ReGreet
+draws the wallpaper in its own window, so the compositor's blur can't do this. Give it the
+wallpaper and the screen size in logical pixels (the mode divided by the output's scale); the
+copy is cut to that size the way `fit = "Cover"` does, and lines up with the wallpaper around
+the boxes:
+
+```sh
+src/apps/regreet/blur-background.sh /usr/share/wallpapers/connections/connections.png 1920x1080 out
+sudo cp out/regreet.css out/regreet-blur.png /etc/greetd/
+```
+
+Run it again after changing the wallpaper or the screen size.
