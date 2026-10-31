@@ -1,9 +1,9 @@
 ## CachyOS-Nord app themes
 
-Themes for terminals, Sublime Text and Prism Launcher in the colors of the CachyOS-Nord GTK
-theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`), cyan cursor and selection,
-and the theme's green, olive and mauve in the 16-color palette. Red and blue come from
-CachyOS's Nordic Konsole scheme.
+Themes for terminals, Sublime Text, Prism Launcher and ReGreet in the colors of the
+CachyOS-Nord GTK theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`), cyan cursor
+and selection, and the theme's green, olive and mauve in the 16-color palette. Red and blue
+come from CachyOS's Nordic Konsole scheme.
 
 Each terminal has two variants:
 
@@ -144,3 +144,31 @@ prism_alpha = on created if app_id is "org.prismlauncher.PrismLauncher" then set
 Use the bright variant with it. At 0.5 its text stays readable over a dark wallpaper; raise the
 value (0.6–0.7) over a busy or light one. Lower values such as the terminals' 0.25 leave even
 near-white text faint, since the text fades along with the window.
+
+### ReGreet
+
+A stylesheet for [ReGreet](https://github.com/rharish101/ReGreet), the greetd greeter, used
+together with the GTK theme. The theme already colors ReGreet's entries, lists and buttons; the
+stylesheet gives the login box and the clock the navy and cyan glow of the theme's windows, a
+larger clock, Reboot and Power Off buttons in navy with mauve text (glowing mauve on hover, like
+the close button), and notices such as a failed login in navy with a colored border instead of
+a solid block.
+
+ReGreet runs as the `greeter` user, which can't read your home folder, so install the GTK theme
+system-wide and the stylesheet to `/etc/greetd`:
+
+```sh
+sudo ./install.sh -s standard        # from the repository root: to /usr/share/themes
+sudo cp src/apps/regreet/regreet.css /etc/greetd/regreet.css
+```
+
+Then set the theme in the `[GTK]` section of `/etc/greetd/regreet.toml`:
+
+```toml
+[GTK]
+application_prefer_dark_theme = true
+theme_name = "CachyOS-Nord"
+```
+
+The stylesheet was made for a plain navy screen, without a background image (`[background]`
+in `regreet.toml`); with one, the boxes are drawn over the image instead.

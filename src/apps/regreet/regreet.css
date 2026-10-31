@@ -1,0 +1,71 @@
+/* CachyOS-Nord for ReGreet: the parts of the greeter the GTK theme leaves plain.
+   Use it together with the GTK theme (theme_name = "CachyOS-Nord" in regreet.toml). */
+
+/* The screen behind the login box, when regreet.toml sets no background image */
+window.background {
+  background-color: #0F121C;
+}
+
+/* Login box and clock: the navy of the theme's windows, with their cyan glow */
+overlay > frame.background {
+  background-color: #131621;
+  border: 1px solid rgba(71, 173, 214, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 3px 12px 2px rgba(21, 72, 93, 0.7), 0 0 24px rgba(71, 173, 214, 0.12);
+}
+
+/* Clock (the only frame whose child is a label) */
+overlay > frame.background > label {
+  padding: 6px 18px;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #86C9E4;
+}
+
+/* Reboot and Power Off: navy with mauve text, glowing mauve on hover like the theme's close
+   button, instead of solid mauve blocks */
+button.destructive-action {
+  background-color: #131621;
+  color: #AD7AA3;
+  border: 1px solid rgba(173, 122, 163, 0.4);
+  box-shadow: none;
+  min-width: 90px;
+}
+
+button.destructive-action:hover,
+button.destructive-action:focus-visible {
+  background-color: #181B28;
+  color: #C09AB9;
+  border-color: rgba(192, 154, 185, 0.8);
+  box-shadow: 0 0 10px rgba(192, 154, 185, 0.45);
+  text-shadow: 0 0 6px rgba(192, 154, 185, 0.7);
+}
+
+button.destructive-action:active {
+  background-color: rgba(173, 122, 163, 0.25);
+}
+
+/* Notices above those buttons (e.g. a failed login): the login box's navy, with the
+   notice's color as text and border, instead of a solid block */
+infobar > revealer > box,
+infobar:hover > revealer > box,
+infobar:backdrop > revealer > box {
+  background-color: #131621;
+  color: #47ADD6;
+  border: 1px solid rgba(71, 173, 214, 0.25);
+  border-radius: 8px;
+}
+
+infobar.error > revealer > box,
+infobar.error:hover > revealer > box,
+infobar.error:backdrop > revealer > box {
+  color: #C09AB9;
+  border-color: rgba(173, 122, 163, 0.6);
+}
+
+infobar.warning > revealer > box,
+infobar.warning:hover > revealer > box,
+infobar.warning:backdrop > revealer > box {
+  color: #ADAD70;
+  border-color: rgba(173, 173, 112, 0.6);
+}
