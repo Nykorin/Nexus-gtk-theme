@@ -171,7 +171,9 @@ theme_name = "CachyOS-Nord"
 ```
 
 Without a background image the screen is plain navy. To use a wallpaper, add a `[background]`
-section; the opaque login box stays readable over a busy image:
+section. The login box, clock, buttons and notices are half transparent, so the wallpaper shows
+through them (unblurred: ReGreet draws the image in its own window, so a compositor's blur can't
+reach it):
 
 ```toml
 [background]
