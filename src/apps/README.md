@@ -170,5 +170,13 @@ application_prefer_dark_theme = true
 theme_name = "CachyOS-Nord"
 ```
 
-The stylesheet was made for a plain navy screen, without a background image (`[background]`
-in `regreet.toml`); with one, the boxes are drawn over the image instead.
+Without a background image the screen is plain navy. To use a wallpaper, add a `[background]`
+section; the opaque login box stays readable over a busy image:
+
+```toml
+[background]
+path = "/usr/share/wallpapers/connections/connections.png"
+fit = "Cover"
+```
+
+The image has to be readable by the `greeter` user, e.g. under `/usr/share`.
