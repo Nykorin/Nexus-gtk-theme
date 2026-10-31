@@ -195,4 +195,6 @@ src/apps/regreet/blur-background.sh /usr/share/wallpapers/connections/connection
 sudo cp out/regreet.css out/regreet-blur.png /etc/greetd/
 ```
 
-Run it again after changing the wallpaper or the screen size.
+Keep the original wallpaper as `path` in `regreet.toml`: `regreet-blur.png` is only for the
+stylesheet, and as `path` it would blur the whole screen. Run the script again after changing
+the wallpaper or the screen size.
