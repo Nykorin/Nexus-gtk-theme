@@ -1,0 +1,45 @@
+/**
+ * @name CachyOS-Nord (transparent)
+ * @author Nerokin
+ * @version 1.0.0
+ * @description CachyOS-Nord with a translucent window for the compositor's blur. Needs CachyOS-Nord.theme.css next to it (don't enable both) and "Enable window transparency" in Vencord's settings.
+ * @source https://github.com/Nykorin/Nexus-gtk-theme/tree/cachyos/src/apps/vesktop
+ */
+
+@import url("./CachyOS-Nord.theme.css");
+
+/* The window is navy at 0.25, like the transparent terminal themes. Wayfire's blur scales with
+   each pixel's opacity up to its alpha_threshold (0.2 here), so fully transparent backgrounds
+   (as in themes that use "transparent") show the desktop unblurred; at 0.25 it's fully blurred.
+   The panels on top are clear or only faintly tinted, so they don't stack up into opaque
+   blocks. */
+html,
+body {
+  background: transparent !important;
+}
+
+body {
+  background-color: rgba(15, 18, 28, 0.25) !important;
+}
+
+.theme-dark.theme-dark,
+.theme-darker.theme-darker,
+.theme-midnight.theme-midnight {
+  /* Main panels: clear over the window's navy, the sidebars faintly tinted */
+  --app-frame-background: transparent;
+  --background-base-lowest: transparent;
+  --background-base-lower: rgba(15, 18, 28, 0.2);
+  --background-base-low: transparent;
+  --chat-background-default: transparent;
+  --background-secondary-alt: rgba(15, 18, 28, 0.3);
+  --channeltextarea-background: rgba(24, 27, 40, 0.6);
+  --card-background-default: rgba(24, 27, 40, 0.6);
+
+  /* Popouts, menus and dialogs sit over messages, not the desktop: nearly opaque */
+  --background-surface-high: rgba(24, 27, 40, 0.94);
+  --background-surface-higher: rgba(28, 32, 48, 0.95);
+  --background-surface-highest: rgba(32, 37, 56, 0.96);
+  --bg-surface-raised: rgba(24, 27, 40, 0.94);
+  --modal-background: rgba(24, 27, 40, 0.96);
+  --modal-footer-background: rgba(19, 22, 33, 0.96);
+}

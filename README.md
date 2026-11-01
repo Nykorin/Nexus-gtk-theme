@@ -81,8 +81,9 @@ Automatically install your host GTK+ theme as a Flatpak:
 
 ### App themes
 
-Themes in the same colors for Alacritty, Ghostty, Konsole and btop (each opaque or transparent),
-for Sublime Text 4 (color scheme and UI theme), Prism Launcher and the ReGreet greeter:
+Themes in the same colors for Alacritty, Ghostty, Konsole, btop and Vesktop (each opaque or
+transparent), for Sublime Text 4 (color scheme and UI theme), Prism Launcher and the ReGreet
+greeter:
 [Install app themes](src/apps)
 
 ## Development

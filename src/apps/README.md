@@ -1,6 +1,6 @@
 ## CachyOS-Nord app themes
 
-Themes for terminals, Sublime Text, Prism Launcher and ReGreet in the colors of the
+Themes for terminals, Sublime Text, Prism Launcher, ReGreet and Vesktop in the colors of the
 CachyOS-Nord GTK theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`), cyan cursor
 and selection, and the theme's green, olive and mauve in the 16-color palette. Red and blue
 come from CachyOS's Nordic Konsole scheme.
@@ -198,3 +198,33 @@ sudo cp out/regreet.css out/regreet-blur.png /etc/greetd/
 Keep the original wallpaper as `path` in `regreet.toml`: `regreet-blur.png` is only for the
 stylesheet, and as `path` it would blur the whole screen. Run the script again after changing
 the wallpaper or the screen size.
+
+### Vesktop
+
+Two [Vencord](https://vencord.dev/) themes for [Vesktop](https://github.com/Vencord/Vesktop)
+(they also work in Discord with Vencord):
+
+- `CachyOS-Nord.theme.css`: navy backgrounds, cyan text and accent (in place of blurple, with
+  navy text on filled buttons), cyan-tinted borders, hover and selection, and the theme's green,
+  olive and mauve for online, idle and do-not-disturb, warnings and errors
+- `CachyOS-Nord-Transparent.theme.css`: the same over a window that is navy at 0.25, for the
+  compositor's blur; popouts, menus and dialogs stay nearly opaque. It imports the first file,
+  so copy both and enable only this one
+
+They set Discord's own color variables rather than its class names, which change with Discord
+updates. Use Discord's Dark theme (Settings → Appearance); Darker and Midnight get the same
+colors.
+
+```sh
+# Flatpak
+cp vesktop/*.theme.css ~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/
+# Native package
+cp vesktop/*.theme.css ~/.config/vesktop/themes/
+```
+
+Then enable one under Vencord → Themes. For the transparent one, also turn on Vencord →
+Settings → *Enable window transparency* and restart Vesktop.
+
+On Wayfire, the blur plugin blurs behind a pixel in proportion to its opacity, up to
+`alpha_threshold` (`[blur]` in `wayfire.ini`); fully transparent backgrounds aren't blurred at
+all. The transparent theme's 0.25 is enough for full blur with a threshold of 0.25 or lower.

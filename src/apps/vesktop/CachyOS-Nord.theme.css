@@ -1,0 +1,186 @@
+/**
+ * @name CachyOS-Nord
+ * @author Nerokin
+ * @version 1.0.0
+ * @description Discord in the colors of the CachyOS-Nord GTK theme: navy backgrounds, cyan text and accent, green, olive and mauve for status.
+ * @source https://github.com/Nykorin/Nexus-gtk-theme/tree/cachyos/src/apps/vesktop
+ */
+
+/* Overrides Discord's own color tokens (the "visual refresh" names), so it doesn't depend on
+   Discord's hashed class names. The doubled class beats Discord's own .theme-dark rules
+   without !important. Made for the Dark theme; Darker and Midnight get the same colors. */
+.theme-dark.theme-dark,
+.theme-darker.theme-darker,
+.theme-midnight.theme-midnight {
+  /* Backgrounds: the GTK theme's navy, darkest at the window frame and server list */
+  --app-frame-background: #0F121C;
+  --app-frame-border: rgba(71, 173, 214, 0.15);
+  --background-base-lowest: #0F121C;
+  --background-base-lower: #131621;
+  --background-base-low: #151826;
+  --background-surface-high: #181B28;
+  --background-surface-higher: #1C2030;
+  --background-surface-highest: #202538;
+  --background-secondary-alt: #131621;
+  --bg-surface-raised: #181B28;
+  --chat-background-default: #151826;
+  --channeltextarea-background: #181B28;
+  --modal-background: #181B28;
+  --modal-footer-background: #131621;
+  --card-background-default: #181B28;
+  --background-scrim: rgba(10, 12, 19, 0.75);
+
+  /* Hover and selection layers: cyan instead of white */
+  --background-mod-muted: rgba(71, 173, 214, 0.04);
+  --background-mod-subtle: rgba(71, 173, 214, 0.08);
+  --background-mod-normal: rgba(71, 173, 214, 0.12);
+  --background-mod-strong: rgba(71, 173, 214, 0.18);
+  --interactive-background-default: rgba(71, 173, 214, 0.06);
+  --interactive-background-hover: rgba(71, 173, 214, 0.1);
+  --interactive-background-active: rgba(71, 173, 214, 0.16);
+  --interactive-background-selected: rgba(71, 173, 214, 0.2);
+  --message-background-hover: rgba(71, 173, 214, 0.04);
+  --card-secondary-bg: rgba(71, 173, 214, 0.08);
+
+  /* Borders: cyan-tinted, as in the GTK theme */
+  --border-muted: rgba(71, 173, 214, 0.06);
+  --border-subtle: rgba(71, 173, 214, 0.12);
+  --border-normal: rgba(71, 173, 214, 0.2);
+  --border-strong: rgba(71, 173, 214, 0.4);
+  --border-focus: #47ADD6;
+  --card-border-default: rgba(71, 173, 214, 0.12);
+  --chat-border: rgba(71, 173, 214, 0.12);
+
+  /* Text: cyan, lighter for names and headings, slate for timestamps and hints */
+  --text-strong: #86C9E4;
+  --text-default: #47ADD6;
+  --text-subtle: #3D93B6;
+  --text-muted: #6B8C9B;
+  --text-link: #71C0DF;
+  --text-brand: #71C0DF;
+  --text-invert: #0F121C;
+  --text-code: #86C9E4;
+  --text-code-variable: #86C9E4;
+  --text-code-comment: #6B8C9B;
+  --chat-text-muted: #6B8C9B;
+  --channels-default: #3D93B6;
+  --channel-icon: #3D93B6;
+  --channel-text-area-placeholder: #526D7A;
+  --text-status-online: #7AE070;
+  --text-status-idle: #ADAD70;
+  --text-status-dnd: #AD7AA3;
+  --text-status-offline: #526D7A;
+  --text-feedback-positive: #7AE070;
+  --text-feedback-warning: #ADAD70;
+  --text-feedback-critical: #C09AB9;
+  --text-feedback-info: #71C0DF;
+
+  /* Icons and other interactive text */
+  --icon-strong: #86C9E4;
+  --icon-default: #47ADD6;
+  --icon-muted: #3D93B6;
+  --interactive-text-default: #3D93B6;
+  --interactive-text-hover: #86C9E4;
+  --interactive-text-active: #86C9E4;
+  --interactive-icon-default: #3D93B6;
+  --interactive-icon-hover: #86C9E4;
+  --interactive-icon-active: #86C9E4;
+  --interactive-muted: #2E4A5A;
+
+  /* Accent: cyan instead of blurple, with navy text on filled buttons */
+  --brand-500: #47ADD6;
+  --brand-560: #3A9BC2;
+  --brand-360: #71C0DF;
+  --background-brand: #47ADD6;
+  --control-brand-foreground: #71C0DF;
+  --control-brand-foreground-new: #71C0DF;
+  --control-primary-background-default: #47ADD6;
+  --control-primary-background-hover: #5DB8DC;
+  --control-primary-background-active: #3A9BC2;
+  --control-primary-text-default: #0F121C;
+  --control-primary-text-hover: #0F121C;
+  --control-primary-text-active: #0F121C;
+  --control-primary-icon-default: #0F121C;
+  --control-primary-icon-hover: #0F121C;
+  --control-primary-icon-active: #0F121C;
+  --control-secondary-background-default: rgba(71, 173, 214, 0.1);
+  --control-secondary-background-hover: rgba(71, 173, 214, 0.16);
+  --control-secondary-background-active: rgba(71, 173, 214, 0.22);
+  --control-secondary-text-default: #47ADD6;
+  --control-secondary-text-hover: #86C9E4;
+  --control-secondary-text-active: #86C9E4;
+  --control-secondary-icon-default: #47ADD6;
+  --control-secondary-icon-hover: #86C9E4;
+  --control-secondary-icon-active: #86C9E4;
+  --interactive-accent-background-hover: #47ADD6;
+  --interactive-accent-background-selected: #47ADD6;
+  --interactive-accent-background-active: #3A9BC2;
+
+  /* Destructive buttons: mauve, like the GTK theme's destructive actions */
+  --control-critical-primary-background-default: #AD7AA3;
+  --control-critical-primary-background-hover: #C09AB9;
+  --control-critical-primary-background-active: #9A6890;
+  --control-critical-primary-text-default: #0F121C;
+  --control-critical-primary-text-hover: #0F121C;
+  --control-critical-primary-text-active: #0F121C;
+  --control-critical-primary-icon-default: #0F121C;
+  --control-critical-primary-icon-hover: #0F121C;
+  --control-critical-primary-icon-active: #0F121C;
+  --control-critical-secondary-text-default: #C09AB9;
+  --control-critical-secondary-text-hover: #C09AB9;
+  --control-critical-secondary-text-active: #C09AB9;
+  --control-critical-secondary-icon-default: #C09AB9;
+  --control-critical-secondary-icon-hover: #C09AB9;
+  --control-critical-secondary-icon-active: #C09AB9;
+
+  /* Text fields */
+  --input-background-default: rgba(15, 18, 28, 0.5);
+  --input-border-default: rgba(71, 173, 214, 0.2);
+  --input-border-hover: rgba(71, 173, 214, 0.35);
+  --input-border-active: #47ADD6;
+  --input-text-default: #47ADD6;
+  --input-placeholder-text-default: #526D7A;
+  --input-icon-default: #3D93B6;
+
+  /* Mentions and highlighted messages */
+  --mention-background: rgba(71, 173, 214, 0.2);
+  --mention-foreground: #86C9E4;
+  --message-highlight-background-default: rgba(71, 173, 214, 0.1);
+  --message-highlight-background-hover: rgba(71, 173, 214, 0.14);
+  --message-mentioned-background-default: rgba(173, 173, 112, 0.1);
+  --message-mentioned-background-hover: rgba(173, 173, 112, 0.14);
+
+  /* Status: green, olive and mauve as in the GTK theme */
+  --status-online: #7AE070;
+  --status-positive: #7AE070;
+  --status-positive-background: #7AE070;
+  --status-positive-text: #0F121C;
+  --status-warning: #ADAD70;
+  --status-warning-background: #ADAD70;
+  --status-warning-text: #0F121C;
+  --status-danger: #AD7AA3;
+  --background-feedback-notification: #AD7AA3;
+  --border-feedback-positive: #7AE070;
+  --border-feedback-warning: #ADAD70;
+  --border-feedback-critical: #AD7AA3;
+  --border-feedback-info: #47ADD6;
+
+  /* Scrollbars: the GTK theme's cyan slider */
+  --scrollbar-auto-thumb: rgba(71, 173, 214, 0.3);
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-thumb: rgba(71, 173, 214, 0.3);
+  --scrollbar-auto-scrollbar-color-track: transparent;
+  --scrollbar-thin-thumb: rgba(71, 173, 214, 0.3);
+  --scrollbar-thin-track: transparent;
+
+  /* Spoilers */
+  --spoiler-hidden-background: #202538;
+  --spoiler-hidden-background-hover: #262C42;
+  --spoiler-revealed-background: rgba(71, 173, 214, 0.08);
+}
+
+/* Selected text: the GTK theme's selection */
+::selection {
+  background-color: rgba(71, 173, 214, 0.6);
+  color: #0F121C;
+}
