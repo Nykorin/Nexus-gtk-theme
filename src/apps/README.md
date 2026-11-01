@@ -1,9 +1,9 @@
 ## CachyOS-Nord app themes
 
-Themes for terminals, Sublime Text, Prism Launcher, ReGreet, Vesktop and Dolphin Emulator in the
-colors of the CachyOS-Nord GTK theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`),
-cyan cursor and selection, and the theme's green, olive and mauve in the 16-color palette. Red
-and blue come from CachyOS's Nordic Konsole scheme.
+Themes for terminals, Sublime Text, Prism Launcher, ReGreet, Vesktop, Dolphin Emulator and Qt
+apps (Kvantum) in the colors of the CachyOS-Nord GTK theme: a navy background (`#0F121C`) with
+cyan text (`#47ADD6`), cyan cursor and selection, and the theme's green, olive and mauve in the
+16-color palette. Red and blue come from CachyOS's Nordic Konsole scheme.
 
 Each terminal has two variants:
 
@@ -259,3 +259,37 @@ balloons. They match when Qt gets its palette from the GTK theme, as the Flatpak
 ```sh
 flatpak override --user --env=GTK_THEME=CachyOS-Nord --filesystem=xdg-data/themes:ro org.DolphinEmu.dolphin-emu
 ```
+
+### Kvantum (Qt apps, with translucent windows)
+
+A [Kvantum](https://github.com/tsujan/Kvantum) theme for Qt apps: Kvantum's KvArcDark recolored
+to the GTK theme's navy and cyan, with translucent windows (at half opacity, menus nearly
+opaque). Unlike a Qt stylesheet, Kvantum can make an app's windows translucent itself, so this
+also works for apps that don't ask for it, such as Dolphin Emulator and PrimeHack.
+
+```sh
+mkdir -p ~/.config/Kvantum
+cp -r kvantum/CachyOS-Nord ~/.config/Kvantum/
+printf '[General]\ntheme=CachyOS-Nord\n' > ~/.config/Kvantum/kvantum.kvconfig   # or pick it in kvantummanager
+```
+
+Apps use it with `QT_STYLE_OVERRIDE=kvantum`. Two things to know:
+
+- Qt's GTK platform theme (`QT_QPA_PLATFORMTHEME=gtk3`, set on GTK desktops such as Budgie)
+  replaces Kvantum's colors with ones taken from the GTK theme. Use the portal platform theme
+  instead, which keeps the desktop's file dialogs: `QT_QPA_PLATFORMTHEME=xdgdesktopportal`.
+- In Dolphin and PrimeHack, choose the *(System)* style, so that no stylesheet paints opaque
+  backgrounds over Kvantum's.
+
+For Flatpak apps, give them the theme and the settings, and install the Kvantum extension for
+the app's runtime (`flatpak info APP` shows it). Flathub has it up to runtime 6.10 (PrimeHack),
+not yet for 6.11 (the current Dolphin):
+
+```sh
+flatpak override --user --filesystem=xdg-config/Kvantum:ro \
+  --env=QT_STYLE_OVERRIDE=kvantum --env=QT_QPA_PLATFORMTHEME=xdgdesktopportal
+flatpak install flathub org.kde.KStyle.Kvantum//6.10
+```
+
+The window opacity is `reduce_window_opacity=50` in `CachyOS-Nord.kvconfig` (0 for opaque
+windows). At 0.5 it is above Wayfire's blur threshold, so Wayfire blurs behind the windows.

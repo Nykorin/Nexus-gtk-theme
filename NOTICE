@@ -26,6 +26,9 @@ Modified in October 2026:
 - themes for Alacritty, Ghostty, Konsole, btop, Sublime Text 4, Prism Launcher,
   Vesktop and Dolphin Emulator, and a ReGreet stylesheet, in the same colors
   (src/apps)
+- a Kvantum theme (src/apps/kvantum/CachyOS-Nord): KvArcDark from Kvantum by
+  Tsu Jan (https://github.com/tsujan/Kvantum, GPL-3.0), recolored, with
+  translucent windows
 
 The Firefox theme in src/firefox keeps its own credits (see src/firefox/README.md).
 

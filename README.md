@@ -83,7 +83,7 @@ Automatically install your host GTK+ theme as a Flatpak:
 
 Themes in the same colors for Alacritty, Ghostty, Konsole, btop and Vesktop (each opaque or
 transparent), for Sublime Text 4 (color scheme and UI theme), Prism Launcher, the ReGreet
-greeter and Dolphin Emulator:
+greeter and Dolphin Emulator, and a Kvantum theme for Qt apps with translucent windows:
 [Install app themes](src/apps)
 
 ## Development
