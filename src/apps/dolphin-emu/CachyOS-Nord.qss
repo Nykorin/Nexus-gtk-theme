@@ -1,8 +1,9 @@
 /* CachyOS-Nord for Dolphin Emulator: navy backgrounds, cyan text and accent, cyan-tinted
    borders, selections filled cyan at 0.6 with navy text, as in the GTK theme.
 
-   A template: install.sh replaces @RES@ with the absolute path of the resources folder,
-   since Dolphin applies the stylesheet's text without a base folder for relative paths.
+   A template: install.sh replaces @RES@ with the absolute path of the images folder
+   (StyleImages/CachyOS-Nord in Dolphin's user folder), since Dolphin applies the stylesheet's
+   text without a base folder for relative paths.
    On Linux, Dolphin keeps the system palette for user styles, so every color is set here. */
 
 /* Base */
