@@ -7535,7 +7535,8 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 popover.background.icon-popover,
-popover.background.budgie-menu {
+popover.background.budgie-menu,
+popover.background.budgie-popover {
   background-color: #181B28;
 }
 

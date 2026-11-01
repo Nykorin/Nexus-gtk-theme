@@ -259,10 +259,12 @@
   }
 }
 
-// The icon task list menu and Budgie menu are plain GTK popovers, which get $menu;
-// match the panel and the other Budgie popovers
+// Since Budgie 10.10 the applet popovers, the icon task list menu and the Budgie menu
+// are plain GTK popovers, so the generic popover.background rule ($menu, nearly
+// opaque) outranks .budgie-popover; match them to the panel
 popover.background.icon-popover,
-popover.background.budgie-menu { background-color: $titlebar; }
+popover.background.budgie-menu,
+popover.background.budgie-popover { background-color: $titlebar; }
 
 // FIXME: workspace has unnecessary/unknown margin
 .workspace-switcher {
