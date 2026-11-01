@@ -264,7 +264,8 @@ flatpak override --user --env=GTK_THEME=CachyOS-Nord --filesystem=xdg-data/theme
 
 A [Kvantum](https://github.com/tsujan/Kvantum) theme for Qt apps: Kvantum's KvArcDark recolored
 to the GTK theme's navy and cyan, with translucent windows (at half opacity, menus nearly
-opaque). Unlike a Qt stylesheet, Kvantum can make an app's windows translucent itself, so this
+opaque). Lists, text fields, buttons, the menu bar, tool bars and list headers are translucent
+too, so the window is see-through throughout. Unlike a Qt stylesheet, Kvantum can make an app's windows translucent itself, so this
 also works for apps that don't ask for it, such as Dolphin Emulator and PrimeHack.
 
 ```sh

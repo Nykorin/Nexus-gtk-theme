@@ -60,9 +60,9 @@ tree_branch_line=true
 
 [GeneralColors]
 window.color=#0F121C
-base.color=#131621
-alt.base.color=#151826
-button.color=#181B28
+base.color=#13162140
+alt.base.color=#15182650
+button.color=#181B2880
 light.color=#262C42
 mid.light.color=#1C2030
 dark.color=#05070C
