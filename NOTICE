@@ -23,8 +23,9 @@ Modified in October 2026:
 - the Budgie panel, popovers and Raven sharing the title bar color
 - a librsvg renderer (src/render-svg-ids.py) used by the asset scripts when
   Inkscape is not installed
-- themes for Alacritty, Ghostty, Konsole, btop, Sublime Text 4, Prism Launcher and
-  Vesktop, and a ReGreet stylesheet, in the same colors (src/apps)
+- themes for Alacritty, Ghostty, Konsole, btop, Sublime Text 4, Prism Launcher,
+  Vesktop and Dolphin Emulator, and a ReGreet stylesheet, in the same colors
+  (src/apps)
 
 The Firefox theme in src/firefox keeps its own credits (see src/firefox/README.md).
 

@@ -1,9 +1,9 @@
 ## CachyOS-Nord app themes
 
-Themes for terminals, Sublime Text, Prism Launcher, ReGreet and Vesktop in the colors of the
-CachyOS-Nord GTK theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`), cyan cursor
-and selection, and the theme's green, olive and mauve in the 16-color palette. Red and blue
-come from CachyOS's Nordic Konsole scheme.
+Themes for terminals, Sublime Text, Prism Launcher, ReGreet, Vesktop and Dolphin Emulator in the
+colors of the CachyOS-Nord GTK theme: a navy background (`#0F121C`) with cyan text (`#47ADD6`),
+cyan cursor and selection, and the theme's green, olive and mauve in the 16-color palette. Red
+and blue come from CachyOS's Nordic Konsole scheme.
 
 Each terminal has two variants:
 
@@ -231,3 +231,29 @@ Settings → *Enable window transparency* and restart Vesktop.
 On Wayfire, the blur plugin blurs behind a pixel in proportion to its opacity, up to
 `alpha_threshold` (`[blur]` in `wayfire.ini`); fully transparent backgrounds aren't blurred at
 all. The transparent theme's 0.25 is enough for full blur with a threshold of 0.25 or lower.
+
+### Dolphin Emulator
+
+A user style for [Dolphin](https://dolphin-emu.org/): navy backgrounds, cyan text, cyan-bordered
+check boxes and radio buttons with the GTK theme's check, dash and dot, selections filled cyan at
+0.6 with navy text, tabs with a cyan top line, thin cyan scroll bars, and cyan-tinted borders.
+
+Dolphin applies a user style's text without a folder to resolve image paths against, so
+`install.sh` writes the stylesheet with absolute paths to its images. It installs to the
+Flatpak's `Styles` folder if the Flatpak is installed, and otherwise to
+`~/.local/share/dolphin-emu/Styles` (or pass the folder):
+
+```sh
+dolphin-emu/install.sh
+```
+
+Then choose *CachyOS-Nord* under Config → Interface → Style.
+
+On Linux, Dolphin keeps the system palette with a user style, and two things take their colors
+from it rather than from the stylesheet: the Settings window's sidebar and Dolphin's help
+balloons. They match when Qt gets its palette from the GTK theme, as the Flatpak does with
+`GTK_THEME=CachyOS-Nord` (or `-compact`) and access to the themes folder:
+
+```sh
+flatpak override --user --env=GTK_THEME=CachyOS-Nord --filesystem=xdg-data/themes:ro org.DolphinEmu.dolphin-emu
+```
