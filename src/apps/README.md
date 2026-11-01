@@ -211,6 +211,9 @@ Two [Vencord](https://vencord.dev/) themes for [Vesktop](https://github.com/Venc
   compositor's blur; popouts, menus and dialogs stay nearly opaque. It imports the first file,
   so copy both and enable only this one
 
+Enable only one theme that sets colors: a transparent theme left on alongside (such as one
+setting backgrounds to `transparent !important`) overrides the opaque one.
+
 They set Discord's own color variables rather than its class names, which change with Discord
 updates. Use Discord's Dark theme (Settings → Appearance); Darker and Midnight get the same
 colors.
