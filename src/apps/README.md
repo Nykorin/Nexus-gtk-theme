@@ -234,14 +234,16 @@ all. The transparent theme's 0.25 is enough for full blur with a threshold of 0.
 
 ### Dolphin Emulator
 
-A user style for [Dolphin](https://dolphin-emu.org/): navy backgrounds, cyan text, cyan-bordered
+A user style for [Dolphin](https://dolphin-emu.org/) and its fork
+[PrimeHack](https://github.com/shiiion/dolphin): navy backgrounds, cyan text, cyan-bordered
 check boxes and radio buttons with the GTK theme's check, dash and dot, selections filled cyan at
 0.6 with navy text, tabs with a cyan top line, thin cyan scroll bars, and cyan-tinted borders.
 
 Dolphin applies a user style's text without a folder to resolve image paths against, so
-`install.sh` writes the stylesheet with absolute paths to its images. It installs to the
-Flatpak's `Styles` folder if the Flatpak is installed, and otherwise to
-`~/.local/share/dolphin-emu/Styles` (or pass the folder):
+`install.sh` writes the stylesheet with absolute paths to its images, so copy it with the
+script rather than by hand. It installs into each of the Dolphin and PrimeHack Flatpaks that's
+installed, each with its own copy of the images (a Flatpak can't read another one's data), and
+otherwise into `~/.local/share/dolphin-emu/Styles` (or pass a `Styles` folder):
 
 ```sh
 dolphin-emu/install.sh
