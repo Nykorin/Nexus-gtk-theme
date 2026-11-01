@@ -14,7 +14,18 @@
 
 set -euo pipefail
 
-if [[ $# -lt 2 || ! "$2" =~ ^[0-9]+x[0-9]+$ ]]; then
+case "${1:-}" in
+  -h | --help)
+    sed -n '2,14s/^# \{0,1\}//p' "$0"
+    exit 0
+    ;;
+  -*)
+    echo "Unknown option: $1 (see --help)" >&2
+    exit 1
+    ;;
+esac
+
+if [[ $# -lt 2 || $# -gt 3 || ! "$2" =~ ^[0-9]+x[0-9]+$ ]]; then
   sed -n '2,14s/^# \{0,1\}//p' "$0" >&2
   exit 1
 fi

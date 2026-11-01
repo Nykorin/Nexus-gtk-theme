@@ -11,7 +11,21 @@ set -euo pipefail
 
 src_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-if [[ $# -ge 1 ]]; then
+case "${1:-}" in
+  -h | --help)
+    sed -n '2,8s/^# \{0,1\}//p' "$0"
+    exit 0
+    ;;
+  -*)
+    echo "Unknown option: $1 (see --help)" >&2
+    exit 1
+    ;;
+esac
+
+if [[ $# -gt 1 ]]; then
+  echo "Too many arguments (see --help)" >&2
+  exit 1
+elif [[ $# -eq 1 ]]; then
   styles_dir="$1"
 elif [[ -d "$HOME/.var/app/org.DolphinEmu.dolphin-emu" ]]; then
   styles_dir="$HOME/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/Styles"
@@ -19,9 +33,9 @@ else
   styles_dir="${XDG_DATA_HOME:-$HOME/.local/share}/dolphin-emu/Styles"
 fi
 
-images_dir="$(dirname "$styles_dir")/StyleImages/CachyOS-Nord"
+images_dir="$(dirname -- "$styles_dir")/StyleImages/CachyOS-Nord"
 
-mkdir -p "$styles_dir" "$images_dir"
+mkdir -p -- "$styles_dir" "$images_dir"
 cp "$src_dir"/resources/*.svg "$images_dir/"
 
 # Earlier versions put the images in Styles/CachyOS-Nord, which Dolphin lists as a second
