@@ -45,6 +45,9 @@ Run the following commands in the terminal:
 -d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
 
 -n, --name NAME         Specify theme name (Default: CachyOS-Nord)
+                        A name given here is used as is, without the -round and
+                        -compact suffixes (-compact is still added when both sizes
+                        are installed)
 
 -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 

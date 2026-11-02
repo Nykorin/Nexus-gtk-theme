@@ -64,6 +64,9 @@ OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
 
   -n, --name NAME         Specify theme name (Default: $THEME_NAME)
+                          A name given here is used as is, without the -round and
+                          -compact suffixes (-compact is still added when both sizes
+                          are installed)
 
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
@@ -88,6 +91,26 @@ OPTIONS:
 EOF
 }
 
+# theme_dir_name NAME SIZE: the installed theme's name. A name given with -n is used
+# exactly as given (with the size suffix only when both sizes are installed, so they
+# don't overwrite each other); the default name gets the -round and size suffixes.
+theme_dir_name() {
+  local name="$1"
+  local size="$2"
+
+  if [[ -n "${custom_name:-}" ]]; then
+    if [[ "${#sizes[@]}" -gt 1 ]]; then
+      echo "$name$size"
+    else
+      echo "$name"
+    fi
+  elif [[ "$window" == 'round' ]]; then
+    echo "$name-round$size"
+  else
+    echo "$name$size"
+  fi
+}
+
 install() {
   local dest="$1"
   local name="$2"
@@ -96,13 +119,7 @@ install() {
   # The source files of the theme's one color variant
   local color='-Dark'
 
-  if [[ "$window" == 'round' ]]; then
-    round='-round'
-  else
-    round=$window
-  fi
-
-  local THEME_DIR="$dest/$name$round$size"
+  local THEME_DIR="$dest/$(theme_dir_name "$name" "$size")"
 
   [[ -d "$THEME_DIR" ]] && rm -rf "${THEME_DIR:?}"
 
@@ -115,13 +132,13 @@ install() {
 
   echo "[Desktop Entry]" >>                                                     "$THEME_DIR/index.theme"
   echo "Type=X-GNOME-Metatheme" >>                                              "$THEME_DIR/index.theme"
-  echo "Name=$name$round$size" >>                                               "$THEME_DIR/index.theme"
+  echo "Name=$(basename "$THEME_DIR")" >>                                               "$THEME_DIR/index.theme"
   echo "Comment=CachyOS Nord GTK theme: navy and cyan" >>                       "$THEME_DIR/index.theme"
   echo "Encoding=UTF-8" >>                                                      "$THEME_DIR/index.theme"
   echo "" >>                                                                    "$THEME_DIR/index.theme"
   echo "[X-GNOME-Metatheme]" >>                                                 "$THEME_DIR/index.theme"
-  echo "GtkTheme=$name$round$size" >>                                           "$THEME_DIR/index.theme"
-  echo "MetacityTheme=$name$round$size" >>                                      "$THEME_DIR/index.theme"
+  echo "GtkTheme=$(basename "$THEME_DIR")" >>                                           "$THEME_DIR/index.theme"
+  echo "MetacityTheme=$(basename "$THEME_DIR")" >>                                      "$THEME_DIR/index.theme"
   echo "ButtonLayout=close,minimize,maximize:menu" >>                           "$THEME_DIR/index.theme"
 
   mkdir -p                                                                      "$THEME_DIR/gnome-shell"
@@ -267,6 +284,7 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     -n|--name)
       name="$2"
+      custom_name="true"
       shift 2
       ;;
     -l|--libadwaita)
@@ -548,13 +566,7 @@ uninstall() {
   local name="${2}"
   local size="${3}"
 
-  if [[ "$window" == 'round' ]]; then
-    round='-round'
-  else
-    round=$window
-  fi
-
-  local THEME_DIR="$dest/$name$round$size"
+  local THEME_DIR="$dest/$(theme_dir_name "$name" "$size")"
 
   if [[ -d "${THEME_DIR}" ]]; then
     echo -e "Uninstall ${THEME_DIR}... "
@@ -571,13 +583,7 @@ link_libadwaita() {
   local name="$2"
   local size="$3"
 
-  if [[ "$window" == 'round' ]]; then
-    round='-round'
-  else
-    round=$window
-  fi
-
-  local THEME_DIR="$dest/$name$round$size"
+  local THEME_DIR="$dest/$(theme_dir_name "$name" "$size")"
 
   echo -e "\nLink '$THEME_DIR/gtk-4.0' to '${HOME}/.config/gtk-4.0' for libadwaita..."
 
