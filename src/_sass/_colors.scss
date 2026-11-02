@@ -126,6 +126,7 @@ $blur_opacity:                          if($variant == 'light', 0.425, 0.25); //
   $titlebar:                            rgba(titlebar(normal), $blur_opacity);
   $titlebar-backdrop:                   rgba(titlebar(backdrop), $blur_opacity);
   $panel:                               if($topbar == 'light', rgba($cachyos-light-titlebar, $blur_opacity), rgba($cachyos-bg, $blur_opacity));
+  $menu:                                $surface; // context menus and popovers, like the panel's popovers
 }
 
 //
