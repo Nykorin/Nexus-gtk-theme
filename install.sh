@@ -11,6 +11,7 @@ opacity=
 panel=
 window=
 blur=
+blur_opacity=
 outline=
 titlebutton=
 icon='-default'
@@ -83,7 +84,9 @@ OPTIONS:
                           solid:    no transparency version
                           float:    floating panel
                           round:    rounded windows
-                          blur:     blur version for 'Blur-Me'
+                          blur:     blur version for 'Blur-Me'; an optional number after it
+                                    sets its opacity, 0 to 1 (default 0.25 Dark,
+                                    0.425 Light), e.g. --tweaks blur 0.4 round
                           noborder: windows and menu with no border
                           square:   square windows button
 
@@ -297,7 +300,9 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     --tweaks)
       shift
+      prev_tweak=
       for tweaks in "$@"; do
+        [[ "$tweaks" == -* ]] && break
         case "$tweaks" in
           solid)
             opacity="solid"
@@ -319,6 +324,20 @@ while [[ "$#" -gt 0 ]]; do
             echo -e "Install blur version ..."
             shift
             ;;
+          [0-9]*|.[0-9]*)
+            # the opacity after "blur": 0 to 1
+            if [[ "$blur" != "true" || -n "$blur_opacity" || "$prev_tweak" != "blur" ]]; then
+              echo "ERROR: '$tweaks' is only valid right after the blur tweak (--tweaks blur 0.4)."
+              exit 1
+            fi
+            if ! [[ "$tweaks" =~ ^(0(\.[0-9]+)?|1(\.0+)?|0?\.[0-9]+)$ ]]; then
+              echo "ERROR: Blur opacity '$tweaks' must be a number from 0 to 1."
+              exit 1
+            fi
+            blur_opacity="$tweaks"
+            echo -e "Blur opacity: $blur_opacity"
+            shift
+            ;;
           noborder)
             outline="false"
             echo -e "Install windows without outline version ..."
@@ -338,6 +357,7 @@ while [[ "$#" -gt 0 ]]; do
             exit 1
             ;;
         esac
+        prev_tweak="$tweaks"
       done
       ;;
     -i|--icon)
@@ -511,6 +531,10 @@ install_round() {
 install_blur() {
   sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/gnome-shell/sass/_tweaks-temp.scss
   sed -i "/\$blur:/s/false/true/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+
+  if [[ -n "$blur_opacity" ]]; then
+    sed -i "/\$blur_opacity_tweak:/s/'default'/$blur_opacity/" ${SRC_DIR}/_sass/_tweaks-temp.scss
+  fi
 }
 
 install_noborder() {

@@ -64,7 +64,9 @@ Run the following commands in the terminal:
                         solid:    no transparency version
                         float:    floating panel
                         round:    rounded windows
-                        blur:     blur version for 'Blur-Me'
+                        blur:     blur version for 'Blur-Me'; an optional number after it
+                                  sets its opacity, 0 to 1 (default 0.25 Dark,
+                                  0.425 Light), e.g. --tweaks blur 0.4 round
                         noborder: windows and menu with no border
                         square:   square windows button
 

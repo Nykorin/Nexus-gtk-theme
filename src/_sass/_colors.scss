@@ -117,6 +117,7 @@ $panel:                                 if($topbar == 'light', rgba($cachyos-lig
 $panel-solid:                           if($topbar == 'light', $cachyos-light-titlebar, $cachyos-bg); // for Unity panel which doesn't allow translucent colors
 
 $blur_opacity:                          if($variant == 'light', 0.425, 0.25); // half of upstream, lets more wallpaper through (as in Nexus)
+@if $blur_opacity_tweak != 'default' { $blur_opacity: $blur_opacity_tweak; } // install.sh --tweaks blur N
 
 @if $blur == 'true' {
   $background:                          if($variant == 'light', rgba($cachyos-light-base, $blur_opacity), rgba($cachyos-bg, $blur_opacity));
